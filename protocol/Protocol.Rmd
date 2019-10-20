@@ -25,7 +25,7 @@ Learn more about using Distill for R Markdown at <https://rstudio.github.io/dist
 
 **Background**
 
-Continuous non-invasive arterial pressure (CNAP) monitoring was introduced to substitute for the gold standard for arterial pressure assessment, which is invasive arterial pressure (IAP) measurement. The usefulness of CNAP monitoring in clinical practice is based on its sensitivity, specificity and limits of agreement both for detecting hemodynamic instability and changes in arterial pressure over time. The objective of this review is to summarise the evidence regarding the concordance between CNAP and invasive arterial pressure
+Continuous non-invasive arterial pressure (CNAP) monitoring was introduced to substitute for the gold standard for arterial pressure assessment, which is invasive arterial pressure (IAP) measurement. The usefulness of CNAP monitoring in clinical practice is based on its sensitivity, specificity and limits of agreement both for detecting hemodynamic instability and changes in arterial pressure over time. The objective of this review is to summarise the evidence regarding the concordance between CNAP and invasive arterial pressure.
 
 **Methods/Design**
 

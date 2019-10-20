@@ -147,8 +147,6 @@ ROC: receiver operating characteristic curve; QUADAS-2: Quality assessment of di
 
 None for all authors
 
-### Authors; contributions
-
 ### Acknowledgements
 
 No specific funding has been received for this systematic review.
