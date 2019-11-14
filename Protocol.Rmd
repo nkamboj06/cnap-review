@@ -107,11 +107,11 @@ For studies that did not report difference versus average analyses, an attempt t
 
 Our goal for the meta-analysis is to estimate the population limits of agreement between CNAP and invasive or intermittent monitoring. The framework for meta-analysis of Bland-Altman method comparison studies based on a limits of agreement (LoA) approach will be used. We selected this method since it mirrors the approach in primary Bland-Altman studies, providing an estimate of the pooled LoAs in the population (not just the samples studied). The ‘population LoA’ is wider than those typically reported in meta-analyses of Bland-Altman studies. Here the pooled LoAs are calculated using δ±2√(σ2 +τ 2 ), where δ is the average bias across studies, σ2 is the average within-study variation in differences and τ2 is the variation in bias across studies. We estimated δ and σ2 using a weighted least-squares model (similar to a random-effects approach) and estimated their SEs using robust variance estimation (RVE). We also (1) included measures of uncertainty when interpreting the LoA estimates by calculating the outer 95% CIs for pooled LoA; and (2) adjusted repeated measurements which were not properly adjusted in individual studies (by using weights proportional to the number of samples not the total number of measurements). All analyses will be conducted in the R statistical program.
 
-We will perform sensitivity analysis based on risk of bias (e.g., treating &quot;unclear risk of bias&quot; as &quot;low risk&quot; and &quot;high risk,&quot; and removing &quot;high risk of bias&quot; studies from the analyses). As clinicians would be interested in the accuracy of the type of monitoring device they use, we conducted subgroup analyses for the following subgroups: 
+We will perform sensitivity analysis based on risk of bias (e.g., treating &quot;unclear risk of bias&quot; as &quot;low risk&quot; and &quot;high risk,&quot; and removing &quot;high risk of bias&quot; studies from the analyses). As clinicians would be interested in the accuracy of the type of monitoring device they use, we will conduct subgroup meta-analysis for the following subgroups: 
 
-- method of CNAP monitoring (Volume Clamp or Arterial Applantation Tonometry) 
+- method of CNAP monitoring (Volume Clamp or Arterial Applanation Tonometry) 
 - type of CNAP monitoring device (CNAP Monitor, Nexfin, Finapres, and T-Line)
-- setting in which CNAP monitoring occured (ICU, OR, and other)
+- setting in which CNAP monitoring occurred (ICU, OR, and other)
 
 ### Grading the strength of the body of evidence
 
@@ -146,7 +146,6 @@ No specific funding has been received for this systematic review.
 
 ### References
 
-
 ```{r}
 library(DiagrammeR)
 grViz("digraph flowchart {
@@ -179,6 +178,9 @@ grViz("digraph flowchart {
       [7]: 'Device'
       [8]: 'Setting'
       ")
+```
+
+Figure 1: Overall meta analysis outline. Stage 1: Comparing CNAP to invasive, and CNAP to intermittent. Stage 2: Comparing CNAP method to invasive, AAT to invasive, CNAP method to intermittent, and AAT method to intermittent. Stage 3: Comparing each device (CNAP, Nexfin, Finapres, T-Line) to invasive and intermittent. Stage 4: Comparing each device in three settings (ICU, OR, and other) to invasive and intermittent. 
 
 ```{r}
 library(DiagrammeR)
@@ -198,6 +200,8 @@ grViz("digraph flowchart {
       [2]: 'Intermittent'
       [3]: 'Invasive'
       ")
+```
+Stage 1: Comparing CNAP to invasive, and CNAP to intermittent. 
 
 ```{r}
 library(DiagrammeR)
@@ -227,6 +231,8 @@ grViz("digraph flowchart {
       [6]: 'Non-invasive and intermittent'
       [7]: 'Continous and Invasive'
       ")
+```
+Stage 2: Comparing CNAP method to invasive, AAT to invasive, CNAP method to intermittent, and AAT method to intermittent.
 
 ```{r}
 library(DiagrammeR)
@@ -256,6 +262,8 @@ grViz("digraph flowchart {
       [6]: 'Nexfin'
       [7]: 'T-Line'
       ")
+```
+Stage 3: Comparing each device (CNAP, Nexfin, Finapres, T-Line) to invasive and intermittent. 
 
 ```{r}
 library(DiagrammeR)
@@ -313,3 +321,5 @@ grViz("digraph flowchart {
       [18]: 'OR'
       [19]: 'Other'
       ")
+```
+Stage 4: Comparing each device in three settings (ICU, OR, and other) to invasive and intermittent. 
