@@ -1,5 +1,5 @@
 ---
-title: "Accuracy and Precision of Continuous Non-Invasive Arterial Pressure Monitoring Compared with Invasive or Intermittent Blood Pressure Monitoring "
+title: "Accuracy and Precision of Continuous Non-Invasive Arterial Pressure Monitoring Compared with Invasive or Non-Invasive Blood Pressure Monitoring "
 description: |
   A Systematic Review Protocol
 author:
@@ -23,27 +23,27 @@ knitr::opts_chunk$set(echo = FALSE)
 <blockquote>
 ### Abstract
 
-Continuous non-invasive arterial pressure (CNAP) monitoring has been used substitute for the gold standard for arterial pressure assessment, which is invasive arterial pressure (IAP) measurement. The primary objective of this systematic review is to summarise the evidence regarding the concordance between CNAP and invasive arterial pressure monitoring. The secondary objective is to summarise the evidence regarding the concordance between CNAP and intermittent arterial pressure monitoring. Medline and EMBASE will be searched for studies published using commercially available CNAP monitoring systems (CNAP® monitor, Finapres Medical Systems, Nexfin, and T-line) that reported on a measurement of the invasive or intermittent arterial pressure that coincided with a measurement of CNAP. Study selection and quality assessment (using the QUADAS-2) will be performed independently by two reviewers. The GRADE approach will be used to summarize the strength of the body of evidence. A synthesis of the existing evidence regarding the concordance between continous noninvasive, invasive, and intemittent arteria pressure measurements will assist clinicians by providing them with estimates about what should be expected from these devices in clinical practice. In addition, gaps in the evidence will be identified, which will need to be addressed in further research.
+Continuous non-invasive arterial pressure (CNAP) monitoring has been used as the substitute for the gold standard for arterial pressure assessment, which is invasive arterial pressure (IAP) measurement. The primary objective of this systematic review is to summarise the evidence regarding the concordance between CNAP and invasive arterial pressure monitoring. The secondary objective is to summarise the evidence regarding the concordance between CNAP and intermittent arterial pressure monitoring. Medline and EMBASE will be searched for studies published using commercially available CNAP monitoring systems (CNAP® Monitor, Finapres Medical Systems, Clearsight System (foremely known as Nexfin), and Tensys T-Line) that reported on a measurement of the invasive or non-invasive arterial pressure that coincided with a measurement of CNAP. Study selection and quality assessment (using the QUADAS-2) will be performed independently by two reviewers. The GRADE approach will be used to summarize the strength of the body of evidence. A synthesis of the existing evidence regarding the concordance between continous noninvasive, invasive, and non-invasive arterial pressure measurements will assist clinicians by providing them with estimates about what should be expected from these devices in clinical practice. In addition, gaps in the evidence will be identified, which will need to be addressed in further research.
 </blockquote>
 </div>
 
 ## Introduction
 
-Arterial blood pressure monitoring is a mainstay of hemodynamic monitoring and is a requirement for patients in critical care settings, undergoing surgical interventions, during the postoperative period, and during interventions with distinct haemodynamic changes. For patients requiring continuous blood pressure monitoring, invasive arterial pressure monitoring is often used as the standard of care and involves arterial cannulation. The cannulation of an artery is painful, time-consuming, needs to be done by a trained clinician and there is risk of infection as well as tissue and nerve damage. In addition, specialised equipment is required in order to analyse arterial pressure continuously. For these reasons, BP is usually measured non-invasively intermittently or continuously. 
+Arterial blood pressure monitoring is a mainstay of hemodynamic monitoring and is a requirement for patients in critical care settings, undergoing surgical interventions, during the postoperative period, and during interventions with distinct haemodynamic changes. For patients requiring continuous blood pressure monitoring, invasive arterial pressure monitoring is often used as the standard of care and involves arterial cannulation. The cannulation of an artery is painful, time-consuming, needs to be done by a trained clinician and there is risk of infection as well as tissue and nerve damage. In addition, specialised equipment is required in order to analyse arterial pressure continuously. For these reasons, blood pressure is usually measured non-invasive and intermittently.
 	
-Intermittent BP monitoring involves an air-filled occluding cuff that enables BP to be measured either manually or automatically. An automated method to measure BP intermittently is by the oscillometric technique with the help of an occluding cuff. The cuff is inflated to a preset value automatically. Then, the pressure is gradually being reduced. The cuff detects pressure waves caused by the oscillations in the vessel. While there are many benefits to intermittent BP monitoring, the devices are unable to provide real-time BP measurements and may leave BP fluctuations undetected or may lead to late recognition and delayed correction. For this reason, continuous non-invasive arterial pressure (CNAP) monitoring is fast gaining importance due to complications associated with the IAP monitoring and addressing the limitations of intermittent BP monitoring. 
+Intermittent blood pressure monitoring involves an air-filled occluding cuff that enables blood pressure to be measured either manually or automatically. An automated method to measure BP intermittently is by the oscillometric technique with the help of an occluding cuff. The cuff is inflated to a preset value and then, the pressure is gradually reduced. The cuff detects pressure waves caused by the oscillations in the vessel. While there are many benefits of this technique of blood pressure monitoring, the devices using this method are unable to provide real-time blood pressure measurements and may leave BP fluctuations undetected or may lead to late recognition and delayed correction. For this reason, continuous non-invasive arterial pressure (CNAP) monitoring is fast gaining importance due to complications associated with the IAP monitoring and addressing the limitations of intermittent blood pressure monitoring. 
 	
-CNAP monitoring is based on two major principles: arterial tonometry and volume clamp. Both techniques enable the arterial waveform and BP values to be obtained continuously. Arterial applanation tonometry is based on the work of Pressman and Newgard, who discovered that a transducer strapped to an artery with a bone underneath, can obtain the arterial pulse wave. Since the initial observation, this technique has been refined and can now measure mean arterial pressure in the radial artery and allows the calculation of diastolic and systolic arterial pressure and other information from the pulse wave. Despite these attractive advantages, devices established using the applanation tonometry are not ideal for continuous monitoring as they have to be handheld by an examiner. A device that is automated and uses this method is the T-Line system (Tensys Medical, San Diego, CA, USA). Volume clamp is the other method of CNAP monitoring is based on the work by Penaz et al. (1976). BP is measured at the finger with an inflatable cuff combined with a photodiode. The diameter of the artery in the finger is measured by the photodiode and the pressure in the cuff is adjusted to keep the diameter of the artery constant. A BP curve can be calculated and transferred to correspond to brachial artery BP from the pressure changes in the cuff. Both these methods display real-time, continuous arterial pressure waveforms and allow noninvasive beat-to-beat arterial pressure measurements. 
+CNAP monitoring is based on two major principles: arterial  applanation tonometry and volume clamp. Both techniques enable the arterial waveform and BP values to be obtained continuously. Arterial applanation tonometry is based on the work of Pressman and Newgard, who discovered that a transducer strapped to an artery with a bone underneath, can obtain the arterial pulse wave. Since the initial observation, this technique has been refined and can now measure mean arterial pressure in the radial artery and allows the calculation of diastolic and systolic arterial pressure and other information from the pulse wave. Despite these attractive advantages, devices established using the applanation tonometry are not ideal for continuous monitoring as they have to be handheld by an examiner. A device that is automated and uses this method is the T-Line system (Tensys Medical, San Diego, CA, USA). Volume clamp is the other method of CNAP monitoring and is based on the work by Penaz et al. (1976). Blood pressure is measured at the finger with an inflatable cuff combined with a photodiode. The diameter of the artery in the finger is measured by the photodiode and the pressure in the cuff is adjusted to keep the diameter of the artery constant. A blood pressure curve can be calculated and transferred to correspond to brachial artery BP from the pressure changes in the cuff. Both these methods display real-time, continuous arterial pressure waveforms and allow noninvasive beat-to-beat arterial pressure measurements. 
 	
-Numerous studies have investigated the concordance between CNAP measurement and IAP measurement across a variety of clinical populations. Critical appraisal of the quality of these studies followed by synthesis of results in a meta-analysis would aid clinical decision-making regarding the appropriateness of substituting CNAP for arterial pressure monitoring in clinical practice. 
+Numerous studies have investigated the concordance between CNAP measurement and non-invasive or invasive arterial pressure measurement across a variety of clinical populations. Critical appraisal of the quality of these studies followed by synthesis of results in a meta-analysis would aid clinical decision-making regarding the appropriateness of substituting CNAP for arterial pressure monitoring in clinical practice. 
 
 ## Objectives
 
 The primary objective of this systematic review is to summarise the evidence regarding the concordance between CNAP and invasive arterial pressure monitoring. The secondary objective is to summarise the evidence regarding the concordance between between CNAP and intermittent artierial pressure monitoring in order to:
 
 - Examine the extent to which CNAP monitoring and invasive arterial pressure differ; 
-- Examine the extent to which CNAP monitoring and intermittent arterial pressure differ; and	
-- Determine the ability of CNAP monitors to track changes in arterial pressure over time (i.e. trending ability)
+- Examine the extent to which CNAP monitoring and non-invasive arterial pressure differ; and	
+- Determine the ability of CNAP monitors to track changes in arterial pressure over time (i.e. trending ability).
 
 ## Methods
 
@@ -53,7 +53,7 @@ A systematic review adhering to the protocol outlined below will be conducted. D
 
 #### Types of studies
 
-Published studies that report on the concordance between the index and reference tests will be included. Studies that examine the concordance between two measurement instruments typically utilise a consecutive series design. However, it is possible that studies which utilised a randomised controlled trial design to evaluate the clinical utility of CNAP monitoring also reported on the concordance between CNAP and IAP, and CNAP and intermittent blood pressure. For this reason, randomised controlled trials will be included. Case control studies will be excluded due to the potential for overestimation of test performance. 
+Published studies that report on the concordance between the index and reference tests will be included. Studies that examine the concordance between two measurement instruments typically utilise a consecutive series design. However, it is possible that studies which utilised a randomised controlled trial design to evaluate the clinical utility of CNAP monitoring also reported on the concordance between CNAP and invasive arterial pressure, and CNAP and non-invasive arterial pressure. For this reason, randomised controlled trials will be included. Case control studies will be excluded due to the potential for overestimation of test performance. 
 
 #### Types of participants
 
@@ -61,11 +61,11 @@ Studies that included human participants, either volunteers or patients receivin
 
 #### Types of index tests
 
-Studies that measured arterial pressure using CNAP with invsasive or intermittent arterial pressure will be included. Published studies using commercially available CNAP monitoring systems (CNAP® monitor, Finapres Medical Systems, Nexfin, and T-line) to compare arterial pressure with that measured by invsasive or intermittent arterial pressure monitoring in  clinical settings will be included. 
+Studies that measured arterial pressure using CNAP with invasive or non-invasive arterial pressure will be included. Published studies using commercially available CNAP monitoring systems (CNAP® Monitor, Finapres Medical Systems, Clearsight System (foremely known as Nexfin), and Tensys T-Line) to compare arterial pressure with that measured by invsasive or non-invasive arterial pressure monitoring in clinical settings will be included. Although some of these devices are able to monitor other hemodynamic parameters, the focus of this study is blood pressure monitoring. 
 
 #### Type of reference tests
 
-Studies that reported on a measurement of the arterial pressure using invasive or intermittent arterial pressure monitoring that coincided with a measurement of the index test will be included. 
+Studies that reported on a measurement of the arterial pressure using invasive or non-invasive arterial pressure monitoring that coincided with a measurement of the index test will be included. 
 
 #### Types of outcome measures
 
@@ -74,7 +74,7 @@ Studies that reported on a measurement of the arterial pressure using invasive o
 
 ### Search methods for identification of studies
 
-Published studies will be identified by searching Medline and EMBASE for CNAP monitoring devices in concordance with IAP or intermittent arterial pressure, as well as the reference lists of articles identified to be relevant to the review. This search strategy is an efficient approach for systematic reviews. Unpublished and ongoing studies will be located by searching the International Clinical Trials Platform. Published conference abstracts will be included if there is sufficient detail reported to assess study quality. Language restrictions will not be imposed. The Cochrane recommended search strategy combining terms for the &#39;target condition&#39; and &#39;index test&#39; will be used. The specific search strategy for each database is presented in the appendices. In addition, other studies included in online repositories of studies that are available about CNAP monitoring devices on the manufacturer websites are included.
+Published studies will be identified by searching Medline and EMBASE for CNAP monitoring devices in concordance with invasive or non-invasive arterial pressure, as well as the reference lists of articles identified to be relevant to the review. This search strategy is an efficient approach for systematic reviews. Unpublished and ongoing studies will be located by searching the International Clinical Trials Platform. Published conference abstracts will be included if there is sufficient detail reported to assess study quality. Language restrictions will not be imposed. The Cochrane recommended search strategy combining terms for the &#39;target condition&#39; and &#39;index test&#39; will be used. The specific search strategy for each database is presented in the appendices. In addition, other studies included in online repositories of studies that are available about CNAP monitoring devices on the manufacturer websites are included.
 
 ## Data collection and analysis
 
@@ -84,11 +84,11 @@ Two independent reviewers will perform title and abstract screening. Full-text c
 
 ### Data extraction and management
 
-We will develop data extraction forms and pilot test on a sample of five studies to achieve acceptable levels of agreement between the two data extractors. At the very least, the following information will be extracted with additional data elements being added as considered appropriate during the review process:
+We will develop data extraction forms and pilot test on a sample of ten studies to achieve acceptable levels of agreement between the two data extractors. At the very least, the following information will be extracted with additional data elements being added as considered appropriate during the review process:
 
 - Study characteristics: author, year of publication, country, design, sample size, clinical setting, number studied and number analysed for each outcome, number of drop-outs with reason, and funding source.
 - Population characteristics: inclusion/exclusion criteria; patient characteristics (age, sex, clinical condition)
-- Test characteristics: timing of index and reference test sampling/measurements, method of sampling/measuring, details about calibration and sensor membrane changes, body temperature considerations.
+- Test characteristics: timing of index and reference test sampling/measurements, and method of sampling/measuring. 
 - Outcomes: Receiver operating curve analyses, difference versus average analyses reporting the mean bias, standard deviation of bias and 95% limits of agreement (otherwise referred to as Bland-Altman level of agreement or plots), four-quadrant (4Q) concordance, polar plot analysis or clinical concordance. Studies may have collected more than one pair of data from the same participant. In these situations, information will be extracted about how the repeated measurements were handled in difference versus average analyses. There are three possible ways that the repeated measurements could have been handled, which include: 1) analysing each pair of data that was collected at the same time-point separately; 2) treating each pair of data as independent and analysing them as a collective; or 3) using either analysis of variance or a random effects model to estimate the within-subject variance after the between-subject variation has been taken into account as a way to control for the dependent nature of the repeated measures data. Option 2 will be treated as a &#39;naïve&#39; estimate of the concordance between CNAP and IAP or intermittent measurement because the dependent nature of the repeated measurements was not taken into account in the analysis.
 
 Differences in data extraction between reviewers will be reconciled by mutual agreement. Data will be entered into a database for statistical analysis.
@@ -103,167 +103,15 @@ Multiple databases and an international clinical trial registry will be thorough
 
 ### Data synthesis
 
-For studies that did not report difference versus average analyses, an attempt to perform these analyses using patient-level data or digitising plots if these are available will be made. If meta-analysis is appropriate, weighted averages of mean bias and level of agreement will be estimated using a random effects meta-analysis. Ninety-five percent credible intervals will be calculated. Difference versus average analyses conducted with repeated measurements that did not take in to account the dependent nature of the data will not be included in meta-analysis. CNAP monitoring will be considered comparable with IAP monitoring if the average bias is less than 5 mmHg and the 95% approximate credible interval is less than 10mm Hg. Heterogeneity will be tested using the Cochran&#39;s Q test and the I2 test.
+For studies that did not report difference versus average analyses, an attempt to perform these analyses using patient-level data or digitising plots if these are available will be made. If meta-analysis is appropriate, weighted averages of mean bias and level of agreement will be estimated using a random effects meta-analysis. Ninety-five percent credible intervals will be calculated. Difference versus average analyses conducted with repeated measurements that did not take in to account the dependent nature of the data will not be included in meta-analysis. CNAP monitoring will be considered comparable with invasive or non-invasive monitoring if the average bias is less than 5 mmHg and the 95% approximate credible interval is less than 10mm Hg. Heterogeneity will be tested using the Cochran&#39;s Q test and the I² test.
 
-Our goal for the meta-analysis is to estimate the population limits of agreement between CNAP and invasive or intermittent monitoring. The framework for meta-analysis of Bland-Altman method comparison studies based on a limits of agreement (LoA) approach will be used. We selected this method since it mirrors the approach in primary Bland-Altman studies, providing an estimate of the pooled LoAs in the population (not just the samples studied). The ‘population LoA’ is wider than those typically reported in meta-analyses of Bland-Altman studies. Here the pooled LoAs are calculated using δ±2√(σ2 +τ 2 ), where δ is the average bias across studies, σ2 is the average within-study variation in differences and τ2 is the variation in bias across studies. We estimated δ and σ2 using a weighted least-squares model (similar to a random-effects approach) and estimated their SEs using robust variance estimation (RVE). We also (1) included measures of uncertainty when interpreting the LoA estimates by calculating the outer 95% CIs for pooled LoA; and (2) adjusted repeated measurements which were not properly adjusted in individual studies (by using weights proportional to the number of samples not the total number of measurements). All analyses will be conducted in the R statistical program.
+Our goal for the meta-analysis is to estimate the population limits of agreement between CNAP and invasive or non-invasive monitoring. The framework for meta-analysis of Bland-Altman method comparison studies based on a limits of agreement (LoA) approach will be used. We selected this method since it mirrors the approach in primary Bland-Altman studies, providing an estimate of the pooled LoAs in the population (not just the samples studied). The ‘population LoA’ is wider than those typically reported in meta-analyses of Bland-Altman studies. Here the pooled LoAs are calculated using δ±2√(σ2 +τ 2 ), where δ is the average bias across studies, σ2 is the average within-study variation in differences and τ2 is the variation in bias across studies. We estimated δ and σ2 using a weighted least-squares model (similar to a random-effects approach) and estimated their SEs using robust variance estimation (RVE). We also (1) included measures of uncertainty when interpreting the LoA estimates by calculating the outer 95% CIs for pooled LoA; and (2) adjusted repeated measurements which were not properly adjusted in individual studies (by using weights proportional to the number of samples not the total number of measurements). All analyses will be conducted in the R statistical program.
 
 We will perform sensitivity analysis based on risk of bias (e.g., treating &quot;unclear risk of bias&quot; as &quot;low risk&quot; and &quot;high risk,&quot; and removing &quot;high risk of bias&quot; studies from the analyses). As clinicians would be interested in the accuracy of the type of monitoring device they use, we will conduct subgroup meta-analysis for the following subgroups: 
 
-- method of CNAP monitoring (Volume Clamp or Arterial Applanation Tonometry) 
-- type of CNAP monitoring device (CNAP Monitor, Nexfin, Finapres, and T-Line)
+- method of CNAP monitoring (Volume Clamp or Arterial Applanation Tonometry)
+- type of CNAP monitoring device (CNAP® Monitor, Finapres Medical Systems, Clearsight System (foremely known as Nexfin), and Tensys T-Line)
 - setting in which CNAP monitoring occurred (ICU, OR, and other)
-
-### Grading the strength of the body of evidence
-
-We will apply the GRADE methodology to rate the quality of the evidence regarding the concordance of continuous non-invasive and invasive, or intermittent arterial pressure measurements as very low, low, moderate or high quality. A summary of findings table will be created. An assessment of the strength of evidence regarding the concordance (mean bias and limits of agreement) and trending ability of arterial pressure monitoring will also be included in the summary of findings table. The following reasons will be used to downgrade the strength of evidence: study limitations (risk of bias), inconsistency, indirectness, imprecision, and publication bias.
-
-### Discussion
-
-Results from this systematic review will be valuable for clinical practice and research. CNAP monitoring devices are commercially available and are being used in clinical practice. As such, it is vital that clinicians have a clear understanding of the accuracy and precision of the devices to ensure they are applied in only the appropriate circumstances. A synthesis of the existing evidence will assist clinicians to integrate findings into their practice. Gaps in the literature will be identified, which will need to be addressed in further research.
-
-A central concern for any systematic review is the validity of the original analyses. In this regard, it is important to note that it has been reported that the traditional Bland-Altman technique for assessing the concordance between two measurements has frequently been performed inappropriately in situations where repeated measurements are taken from the same research participant. Although there are ways to account for the dependent nature of the repeated measurements, multiple paired measurements from the same participants are often analysed as though they are independent. For this reason, framework for meta-analysis of Bland-Altman method comparison studies based on a LoA approach will be used as it provides an estimate of the pooled LoAs in the population and not just the samples studied. 
-
-The trending ability of CNAP monitors is important information for clinicians to consider when using CNAP in practice. This is because arterial pressure continuously changes in response to a variety of factors. In addition, evaluating trends in CNAP may be useful in clinical practice for evaluating the effectiveness of interventions employed to improve hemodynamic status. Conclusions about trending ability can be drawn from the accuracy and precision of absolute measurements. For example, the mean deviation between absolute measurements of CNAP and invasive or intermittent arterial pressure (i.e. the accuracy) would be fixed if the monitor is highly precise providing an indication of trending ability. Alternatively, if the device is highly imprecise, the deviation between CNAP and IAP will be variable making trending unreliable. As there are no agreed standards for the accuracy and precision of CNAP monitors, evaluation of trending ability from difference versus average analyses is therefore ultimately a qualitative judgement about whether or not the index test is sufficiently precise. 
-
-This systematic review will assess the accuracy and precision of CNAP measurements with invasive or intermittent measurements in all clinical settings to determine whether CNAP devices are clinically meaningful and appropriate. There is the potential that CNAP does not improve clinical outcomes despite strong concordance with invasive or intermittent blood pressure measurements. Therefore, the evidence to be derived from this systematic review should only be considered within the context of other information about the clinical utility of these devices.
-
-### Abbreviations used
-
-_CNAP:_ _continuous_ _non-invasive arterial pressure; IAP : invasive arterial pressure_
-
-ROC: receiver operating characteristic curve; QUADAS-2: Quality assessment of diagnostic accuracy studies revised tool.
-
-
-### Declarations
-
-### Competing interests
-
-None for all authors
-
-### Acknowledgements
-
-No specific funding has been received for this systematic review.
-
-### References
-
-```{r}
-library(DiagrammeR)
-grViz("digraph flowchart {
-      # node definitions with substituted label text
-      node [fontname = Helvetica, shape = rectangle]        
-      tab1 [label = '@@1']
-      tab2 [label = '@@2']
-      tab3 [label = '@@3']
-      tab4 [label = '@@4']
-      tab5 [label = '@@5']
-      tab6 [label = '@@6']
-      tab7 [label = '@@7']
-      tab8 [label = '@@8']
-      
-      # edge definitions with the node IDs
-      tab1 -> tab2;
-      tab1 -> tab3;
-      tab2 -> tab4, tab5;
-      tab4 -> tab6;
-      tab6 -> tab7;
-      tab7 -> tab8
-      }
-
-      [1]: 'Automated Blood Pressure Monitoring '
-      [2]: 'Continous'
-      [3]: 'Intermittent'
-      [4]: 'Non-invasive'
-      [5]: 'Invasive'
-      [6]: 'Method'
-      [7]: 'Device'
-      [8]: 'Setting'
-      ")
-```
-
-Figure 1: Overall meta analysis outline. Stage 1: Comparing CNAP to invasive, and CNAP to intermittent. Stage 2: Comparing CNAP method to invasive, AAT to invasive, CNAP method to intermittent, and AAT method to intermittent. Stage 3: Comparing each device (CNAP, Nexfin, Finapres, T-Line) to invasive and intermittent. Stage 4: Comparing each device in three settings (ICU, OR, and other) to invasive and intermittent. 
-
-```{r}
-library(DiagrammeR)
-grViz("digraph flowchart {
-      # node definitions with substituted label text
-      node [fontname = Helvetica, shape = rectangle]        
-      tab1 [label = '@@1']
-      tab2 [label = '@@2']
-      tab3 [label = '@@3']
-
-      # edge definitions with the node IDs
-      tab1 -> tab2;
-      tab1 -> tab3
-      }
-
-      [1]: 'Continous non-invasive monitoring'
-      [2]: 'Intermittent'
-      [3]: 'Invasive'
-      ")
-```
-Stage 1: Comparing CNAP to invasive, and CNAP to intermittent. 
-
-```{r}
-library(DiagrammeR)
-grViz("digraph flowchart {
-      # node definitions with substituted label text
-      node [fontname = Helvetica, shape = rectangle]        
-      tab1 [label = '@@1']
-      tab2 [label = '@@2']
-      tab3 [label = '@@3']
-      tab4 [label = '@@4']
-      tab5 [label = '@@5']
-      tab6 [label = '@@6']
-      tab7 [label = '@@7']
-      
-      # edge definitions with the node IDs
-      tab1 -> tab2;
-      tab1 -> tab3;
-      tab2 -> tab4, tab5;
-      tab3 -> tab6, tab7
-      }
-
-      [1]: 'CNAP Method'
-      [2]: 'Volume Clamp Method'
-      [3]: 'Arterial Applantation Tonometry'
-      [4]: 'Non-invasive and intermittent'
-      [5]: 'Continous and Invasive'
-      [6]: 'Non-invasive and intermittent'
-      [7]: 'Continous and Invasive'
-      ")
-```
-Stage 2: Comparing CNAP method to invasive, AAT to invasive, CNAP method to intermittent, and AAT method to intermittent.
-
-```{r}
-library(DiagrammeR)
-grViz("digraph flowchart {
-      # node definitions with substituted label text
-      node [fontname = Helvetica, shape = rectangle]        
-      tab1 [label = '@@1']
-      tab2 [label = '@@2']
-      tab3 [label = '@@3']
-      tab4 [label = '@@4']
-      tab5 [label = '@@5']
-      tab6 [label = '@@6']
-      tab7 [label = '@@7']
-      
-      # edge definitions with the node IDs
-      tab1 -> tab2;
-      tab1 -> tab3;
-      tab3 -> tab7;
-      tab2 -> tab4, tab5, tab6
-      }
-
-      [1]: 'CNAP Method'
-      [2]: 'Volume Clamp Method'
-      [3]: 'Arterial Applantation Tonometry'
-      [4]: 'CNAP® Monitor'
-      [5]: 'Finapres'
-      [6]: 'Nexfin'
-      [7]: 'T-Line'
-      ")
-```
-Stage 3: Comparing each device (CNAP, Nexfin, Finapres, T-Line) to invasive and intermittent. 
 
 ```{r}
 library(DiagrammeR)
@@ -279,47 +127,63 @@ grViz("digraph flowchart {
       tab7 [label = '@@7']
       tab8 [label = '@@8']
       tab9 [label = '@@9']
-      tab10 [label = '@@10']
-      tab11 [label = '@@11']
-      tab12 [label = '@@12']
-      tab13 [label = '@@13']
-      tab14 [label = '@@14']
-      tab15 [label = '@@15']
-      tab16 [label = '@@16']
-      tab17 [label = '@@17']
-      tab18 [label = '@@18']
-      tab19 [label = '@@19']
       
       # edge definitions with the node IDs
       tab1 -> tab2;
       tab1 -> tab3;
+      tab2 -> tab4;
+      tab4 -> tab5;
+      tab5 -> tab6;
       tab3 -> tab7;
-      tab2 -> tab4, tab5, tab6;
-      tab7 -> tab17, tab18, tab19;
-      tab4 -> tab8, tab9, tab10;
-      tab5 -> tab11, tab12, tab13;
-      tab6 -> tab14, tab15, tab16
+      tab7 -> tab8;
+      tab8 -> tab9;
       }
 
-      [1]: 'CNAP Method'
-      [2]: 'Volume Clamp Method'
-      [3]: 'Arterial Applantation Tonometry'
-      [4]: 'CNAP® Monitor'
-      [5]: 'Finapres'
-      [6]: 'Nexfin'
-      [7]: 'T-Line'
-      [8]: 'ICU'
-      [9]: 'OR'
-      [10]: 'Other'
-      [11]: 'ICU'
-      [12]: 'OR'
-      [13]: 'Other'
-      [14]: 'ICU'
-      [15]: 'OR'
-      [16]: 'Other'
-      [17]: 'ICU'
-      [18]: 'OR'
-      [19]: 'Other'
+      [1]: 'Continous non-invasive arterial pressure monitoring'
+      [2]: 'Non-invasive'
+      [3]: 'Invasive'
+      [4]: 'Methods'
+      [5]: 'Devices'
+      [6]: 'Settings'
+      [7]: 'Methods'
+      [8]: 'Devices'
+      [9]: 'Settings'
       ")
 ```
-Stage 4: Comparing each device in three settings (ICU, OR, and other) to invasive and intermittent. 
+Figure 1: Overall meta analysis outline. Stage 1: Comparing CNAP to invasive, and CNAP to non-invasive. Stage 2: Comparing each method (volume clamp and arterial applanation tonometry) to invasive and non-invasive. Stage 3: Comparing each device (CNAP® Monitor, Finapres Medical Systems, Clearsight System (foremely known as Nexfin), and Tensys T-Line)) to invasive and non-invasive. Stage 4: Comparing each device in three settings (ICU, OR, and other) to invasive and non-invasive. 
+
+### Grading the strength of the body of evidence
+
+We will apply the GRADE methodology to rate the quality of the evidence regarding the concordance of continuous non-invasive and invasive, or non-invasive arterial pressure measurements as very low, low, moderate or high quality. A summary of findings table will be created. An assessment of the strength of evidence regarding the concordance (mean bias and limits of agreement) and trending ability of arterial pressure monitoring will also be included in the summary of findings table. The following reasons will be used to downgrade the strength of evidence: study limitations (risk of bias), inconsistency, indirectness, imprecision, and publication bias.
+
+### Discussion
+
+Results from this systematic review will be valuable for clinical practice and research. CNAP monitoring devices are commercially available and are being used in clinical practice. As such, it is vital that clinicians have a clear understanding of the accuracy and precision of the devices to ensure they are applied in only the appropriate circumstances. A synthesis of the existing evidence will assist clinicians to integrate findings into their practice. Gaps in the literature will be identified, which will need to be addressed in further research.
+
+A central concern for any systematic review is the validity of the original analyses. In this regard, it is important to note that it has been reported that the traditional Bland-Altman technique for assessing the concordance between two measurements has frequently been performed inappropriately in situations where repeated measurements are taken from the same research participant. Although there are ways to account for the dependent nature of the repeated measurements, multiple paired measurements from the same participants are often analysed as though they are independent. For this reason, framework for meta-analysis of Bland-Altman method comparison studies based on a LoA approach will be used as it provides an estimate of the pooled LoAs in the population and not just the samples studied. 
+
+The trending ability of CNAP monitors is important information for clinicians to consider when using CNAP in practice. This is because arterial pressure continuously changes in response to a variety of factors. In addition, evaluating trends in CNAP may be useful in clinical practice for evaluating the effectiveness of interventions employed to improve hemodynamic status. Conclusions about trending ability can be drawn from the accuracy and precision of absolute measurements. For example, the mean deviation between absolute measurements of CNAP and invasive or non-invasive arterial pressure (i.e. the accuracy) would be fixed if the monitor is highly precise providing an indication of trending ability. Alternatively, if the device is highly imprecise, the deviation between CNAP and invasive or non-invasvive blood pressure will be variable making trending unreliable. As there are no agreed standards for the accuracy and precision of CNAP monitors, evaluation of trending ability from difference versus average analyses is therefore ultimately a qualitative judgement about whether or not the index test is sufficiently precise. 
+
+This systematic review will assess the accuracy and precision of CNAP measurements with invasive and non-invasive measurements in all clinical settings to determine whether CNAP devices are clinically meaningful and appropriate. There is the potential that CNAP does not improve clinical outcomes despite strong concordance with invasive or intermittent blood pressure measurements. Therefore, the evidence to be derived from this systematic review should only be considered within the context of other information about the clinical utility of these devices.
+
+### Abbreviations used
+
+_CNAP:_ _Continuous_ _Non-invasive Arterial Pressure_
+
+_ROC:_ _Receiver_ _Operating Characteristic Curve_
+
+_QUADAS-2: Quality assessment of diagnostic accuracy studies revised tool_ 
+
+
+### Declarations
+
+### Competing interests
+
+None for all authors
+
+### Acknowledgements
+
+No specific funding has been received for this systematic review.
+
+### References
+
