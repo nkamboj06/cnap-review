@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1570992979453.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "110EF677",
+    "lastKnownWriteTime" : 1577562203,
+    "last_content_update" : 1579022011027,
+    "path" : "~/cnap-review/Protocol.Rmd",
+    "project_path" : "Protocol.Rmd",
+    "properties" : {
+        "cursorPosition" : "147,3",
+        "docOutlineVisible" : "0",
+        "ignored_words" : "Cochrane,analysing,LoA,LoAs,SEs,CIs,Applanation,Tonometry,Finapres,Clearsight,Nexfin,Tensys,fontname,Helvetica,hemodynamic,Sys,blockquote,haemodynamic,cannulation,oscillometric,applanation,tonometry,Newgard,Penaz,et,al,photodiode,brachial,waveforms,Nedel,Soares,Karollliny,Gunsch\n",
+        "last_setup_crc32" : "",
+        "scrollLine" : "148",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

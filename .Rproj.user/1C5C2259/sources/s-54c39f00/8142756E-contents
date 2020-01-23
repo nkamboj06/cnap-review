@@ -1,0 +1,22 @@
+---
+title: "An exploration of how persons requiring hemodialysis treatment explain the ways in which access to transportation for such treatment influences their overall health."
+
+author:
+  - name: Navpreet Kamboj
+    affiliation: Western University 
+    affiliation_url: https://www.uwo.ca/fhs/nursing/
+  - name: Yolanda Babenko-Mould
+    affiliation: Arthur Labatt Family School of Nursing, Western University
+    affiliation_url: https://www.uwo.ca/fhs/nursing/
+  - name: Kim Jackson
+    affiliation: Arthur Labatt Family School of Nursing, Western University
+    affiliation_url: https://www.uwo.ca/fhs/nursing/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+bibliography: bibliography.bib
+---
+
+
+<div class="l-page-outset">
+<blockquote>
+### Abstract

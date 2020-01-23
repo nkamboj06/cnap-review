@@ -1,0 +1,9 @@
+{
+    "path" : "~/cnap-review",
+    "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 2
+        }
+    ]
+}

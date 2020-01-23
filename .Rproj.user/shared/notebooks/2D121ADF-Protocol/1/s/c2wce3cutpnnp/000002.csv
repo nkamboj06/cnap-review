@@ -1,0 +1,50 @@
+"0",""
+"0","library(DiagrammeR)"
+"2","Registered S3 methods overwritten by 'htmltools':
+  method               from         
+  print.html           tools:rstudio
+  print.shiny.tag      tools:rstudio
+  print.shiny.tag.list tools:rstudio
+"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"2","Registered S3 method overwritten by 'dplyr':
+  method           from
+  print.rowwise_df     
+"
+"0","grViz(""digraph flowchart {"
+"0","      # node definitions with substituted label text"
+"0","      node [fontname = Helvetica, shape = rectangle]        "
+"0","      tab1 [label = '@@1']"
+"0","      tab2 [label = '@@2']"
+"0","      tab3 [label = '@@3']"
+"0","      tab4 [label = '@@4']"
+"0","      tab5 [label = '@@5']"
+"0","      tab6 [label = '@@6']"
+"0","      tab7 [label = '@@7']"
+"0","      tab8 [label = '@@8']"
+"0","      tab9 [label = '@@9']"
+"0","      "
+"0","      # edge definitions with the node IDs"
+"0","      tab1 -> tab2;"
+"0","      tab1 -> tab3;"
+"0","      tab2 -> tab4;"
+"0","      tab4 -> tab5;"
+"0","      tab5 -> tab6;"
+"0","      tab3 -> tab7;"
+"0","      tab7 -> tab8;"
+"0","      tab8 -> tab9;"
+"0","      }"
+"0",""
+"0","      [1]: 'Continuous non-invasive arterial pressure monitoring'"
+"0","      [2]: 'Non-invasive'"
+"0","      [3]: 'Invasive'"
+"0","      [4]: 'Methods'"
+"0","      [5]: 'Devices'"
+"0","      [6]: 'Settings'"
+"0","      [7]: 'Methods'"
+"0","      [8]: 'Devices'"
+"0","      [9]: 'Settings'"
+"0","      "")"

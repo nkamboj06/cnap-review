@@ -107,7 +107,7 @@ We will perform sensitivity analysis based on risk of bias (e.g., treating &quot
 
 <!---The figure is better but its still not perfect. I don't think readers will be able to tell what is planned for the subgroup analyses just by looking at the figure.--->
 
-```{r figure-1, fig.cap="Overall meta analysis outline. Stage 1: Comparing CNAP to invasive, and CNAP to non-invasive. Stage 2: Comparing each method (volume clamp and arterial applanation tonometry) to invasive and non-invasive. Stage 3: Comparing each device (CNAP, Finapres, ClearSight (foremely known as Nexfin), and T-Line) to invasive and non-invasive. Stage 4: Comparing each device in three settings (ICU, OR, and other) to invasive and non-invasive."}
+```{r figure-1, fig.cap="Overall meta analysis outline. Stage 1: Comparing CNAP to invasive, and CNAP to non-invasive. Stage 2: Comparing each method (volume clamp and arterial applanation tonometry) to invasive and non-invasive. Stage 3: Comparing each device (CNAP® Monitor, Finapres Medical Systems, Clearsight System (foremely known as Nexfin), and Tensys T-Line)) to invasive and non-invasive. Stage 4: Comparing each device in three settings (ICU, OR, and other) to invasive and non-invasive."}
 
 library(DiagrammeR)
 grViz("digraph flowchart {
@@ -135,14 +135,14 @@ grViz("digraph flowchart {
       }
 
       [1]: 'Continuous non-invasive arterial pressure monitoring'
-      [2]: 'Non-invasive monitoring'
-      [3]: 'Invasive monitoring'
-      [4]: 'Methods (volume clamp and arterial applanation tonometry)'
-      [5]: 'Devices (CNAP, Finapres, Clearsight, and T-Line)'
-      [6]: 'Settings (ICU, OR, and other)'
-      [7]: 'Methods (volume clamp and arterial applanation tonometry)'
-      [8]: 'Devices (CNAP, Finapres, Clearsight, and T-Line)'
-      [9]: 'Settings (ICU, OR, and other)'
+      [2]: 'Non-invasive'
+      [3]: 'Invasive'
+      [4]: 'Methods'
+      [5]: 'Devices'
+      [6]: 'Settings'
+      [7]: 'Methods'
+      [8]: 'Devices'
+      [9]: 'Settings'
       ")
 
 ```

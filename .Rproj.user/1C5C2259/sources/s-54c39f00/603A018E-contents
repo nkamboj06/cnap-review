@@ -1,0 +1,83 @@
+
+@article{tipton2017framework,
+  title={A framework for the meta-analysis of Bland--Altman studies based on a limits of agreement approach},
+  author={Tipton, Elizabeth and Shuster, Jonathan},
+  journal={Statistics in Medicine},
+  volume={36},
+  number={23},
+  pages={3621--3635},
+  year={2017},
+  publisher={Wiley Online Library}
+  
+}
+@article{Nedel2018Review,
+  title={Accuracy of non-invasive blood pressure monitoring compared with invasive blood pressure monitoring in         critically-ill patients: a systematic review and meta-analysis},
+  author={Nedel, Wagner and  Soares, Pedro and Gunsch, Karollliny and Tonin Alessandro},
+  year={2018},
+  publisher={PROSPERO CRD42018115625} 
+  
+}
+ @article{Meidert2018Techniques,
+  title={Techniques for Non-Invasive Monitoring of Arterial Blood Pressure},
+  author={Meidert, Agnes and Saugel, Bernd},
+  journal={Frontiers in medicine},
+  volume={2},
+  number={231},
+  year={2018}
+  
+}
+@article{Stenglova2017CNAP,
+  title={Continuous Non-Invasive Arterial Pressure Assessment during Surgery to Improve Outcome},
+  author={Stenglova, Alena and Benes Jan},
+  journal={Frontiers in medicine},
+  volume={4},
+  number={202},
+  pages={1-8},
+  year={2017},
+
+}
+@article{Penaz1976Volumeclamp,
+  title={Contribution to the continuous indirect blood pressure measurement},
+  author={Penaz, Jan and Voigt, A and Teichmann, W. },
+  journal={Z Gesamte Inn Med},
+  volume={31},
+  number={24},
+  pages={1030-1033},
+  year={1976},
+
+}
+@article{teamrc2017R,
+  title={R: A language and environment for statistical computing.},
+  author={Team RC Core Team R.},
+  year={2017},
+  publisher={Vienna, Austria: R Foundation for statistical computing},
+  url={http://www.r-project. org/},
+
+}
+@article{Tanner2016Metaanalysis,
+  title={Handling complex meta-analytic data structures using robust variance estimates: a tutorial in r},
+  author={Tanner-Smith, E and Tipton, Elizabeth and Polanin, J},
+  journal={J Dev Life Course Criminol},
+  volume={2},
+  pages={85–112},
+  year={2016},
+
+}
+@article{Hedges2010RVE,
+  title={Robust variance estimation in meta-regression with dependent effect size estimates},
+  author={Hedges, L and Tipton Elizabeth and Johnson, M},
+  journal={Res Synth Methods},
+  volume={1},
+  pages={164-165},
+  year={2010},
+
+}
+@article{Tipton2015Sample,
+  title={Small sample adjustments for robust variance estimation with meta- regression},
+  author={Tipton Elizabeth},
+  journal={Psychol Methods},
+  volume={20},
+  pages={375–393},
+  year={2015},
+
+}
