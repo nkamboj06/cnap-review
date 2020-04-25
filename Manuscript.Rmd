@@ -1,0 +1,30 @@
+---
+title: "Accuracy and Precision of Continuous Non-Invasive Arterial Pressure Monitoring Compared with Invasive or Non-Invasive Blood Pressure Monitoring"
+description: |
+  A Systematic Review and Meta-analysis
+author:
+  - name: Navpreet Kamboj
+    affiliation: Lawrence S. Bloomberg Faculty of Nursing, University of Toronto
+    affiliation_url: https://bloomberg.nursing.utoronto.ca/
+  - name: Aaron Conway
+    url: https://www.aaronconway.info
+    affiliation: Lawrence S. Bloomberg Faculty of Nursing, University of Toronto
+    affiliation_url: https://bloomberg.nursing.utoronto.ca/
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+<div class="l-page-outset">
+<blockquote>
+
+### Abstract
+
+### Introduction
+
+### Methods
+
+### Results
+
+### Discussion
+
+### Conclusion
