@@ -1,0 +1,17 @@
+Package: cnapreview
+Title: Analysis Workflow for Meta-Analysis
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Aaron",
+           family = "Conway",
+           role = c("aut", "cre"),
+           email = "aaron.conway@utoronto.ca",
+           comment = c(ORCID = "0000-0002-9583-8636"))
+Description: Analysis workflow for meta-analysis
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports: 
+    magrittr
