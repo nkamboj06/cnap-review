@@ -6,7 +6,7 @@
 #' @importFrom tidyr pivot_longer drop_na
 
 
-make_outcome_df <- function(data, study_df, baseline_df){
+make_outcome_df <- function(data){
   data %>% 
   mutate(study = study_identifier) %>% 
   select(study, 

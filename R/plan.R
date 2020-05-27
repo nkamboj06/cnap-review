@@ -17,7 +17,7 @@ get_analysis_plan <- function(){
     
     # Import data
     data = read_csv(
-      here("data/covidenceexport.csv")) %>% 
+      here("data/covidence27.csv")) %>% 
       clean_names(),
     rob = create_clean_rob(
       here("data/review_69353_quality_assessment_export.csv")),
@@ -50,13 +50,14 @@ get_analysis_plan <- function(){
     results_list = list(nexfin_results),
     results_flextable = make_results_flextable(results_list,
                                        names = c("Nexfin")),
-   # Renders the manuscript
-    # manuscript_word = target(
-    #   command = {
-    #     rmarkdown::render(knitr_in("manuscript/index.Rmd"))
-    #     file_out("manuscript/index.docx")
-    #   }
-    # )
+    
+   # Renders the manuscript - use drake::r_make() to render not knit
+    manuscript_word = target(
+      command = {
+        rmarkdown::render(knitr_in("manuscript/index.Rmd"))
+        file_out("manuscript/index.docx")
+      }
+    )
   )
 }
     

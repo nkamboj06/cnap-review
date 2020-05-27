@@ -30,7 +30,8 @@ names(data) <- str_replace(names(data), "[a-z][a-z][a-z]_", "")
 
 data <- data %>%
   right_join(rob, by = "study") %>%
-  right_join(study_df, by = "study")
+  right_join(study_df, by = "study") %>% 
+  drop_na(cnap)
 
 data <- data %>%
   mutate(c = measurements/participants) %>%
