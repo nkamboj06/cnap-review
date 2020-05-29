@@ -42,6 +42,9 @@ knitr::opts_chunk$set(include=TRUE,
                       echo=FALSE, warning=FALSE, message=FALSE)
 library(officer)
 library(officedown)
+library(drake)
+
+loadd(nexfin_results)
 ```
 
 \pagebreak
@@ -60,7 +63,7 @@ Medline and EMBASE were searched for studies that reported on a measurement of c
 
 **Results**
 
-
+The primary meta-analysis of zero-heat-flux versus core temperature consisted of `r nexfin_results$Comparisons` comparisons from `r nexfin_results$Studies` individual studies. Data from `r nexfin_results$Participants` participants with `r format(nexfin_results$Measurements, scientfic=F)` paired measurements were included. The pooled estimate for the mean bias was `r nexfin_results$bias_mean`°C. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r nexfin_results$CI_L_rve`°C to `r nexfin_results$CI_U_rve`°C. The GRADE evidence quality rating was downgraded to moderate due to concerns about study limitations. Population limits of agreement for the sensitivity analysis restricted to studies rated as having low risk of bias across all the domains of the QUADAS-2 were similar to the primary analysis.
 
 **Conclusion**
 
@@ -153,6 +156,7 @@ A sensitivity analysis for the primary comparison (zero-heat-flux versus tempera
 Sixteen studies were included (Figure 1). Two studies reported only in abstract form were not included and assigned as 'studies awaiting classification' because there was insufficient information provided.[@cullen2015measuring; @VendrellJorda2016] 
 
 
+
 \pagebreak
 
 ## Discussion
@@ -222,8 +226,7 @@ Fig. 3 Comparisons between core and zero-heat-flux thermometers within and acros
 ## Table 1: Study Characteristics
 
 ```{r }
-
-
+drake::readd(characteristics_table)
 ```
 
 \pagebreak

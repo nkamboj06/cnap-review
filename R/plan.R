@@ -2,7 +2,6 @@
 #' @rdname get_analysis_plan
 #' @description Targets and functions for analyses
 #' @export
-#' @importFrom janitor clean_names
 #' @importFrom drake drake_plan knitr_in
 #' @importFrom here here
 #' @importFrom dplyr filter select
@@ -16,9 +15,9 @@ get_analysis_plan <- function(){
     prisma = make_prisma(),
     
     # Import data
-    data = read_csv(
-      here("data/covidence27.csv")) %>% 
-      clean_names(),
+    importdata = read_csv(
+      here("data/covidence27.csv")),
+    data = cleandata(importdata),
     rob = create_clean_rob(
       here("data/review_69353_quality_assessment_export.csv")),
     study_df = data %>% select(
@@ -31,6 +30,12 @@ get_analysis_plan <- function(){
     # Risk of bias figures
     rob_within = make_rob_within(rob),
     rob_across = make_rob_across(rob),
+    
+    # Study characteristics table
+    
+    characteristics_table = make_characteristics_table(study_df,
+                                                       baseline_df,
+                                                       outcomes_df),
     
     # Meta-analysis
     baseline_df = make_baseline_df(data),

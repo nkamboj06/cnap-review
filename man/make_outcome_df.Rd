@@ -4,7 +4,7 @@
 \alias{make_outcome_df}
 \title{Makes dataframe of outcomes}
 \usage{
-make_outcome_df(data, study_df, baseline_df)
+make_outcome_df(data)
 }
 \description{
 Extract outcomes into long data frame

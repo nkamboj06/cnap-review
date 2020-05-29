@@ -7,6 +7,9 @@
 
 
 make_outcome_df <- function(data){
+  
+  names(data) <- str_replace(names(data), "radial/femoral", "")
+  
   data %>% 
   mutate(study = study_identifier) %>% 
   select(study, 
