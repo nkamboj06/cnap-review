@@ -5,12 +5,12 @@
 ##' @export
 make_prisma <- function() {
 
-  ggprisma::ggprisma(retrieved = 131, included = 16, 
-                     duplicates = 35, full_text = 23, 
-                     wrong_intervention = 5, 
-                     wrong_comparator = 2, 
-                     wrong_design = 1, 
-                     awaiting_classification = 2)
+  ggprisma::ggprisma(retrieved = 1710, included = 19, 
+                     duplicates = 858, full_text = 48, 
+                     wrong_setting = 20, 
+                     wrong_population= 7, 
+                     insufficient_data = 2)
   
 
 }
+

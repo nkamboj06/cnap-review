@@ -7,6 +7,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "aaron.conway@utoronto.ca",
            comment = c(ORCID = "0000-0002-9583-8636"))
+    person(given = "Navpreet",
+           family = "Kamboj",
+           role = c("aut", "cre"),
+           email = "navpreet.kamboj@mail.utoronto.ca",
+           comment = c(ORCID = "0000-0001-6500-0456")) 
 Description: Analysis workflow for meta-analysis
 License: MIT + file LICENSE
 Encoding: UTF-8

@@ -4,17 +4,17 @@ subtitle: A systematic review and meta-analysis
 bibliography: Extras/bibliography.bib
 csl: Extras/sp-basic.csl
 author:
-  - Navpreet Kamboj BScN:
+  - Navpreet Kamboj MScN:
       institute: [LBFON]
       correspondence: true
   - Kristina Chang MScN:
       institute: [PMCC]
       correspondence: false
   - Kelly Metcalfe PhD:
-      institute: [PMCC]
+      institute: [LBFON]
       correspondence: false
   - Charlene Chu PhD:
-      institute: [PMCC]
+      institute: [LBFON]
       correspondence: false
   - Aaron Conway PhD:
       email: aaron.conway@utoronto.ca

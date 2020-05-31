@@ -16,7 +16,7 @@ get_analysis_plan <- function(){
     
     # Import data
     importdata = read_csv(
-      here("data/covidence27.csv")),
+      here("review_69353_extracted_data_csv_20200601072844.csv")),
     data = cleandata(importdata),
     rob = create_clean_rob(
       here("data/review_69353_quality_assessment_export.csv")),
