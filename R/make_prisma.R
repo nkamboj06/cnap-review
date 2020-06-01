@@ -11,6 +11,5 @@ make_prisma <- function() {
                      wrong_population= 7, 
                      insufficient_data = 2)
   
-
+  
 }
-
