@@ -12,11 +12,15 @@
 get_analysis_plan <- function(){
   drake_plan(
     # Prisma figure 
-    prisma = make_prisma(),
+    prisma = make_prisma(retrieved = 1710, included = 19, 
+                         duplicates = 858, full_text = 48, 
+                         wrong_setting = 20,
+                         wrong_population= 7,
+                         awaiting_classification = 2),
     
     # Import data
     importdata = read_csv(
-      here("review_69353_extracted_data_csv_20200601072844.csv")),
+      here("data/review_69353_extracted_data_csv_20200601072844.csv")),
     data = cleandata(importdata),
     rob = create_clean_rob(
       here("data/review_69353_quality_assessment_export.csv")),

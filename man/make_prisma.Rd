@@ -4,7 +4,22 @@
 \alias{make_prisma}
 \title{Make a prisma diagram}
 \usage{
-make_prisma()
+make_prisma(
+  retrieved,
+  duplicates,
+  included,
+  full_text,
+  wrong_setting,
+  wrong_population,
+  awaiting_classification,
+  line_size = 0.5,
+  box_type = "round",
+  box_lines = 0.5,
+  box_colour = "#ff4f14",
+  box_fill = "white",
+  text_colour = "#ff4f14",
+  arrow_colour = "#ff4f14"
+)
 }
 \value{
 
