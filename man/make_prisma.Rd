@@ -11,7 +11,7 @@ make_prisma(
   full_text,
   wrong_setting,
   wrong_population,
-  awaiting_classification,
+  wrong_outcome,
   line_size = 0.5,
   box_type = "round",
   box_lines = 0.5,

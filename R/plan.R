@@ -16,7 +16,7 @@ get_analysis_plan <- function(){
                          duplicates = 858, full_text = 48, 
                          wrong_setting = 20,
                          wrong_population= 7,
-                         awaiting_classification = 2),
+                         wrong_outcome = 2),
     
     # Import data
     importdata = read_csv(

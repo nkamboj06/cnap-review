@@ -6,7 +6,7 @@
 make_prisma <- function(retrieved, duplicates, included, full_text,
                         wrong_setting,
                         wrong_population,
-                        awaiting_classification,
+                        wrong_outcome,
                         line_size = 0.50, box_type = "round", box_lines = 0.5, 
                         box_colour = "#ff4f14", box_fill = "white", text_colour = "#ff4f14",
                         arrow_colour = "#ff4f14") {
@@ -14,7 +14,7 @@ make_prisma <- function(retrieved, duplicates, included, full_text,
     
     # Based on user input
     screened = {{ retrieved }}-{{ duplicates }} 
-    screen_excluded = screened-{{ full_text }} - {{ awaiting_classification }}
+    screen_excluded = screened-{{ full_text }}
     full_text_excluded = {{ full_text }} -{{ included }} 
     
     
@@ -115,15 +115,15 @@ make_prisma <- function(retrieved, duplicates, included, full_text,
                                reflow = TRUE, colour = text_colour, data = data.frame()) +
       
       # awaiting classifications box 
-      ggplot2::annotation_custom(grob = 
-                                   grid::roundrectGrob(gp = 
-                                                         grid::gpar(col = box_colour, fill = box_fill)),
-                                 xmin = second_x_min, xmax=second_x_max, 
-                                 ymin=awaiting_classification_y_min, ymax=awaiting_classification_y_max) +
-      ggfittext::geom_fit_text(ggplot2::aes(xmin = second_x_min, xmax=second_x_max, 
-                                            ymin=awaiting_classification_y_min, ymax=awaiting_classification_y_max),
-                               label= glue::glue({{ awaiting_classification}} , ' studies awaiting classification'),
-                               reflow = TRUE, colour = text_colour, data = data.frame()) +
+      # ggplot2::annotation_custom(grob = 
+      #                              grid::roundrectGrob(gp = 
+      #                                                    grid::gpar(col = box_colour, fill = box_fill)),
+      #                            xmin = second_x_min, xmax=second_x_max, 
+      #                            ymin=awaiting_classification_y_min, ymax=awaiting_classification_y_max) +
+      # ggfittext::geom_fit_text(ggplot2::aes(xmin = second_x_min, xmax=second_x_max, 
+      #                                       ymin=awaiting_classification_y_min, ymax=awaiting_classification_y_max),
+      #                          label= glue::glue({{ awaiting_classification}} , ' studies awaiting classification'),
+      #                          reflow = TRUE, colour = text_colour, data = data.frame()) +
       
       # full text excluded box 
       ggplot2::annotation_custom(grob = 
@@ -138,6 +138,7 @@ make_prisma <- function(retrieved, duplicates, included, full_text,
       ggfittext::geom_fit_text(ggplot2::aes(xmin = second_x_min, xmax=second_x_max,
                                             ymin=full_excluded_y_max-17, ymax=full_excluded_y_max-7),
                                label= glue::glue({{ wrong_setting }} , ' wrong setting', '\n',
+                                                 {{ wrong_outcome }} , ' wrong outcome', '\n',
                                                  {{ wrong_population }} , ' wrong population'),
                                colour = text_colour, data = data.frame()) +
       
@@ -181,10 +182,10 @@ make_prisma <- function(retrieved, duplicates, included, full_text,
       
       # Screen - awaiting  
       
-      ggplot2::geom_curve(ggplot2::aes(
-        x = arrow_x, xend = second_x_min, 
-        y = screen_y_min,  yend = awaiting_classification_y_max-4), linetype = "dashed",
-        curvature = -0.15, colour = arrow_colour) +
+      # ggplot2::geom_curve(ggplot2::aes(
+      #   x = arrow_x, xend = second_x_min, 
+      #   y = screen_y_min,  yend = awaiting_classification_y_max-4), linetype = "dashed",
+      #   curvature = -0.15, colour = arrow_colour) +
       
       # Full text - excluded  
       
