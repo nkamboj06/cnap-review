@@ -136,10 +136,10 @@ grViz("digraph flowchart {
       [2]: 'Non-invasive monitoring'
       [3]: 'Invasive monitoring'
       [4]: 'Methods (volume clamp and arterial applanation tonometry)'
-      [5]: 'Devices (CNAP, Finapres, Clearsight, Vasotrac, and T-Line)'
+      [5]: 'Devices (CNAP, Finapres, Nexfin, and T-Line)'
       [6]: 'Settings (ICU, OR, and other)'
       [7]: 'Methods (volume clamp and arterial applanation tonometry)'
-      [8]: 'Devices (CNAP, Finapres, Clearsight, Vasotrac, and T-Line)'
+      [8]: 'Devices (CNAP, Finapres, Nexfin, and T-Line)'
       [9]: 'Settings (ICU, OR, and other)'
       ")
 

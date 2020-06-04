@@ -7,3 +7,4 @@ devtools::load_all()
 ## culprits of this seem to be interactive graphics e.g. plotly and mapdeck.
 drake::drake_config(get_analysis_plan(),
              lock_envir = TRUE)
+

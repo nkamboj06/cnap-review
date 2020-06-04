@@ -47,6 +47,7 @@ get_analysis_plan <- function(){
     nexfin_df = make_ma_df(outcomes_df = outcomes_df,
                            rob = rob, 
                            study_df = study_df,
+                       
      #add in filters below to select subset of studies (e.g. filter())
                            outcome == "sbp",
                            cnap == "nexfin" | cnap == "tline",
@@ -54,6 +55,7 @@ get_analysis_plan <- function(){
                            location == "radial",
                            group == "primary",
                            ),
+    
     # won't work properly until extraction is completed (too much missing data)
     nexfin_results = meta_analysis(nexfin_df),
     results_list = list(nexfin_results),
