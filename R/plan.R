@@ -68,12 +68,28 @@ get_analysis_plan <- function(){
                             )
     ),
     
-    # meta-analysis for primary
+    # making dataframe for finapres analysis
+    finapres_df= make_ma_df(outcomes_df = outcomes_df,
+                            rob = rob,
+                            study_df = study_df,
+                            
+     #add in filters below to select subset of studies (e.g. filter())
+                            outcome == "sbp",
+                            cnap == "finapres" | cnap == "tline",
+                            type == "invasive",
+                            location == "radial" | location == "femoralradial" | location =="radialfemoral"
+                            ),
+    
+    #meta-analysis for finapres
+    finapres_results = meta_analysis(finapres_df),
+    
+    # meta-analysis for primary analysis
     primary_map_results = meta_analysis(primary_map_df),
-    results_list = list(nexfin_results, primary_map_results),
+    results_list = list(nexfin_results, primary_map_results, finapres_results),
     results_flextable = make_results_flextable(results_list,
                                        names = c("Nexfin",
-                                                 "Primary")),
+                                                 "Primary",
+                                                 "Finapres")),
     
    # Renders the manuscript - use drake::r_make() to render not knit
     manuscript_word = target(
