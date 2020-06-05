@@ -52,15 +52,28 @@ get_analysis_plan <- function(){
                            outcome == "sbp",
                            cnap == "nexfin" | cnap == "tline",
                            type == "invasive",
-                           location == "radial",
-                           group == "primary",
+                           location == "radial" | location == "femoralradial" | location =="radialfemoral"
                            ),
     
     # won't work properly until extraction is completed (too much missing data)
     nexfin_results = meta_analysis(nexfin_df),
-    results_list = list(nexfin_results),
+    
+    # making dataframe for primary analysis
+    primary_map_df = make_ma_df(outcomes_df = outcomes_df,
+                            rob = rob,
+                            study_df = study_df,
+                            #add in filters below to select subset of studies (e.g. filter())
+                            case_when(study!="Ameloot 2014" ~ outcome == "map" & type == "invasive",
+                                      study=="Ameloot 2014" ~ outcome == "map" & type == "invasive" & location == "femoral"
+                            )
+    ),
+    
+    # meta-analysis for primary
+    primary_map_results = meta_analysis(primary_map_df),
+    results_list = list(nexfin_results, primary_map_results),
     results_flextable = make_results_flextable(results_list,
-                                       names = c("Nexfin")),
+                                       names = c("Nexfin",
+                                                 "Primary")),
     
    # Renders the manuscript - use drake::r_make() to render not knit
     manuscript_word = target(
@@ -71,4 +84,3 @@ get_analysis_plan <- function(){
     )
   )
 }
-    
