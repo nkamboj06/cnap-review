@@ -83,13 +83,58 @@ get_analysis_plan <- function(){
     #meta-analysis for finapres
     finapres_results = meta_analysis(finapres_df),
     
+    #making dataframe for ncat analysis
+    ncat_df= make_ma_df(outcomes_df = outcomes_df,
+                            rob = rob,
+                            study_df = study_df,
+     #add in filters below to select subset of studies (e.g. filter())
+                            outcome == "sbp",
+                            cnap == "ncat" | cnap == "tline",
+                            type == "invasive",
+                            location == "radial" | location == "femoralradial" | location =="radialfemoral"
+                            ),
+    
+
     # meta-analysis for primary analysis
     primary_map_results = meta_analysis(primary_map_df),
-    results_list = list(nexfin_results, primary_map_results, finapres_results),
+    results_list = list(nexfin_results, primary_map_results, finapres_results, ncat_results, cnap_results, tline_results),
     results_flextable = make_results_flextable(results_list,
                                        names = c("Nexfin",
                                                  "Primary",
-                                                 "Finapres")),
+                                                 "Finapres",
+                                                 "Ncat",
+                                                 "Cnap",
+                                                 "Tline")),
+    # meta-analysis for ncat analysis
+    ncat_results = meta_analysis(ncat_df),
+    
+    #making dataframe for cnap analysis
+    cnap_df= make_ma_df(outcomes_df = outcomes_df,
+                        rob = rob,
+                        study_df = study_df,
+                        #add in filters below to select subset of studies (e.g. filter())
+                        outcome == "sbp",
+                        cnap == "cnap" | cnap == "tline",
+                        type == "invasive",
+                        location == "radial" | location == "femoralradial" | location =="radialfemoral"
+    ),
+    
+     # meta-analysis for cnap analysis
+    cnap_results = meta_analysis(cnap_df),
+    
+    #making dataframe for tline analysis
+    tline_df= make_ma_df(outcomes_df = outcomes_df,
+                        rob = rob,
+                        study_df = study_df,
+                        #add in filters below to select subset of studies (e.g. filter())
+                        outcome == "sbp",
+                        cnap == "tline",
+                        type == "invasive",
+                        location == "radial" | location == "femoralradial" | location =="radialfemoral"
+    ),
+    
+    # meta-analysis for tline analysis
+    tline_results = meta_analysis(tline_df),
     
    # Renders the manuscript - use drake::r_make() to render not knit
     manuscript_word = target(
