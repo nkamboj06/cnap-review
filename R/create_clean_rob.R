@@ -17,6 +17,6 @@ rob %>%
          contains("bland")) %>% 
   mutate(`What was the overall risk of bias associated with the selection of participants?`=
            ifelse(is.na(`What was the overall risk of bias associated with the selection of participants?`),
-                  rob$`What was the overall risk of bias associated with the selection of participants? for All outcomes`,
+                  `What was the overall risk of bias associated with the selection of participants? for All outcomes`,
          `What was the overall risk of bias associated with the selection of participants?`))
 }
