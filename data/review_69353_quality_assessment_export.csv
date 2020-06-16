@@ -48,7 +48,7 @@ Saugel 2012,Consensus,"","","",low,"Exclu- sion criteria for enrollment in the s
 ",low,"5-French 20-cm arterial catheter (Pul- siocath; Pulsion Medical Systems, Munich, Germany) placed in the abdominal aorta through the femoral artery for invasive BP measurement","
 ",low,"","",low,"","",high,"of all changes. Results Patients <b>Forty-one patients were eligible for enrollment in the present study. In ﬁve patients informed consent could not be obtained. In addition, a few patients had to be excluded from the analysis due to data recording problems: In ﬁve patients, the BP signal obtained from the arterial catheter was not recorded correctly beat-by-beat by the T-Line Ò monitor because of a technical error. In two patients, BP measurements could not be compared because of a false arterial line signal due to an overdamped arterial BP waveform and catheter clotting. Data from one patient were excluded from the analysis because excessive arm movement during the measurement procedure induced artifacts in the BP signal. Finally, data from 28 patients were available for analysis. 
 Demographic data and</b> clinical characteristics including hemodynamic variables","
-","","","",unclear,"",""
+","","","",low,"",""
 Fischer 2012,Aaron,"","","",low,"Patients undergoing emergency surgery (,24 h), redo surgery, off-pump coronary artery bypass grafting, and complex, unusual procedures or not re- quiring advanced haemodynamic monitoring were not included in the study. Patients with abnormalities in post- operative cardiac rhythm were excluded from the study.","
 ","","","",low,"","","","","",high,"",No randomization,low,"","","","","",low,All measurements were performed over a 5 s time interval and then averaged. Bolus,"
 ","","","",high,"","",low,"The power analysis showed that 190 comparative data points of mean arterial pressure (38 sub- jects) were necessary to detect a difference between sample means of 5 mm Hg [5% type I error rate, 10% type II error rate, expected standard deviation ( SD ) at 15 mm Hg for both methods]. On the basis of a previous report con- ducted in the setting of cardiac surgery, 17 we postulated that the overall success rate of ﬁnger arterial pressure mon- itoring would be nearly 75%. Thus, we decided to include 50 subjects in the study.
@@ -127,7 +127,7 @@ Simultan- eously recorded AP values were extracted from the TL-200pro monitor to
 ",low,"In order to check the damping coefﬁcient of the arterial line system, we performed a fast ﬂush test of the invasive femoral AP measurement.
 After a patient’s enrolment in the study, the TL-200pro device was set up. In order to check the damping coefﬁcient of the arterial line system, we performed a fast ﬂush test of the invasive femoral AP measurement. Arterial pressure was measured for a total of 15 min (3×5 min intervals within 60 min).","
 
-",low,"","",low,"","",low,"","","","","",unclear,"",""
+",low,"","",low,"","",low,"","","","","",low,"",""
 Meidert 2013,Aaron,"","","",low,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",low,"After the study measurements, BP data were extracted using dedicated software resulting in a beat-to-beat report of BP values, as described before [6,9]. The BP waveforms were then visually inspected, and episodes containing obvious artifacts in the arterial BP waveform or the tonometry-derived waveform were manually removed. For comparative statistical analyses, we then averaged episodes of 10 heart beats for both the noninvasively and invasively assessed BP values.","
 ",unclear,"","",low,"","",low,Bland-Altman plots accounting for repeated BP measurements,"
 ",low,"","",low,"","",low,"","",low,"","",unclear,"",no information,"","","",low,"",""
@@ -144,7 +144,7 @@ Meidert 2013,Consensus,"","","",low,"Exclusion criteria were contraindications f
 ","","","",low,"After the study measurements, BP data were extracted using dedicated software resulting in a beat-to-beat report of BP values, as described before [6,9]. The BP waveforms were then visually inspected, and episodes containing obvious artifacts in the arterial BP waveform or the tonometry-derived waveform were manually removed. For comparative statistical analyses, we then averaged episodes of 10 heart beats for both the noninvasively and invasively assessed BP values.","
 ",unclear,"","",low,"","",low,Bland-Altman plots accounting for repeated BP measurements,"
 ",low,The T-Line TL-200pro device (Tensys Medical Inc) used for radial artery applanation tonometry was set up according to the instructions of the manufacturer,"
-",low,"","",low,"","",low,"","",unclear,"","","","","",unclear,"",""
+",low,"","",low,"","",low,"","",unclear,"","","","","",low,"",""
 Meidert 2014,Aaron,"","","",low,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",low,"","",low,Four patients could not be included in the study because they (or their legal representatives) refused to give written informed consent.,"
 ",low,"","",low,"we performed a Bland –Altman analysis [mean dif- ference (bias), SD, and 95% limits of agreement] for multiple measurements in one individual as described by Bland and Altman in 2007","
 ",low,"The T-Line system (TL-200 or TL-200pro; Tensys Medical Inc.) was used for continuous non-invasive assessment of AP, as described previously. 7 10 11 Simultaneously, AP values were measured using an arterial catheter placed in the radial artery of the patient’s contralateral arm. In each patient, three 5 min intervals of AP measurements (resulting in a total of 15 min) were recorded.","
@@ -166,7 +166,7 @@ Meidert 2014,Consensus,"","","",low,"","","","","",low,"","","","","",unclear,""
 ",low,AP values were measured using an arterial catheter placed in the radial artery of the patient’s contralateral arm.,"
 ",low,"data processing, and statistical analysis <b>After simultaneous recording of invasive and non-invasive AP data, a beat-to-beat report containing numeric AP values was extracted from the raw data sets using computer software as previously described. 7 10 All recorded AP data were included in the statistical analysis. 
 For statistical analyses, we</b> used IBM SPSS Statistics 20","
-",low,"","",low,"","","","","",unclear,"",""
+",low,"","",low,"","","","","",low,"",""
 Martina 2014,Aaron,"","","",low,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",low,"","",low,"","",low,"","",high,"","",low,"The netherlands) (Figure 1). 10,11 <b>noninvasive arterial pressure is based on a brachial recon- 
 struction from the finger arterial pressure measured by the fin- 
 ger cuff. To obtain nAP, an appropriate finger cuff size was 
@@ -230,7 +230,7 @@ The analog signals of nAP and IAP were sampled at 200 hz
 and stored on a hard disk. For each patient recording, 600 sec- 
 onds periods of matched nAP and IAP values were selected.</b> Systolic pressure (SYS), diastolic pressure","
 ",low,"To avoid inadequate invasive arterial blood pressure wave shape, the invasive arterial catheter was peri- odically flushed.","
-",low,"","",low,"","",low,"","","","","",unclear,"",""
+",low,"","",low,"","",low,"","","","","",low,"",""
 Ameloot 2014,Aaron,"","","",low,"were included in this study. <b>Inclusion criteria were 
 
 hemodynamic instability with need for continuous hemodynamic monitoring.</b> The severity of critical illness","
@@ -271,16 +271,16 @@ Netwerk Antwerpen (ZNA) Stuivenberg Hospital in Antwerp, Belgium between August
 
 middle phalanx of the finger. The pulsating finger artery is clamped to a constant volume by applying a varying counter pressure equivalent to the arterial pressure using a built­in photoelectric plethysmograph and an automatic algorithm (Physiocal).</b> The resulting finger arterial pressure","
 ",low,A PiCCO catheter (Pulsiocath PV2015L20) was placed in the left or right femoral artery in all patients.,"
-",high,"","",high,"","",low,"","","","","",unclear,"",""
+",high,"","",high,"","",low,"","","","","",low,"",""
 Ilies 2015,Aaron,"","","",low,"","","","","",low,"","","","","",unclear,Inclusion criteria were patients with American Society of Anaesthesiologists (ASA) physiologi- cal status of III or IV who had a radial arterial catheter and were receiving mechanical ventilation of their lungs.,"
 ",low,"","","","","",low,"","","","","",low,"After calibration of CNAP, data collection from both devices was started using a laptop computer with software (Datex Ohmeda S5 Collect; GE Healthcare, Helsinki, Finland) that allows the export of systolic arterial pressure, diastolic arterial pressure and MAP (SAP, DAP, MAP) of both devices with a sampling rate of 100 Hz. Automated","
 ",unclear,"Six patients were excluded, four because of violations of the study protocol regarding the calibration process and two because of data sampling issues. Six patients required radial arterial grafting.","
 ",low,"","",low,Bland and Altman 26 analysis for repeated measures.,"
 ",low,"The CIAP catheter and the oscillometric cuff for CNAP calibration were on the ipsilateral arm and the ﬁnger cuffs on the contralateral arm. When the radial artery was taken for coronary artery bypass graft (CABG), the ipsilateral arm was used for CNAP cuffs and CIAP, whereas the calibration cuff was contralateral. The index and middle ﬁnger were used for the ﬁnger cuffs. Measuring time was predeﬁned as 30 min.","
 ",low,"","",low,"","",low,"","",unclear,"","","","","",unclear,"",""
-Ilies 2015,Consensus,"","","","","","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",low,"After calibration of CNAP, data collection from both devices was started using a laptop computer with software (Datex Ohmeda S5 Collect; GE Healthcare, Helsinki, Finland) that allows the export of systolic arterial pressure, diastolic arterial pressure and MAP (SAP, DAP, MAP) of both devices with a sampling rate of 100 Hz. Automated","
+Ilies 2015,Consensus,"","","",low,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",low,"After calibration of CNAP, data collection from both devices was started using a laptop computer with software (Datex Ohmeda S5 Collect; GE Healthcare, Helsinki, Finland) that allows the export of systolic arterial pressure, diastolic arterial pressure and MAP (SAP, DAP, MAP) of both devices with a sampling rate of 100 Hz. Automated","
 ",unclear,"","",low,"","",low,"","",low,"The CIAP catheter and the oscillometric cuff for CNAP calibration were on the ipsilateral arm and the ﬁnger cuffs on the contralateral arm. When the radial artery was taken for coronary artery bypass graft (CABG), the ipsilateral arm was used for CNAP cuffs and CIAP, whereas the calibration cuff was contralateral. The index and middle ﬁnger were used for the ﬁnger cuffs. Measuring time was predeﬁned as 30 min.","
-",low,"","",low,"","",low,"","",unclear,"","","","","",unclear,"",""
+",low,"","",low,"","",low,"","",unclear,"","","","","",low,"",""
 Ilies 2015,Navpreet,"","","",low,"mechanical ventilation of their lungs. <b>Exclusion criteria were emergencies, complete heart 
 block, age less than 18 years, arterial pressure difference 
 more than 10 mmHg between arms and marked oedema</b> of the ﬁngers. Patients were","
@@ -311,7 +311,7 @@ Langwieser 2015,Consensus,"","","",low,"The presence of a systolic AP difference
 ",low,"","",low,analysis accounting for multiple measurements in one individual to evaluate the accuracy and precision of agreement,"
 ",low,"For radial artery applanation tonometry, the measurement equipment consisting of the stand-alone T-line TL 200pro monitor, bracelet, locator, wrist splint, and sensor was set up according to the manufacturer’s instructions as descri- bed in detail before","
 ",low,The invasive AP monitoring was checked by performing a fast ﬂush test and adjusting the pressure transducer in the phlebostatic axis,"
-",low,"","",low,"","",high,"","","","","",unclear,"",""
+",low,"","",low,"","",high,"","","","","",low,"",""
 Wagner 2015,Aaron,"","","",low,"were eligible for study inclusion. <b>Exclusion criteria were a patient’s age\18 years or 
 signiﬁcant ﬁnger edema. Before starting the AP measure- 
 ments, oscillometric AP was determined on the right and on 
@@ -384,7 +384,7 @@ sists of a double-finger cuff, a pressure transducer mounted
 on the forearm, and an upper-arm blood pressure cuff for calibration.</b> The principle of CNAP, the
 The CNAP finger cuff was placed contralaterally to IBP to allow the medical staff to easily access IBP for possible treatment. Although the manufacturer recommends placing the CNAP upper-arm cuff on the same arm as the CNAP finger cuff, the upper-arm cuff was applied to the same arm as IBP to eliminate possible pressure differences of the arms.","
 
-",low,"","",low,"","",unclear,"","",low,"","","","","",unclear,"",""
+",low,"","",low,"","",unclear,"","",low,"","","","","",low,"",""
 Bindra 2016,Aaron,unclear,"",Convenience sample,"","","",low,"","","","","",unclear,"between February and July 2014 <b>as 
 part of a larger cohort investigating cerebrovascular 
 autoregulation in patients admitted for septic shock, car- 
@@ -419,7 +419,7 @@ From our experience, the setup of autoregulation monitoring using NIRS and Finom
 no mention of how repeated measures were taken into account",low,Care was taken to apply the appropriate ﬁnger cuff size as per the manufacturer’s recommendations.,"
 ",low,"Arterial blood pressure was measured invasively (iABP) with a 20 G radial intra-arterial catheter (Leadercath, Vygon, France) and the transducer","
 ",low,"",recorded all data,low,"","",unclear,"19 patients admitted to the Intensive care unit (ICU) of Liverpool Hospital, New South Wales, Australia, were prospectively studied","
-",unclear,"","","","",""
+",low,"","","","",""
 Lakhal 2016,Aaron,"","","",low,"","","","","",unclear,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",low,"Blood Pressure reading bias because <b>of the possible variability of the instanta- 
 neous displayed value of invasive BP, pairs of intraarterial and 
 noninvasive measurements were collected, in real time, from the 
@@ -451,14 +451,14 @@ trend database of the monitor rather than from the main screen.</b> Study Protoc
 ",low,"","",low,The agreement between intraarterial and noninvasive read- ings of BP was also assessed by Bland-Altman analysis for repeated measurements.,"
 ",low,"A finger cuff of appropriate size was placed according to the manufacturer’s guidelines and was connected to a Dräger Infinity™ Delta monitor (Dräger Medical Systems, Lübeck, Germany) via the Infinity CNAP Smartpod (Dräger Medical Systems, software version 2.238). On the opposite upper limb, a brachial cuff, also chosen according to manufacturer’s guidelines (after measurement of brachial circumference), was placed 2 cm above the antecubital fossa. The brachial cuff was connected to the Dräger Infinity Delta monitor for oscillometric calibration of CNAP finger cuff measurements","
 ",low,"","",high,"","",low,"","",high,"No CNAP finger cuff measurement was displayed in 32 of 218 included patients (15%). Patients with CNAP fail- ure were included earlier in their ICU stay and had more frequent signs of tissular hypoperfusion (more frequently mottling skin, longer capillary refill time) than patients with CNAP detection of BP signal (Table 1). Four patients were excluded (Figure 2). Therefore, 182 patients were analyzed for comparison of 3 noninvasive devices with intraarte- rial measurements (Figure","
-","","","",unclear,"",""
+","","","",low,"",""
 Novak 1994,Aaron,"","","",low,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",low,"","",low,"","",low,"","",high,"",No mention of how repeated measures were accounted for in the analysis,low,"","",low,"","",low,"","",low,"","",low,"","","","","",unclear,"",""
 Novak 1994,Navpreet,"","","",unclear,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,FAP and IAP were continuously acquired over a 1-hr period.,"
 ","","","",unclear,"","",low,from 20 patients were analyzed.,"
 ",unclear,"","",unclear,"","",low,cuff (black) of appropriate size was placed on the second or third digit. The,"
 ",low,The intraarterial line was inserted into the radial artery using a 20-gauge 32- mm Teflon catheter. The catheter was attached to an Abbott Critical Care Systems transducer,"
 ",low,"","",low,"","",low,"","","","","",low,"",""
-Novak 1994,Consensus,"","","",low,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",unclear,"","",low,"","",unclear,"","",high,"",No mention of how repeated measures were accounted for in the analysis,low,"","",low,"","",low,"","",low,"","",low,"","","","","",unclear,"",""
+Novak 1994,Consensus,"","","",low,"","","","","",low,"","","","","",unclear,"","",low,"","","","","",low,"","","","","",unclear,"","",low,"","",unclear,"","",high,"",No mention of how repeated measures were accounted for in the analysis,low,"","",low,"","",low,"","",low,"","",low,"","","","","",low,"",""
 Hofhuizen 2014,Aaron,"","","",low,"criteria were cardiac arrhythmias, preoperative inotropic or intra-aortic balloon pump support, and patients requiring emergency or redo cardiac surgery.","
 ","","","",low,"","","","","",unclear,"With the approval of the institutional review board and after obtaining participants' written informed consent, 20 patients admit- ted to the intensive care unit (ICU) following elective conventional cardiac surgery were studied. Exclusion","
 ",low,"","","","","",unclear,"","","","","",unclear,"","",unclear,"Because of technical difﬁculties intra-arterial blood pressure, recording failed in 4 patients, which led to 66 pairs of CO NI and CO TD and 54 pairs of ABP and CO","
@@ -483,7 +483,7 @@ Hofhuizen 2014,Consensus,"","","",low,"Exclusion criteria were cardiac arrhythmi
 ",unclear,"","",low,"To assess agreement (bias and limits of agreement [LOA]) between the invasive and noninvasive derived parameters Bland-Altman analysis was used, which was corrected for repeated measurements in 1 subject","
 ",low,"The noninvasive arterial signal (ABP NI ) and CO (CO NI ) were obtained using an appropriate size ﬁnger cuff applied to the midphalanx of the left middle or index ﬁnger according to guidelines provided by the manufacturer. The ﬁnger with the cuff was positioned at the midaxillary line, and the ﬁnger was checked regularly for signs of tissue hypoxia.","
 ",low,"Anaesthesia was according to the institutional protocol at the discretion of the attending anaesthesiologist. A 20 GA right radial intra-arterial catheter (Becton Dickinson and Co, Franklin Lakes, NJ) was introduced before anesthesia induction and connected via standard low compliant tubing to a disposable pressure transducer (Edwards Lifesciences). After induction, a 2-lumen central venous catheter was inserted in the right internal jugular vein for the measurement of central venous pressure. Cardiac output was monitored using the PiCCO monitor and a 5F thermistor-tipped arterial PiCCO catheter inserted in the femoral artery (Pulsion Medical Systems). All pressure monitors were zeroed at the midaxillary line. Signals were recorded simultaneously using a sample rate of 200 Hz and stored on a hard disk.","
-",unclear,"","",unclear,"","",unclear,"","","","","",unclear,"",""
+",unclear,"","",unclear,"","",unclear,"","","","","",low,"",""
 Berkelmans 2018,Aaron,low,"Patients with reduced peripheral perfusion as assessed by clinical features (cold, pale hands and fingers), high-dose vasopressor drugs (>0.24 µg/kg/min norepinephrine) and/or moder- ate or more severe peripheral edema [21] were excluded, as well as agitated patients (VCM is affected by rapid movement of the hand).","
 These exclusion seem reasonable as they would affect the performance of the CNAP device","","","",low,"","","","","",unclear,"Patients with AF who had an intra-arterial catheter in the radial artery for BP monitoring on the intensive care unit, medium care unit or coronary care unit were eligible for this study.","
 ","","","",low,"","",low,"","","","","",low,"Continuous finger arterial and intra-arterial pressures were measured simultaneously. In the first minutes of measurement the positions of the finger cuff and pressure transducer were checked for possible hydrostatic level errors and, if necessary, readjusted. Subsequently, BP was measured for 15 min. During the BP measurement, no ther- apeutic changes were made. The non-invasive and invasive arterial blood pressure curves of all patients were A/D con- verted at 200 Hz and stored for off-line analysis [15–20].","
@@ -507,7 +507,7 @@ These exclusion seem reasonable as they would affect the performance of the CNAP
 ",low,"","",high,"","",low,"A finger cuff was applied to the mid-phalanx of the sec- ond, middle or fourth finger ipsilateral to the arm with the intra-arterial catheter. The","
 ",low,The arterial line was placed in the radial artery (left or right) with a 20 gauge cannula.,"
 ",low,"","",low,Data were discarded if the intra-arterial BP signal was visually damped or when the automatic calibration of the Nexfin (Physiocal ® ) occurred more often than once every 30 heart- beats.,"
-",low,"","",unclear,"","","","",""
+",low,"","",low,"","","","",""
 Greiwe 2018,Aaron,"","","",low,"Patients with a mean arterial pressure (MAP) difference between both arms of > 10 mmHg evaluated with an upper arm cuff were not included in the study, as well as patients with a history of arterial arm surgery, other anatomic upper limb abnormalities or upper limb neuropathy.","
 ","","","",low,"","","","","",unclear,"We screened patients treated on our cardiological or cardio- surgical intensive care unit (ICU) (University Medical Cen- tre Hamburg-Eppendorf, Germany) for participation in the study. Patients were either awake and spontaneously breath- ing or mechanically ventilated and anaesthetised. Inclusion criteria were a previously inserted radial artery catheter, age above 18 years, either known highly impaired left ventricular function assessed in transthoracic or transesophageal echo- cardiography (ejection fraction < 30%)","
 ",low,"","","","","",low,"","","","","",low,"AT- and AL- data were simultaneously transferred to the standard bedside patient monitor to synchronise data recording (Infinity delta, Draeger ®, Lue- beck, Germany) and extracted to an external computer and recorded every second by an analyzing software (eData Data Grabber, Draeger ®, Luebeck, Germany).","
@@ -554,4 +554,4 @@ and restarted when major limb movement occurred during</b> measurements. AT- and
 The AT bracelet device (T-Line 400, Tensys Medical ®, San Diego, USA) was placed at the contralateral forearm to the arterial line (AL), connected to the monitor and set up as previously described [5]. The AL was then zeroed to the right atrium. A disposable sensor, which is attached to the bracelet, automatically detects and flattens the radial artery. A continuous maximum arterial pressure signal is derived by the sensor which is constantly floating on the artery. The acquired arterial signal is then processed with an underlying algorithm and scaled to display MAP, systolic arterial pres- sure (SAP) and diastolic arterial pressure (DAP).","
 
 ",low,"","",low,"","",low,"we did not average ten heartbeat-epochs and then analysed the data [4, 6–9, 11, 12]. We believe that this aggregation of data over ten beats may lead to an underestimation of the bias and precision of agreement because it is an averaging of data which are already aggregated by the bedside monitor and the T-Line device.","
-",low,"","","","","",unclear,"",""
+",low,"","","","","",low,"",""

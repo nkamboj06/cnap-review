@@ -54,25 +54,24 @@ loadd(nexfin_results)
 
 **Purpose**
 
-Zero-heat-flux thermometers provide clinicians with the ability to continuously and non-invasively monitor body temperature. These devices are increasingly being used to substitute for more invasive core temperature measurements during surgery and in critical care. The aim of this review was to determine the accuracy and precision of zero-heat-flux temperature measurements from the 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System. 
+Arterial blood pressure monitoring is vital to clinical decision making. Both the gold standard for monitoring, which is invasive arterial pressure measurement, and the most common modality of blood pressure modality, non-invasive blood pressure monitoring present with limitations that can be resolved with continuous non-invasive arterial pressure (CNAP) monitoring. The aim of this systematic review is to summarize the evidence regarding the concordance between CNAP and invasive arterial pressure monitoring.
 
 **Methods**
 
-Medline and EMBASE were searched for studies that reported on a measurement of core or peripheral temperature that coincided with a measurement from the zero-heat-flux device. Study selection and quality assessment was performed independently using the Revised Quality Assessment of Diagnostic Accuracy Studies tool (QUADAS-2). The Grading of Recommendations, Assessment, Development and Evaluations (GRADE) approach was used to summarize the strength of the evidence.  Pooled estimates of the mean bias and limits of agreement with outer 95% confidence intervals (population limits of agreement) were calculated. 
-
+Medline and EMBASE will be searched for studies published using commercially available CNAP monitoring systems that reported on a measurement of the invasive or non-invasive arterial pressure that coincided with a measurement of CNAP. Study selection and quality assessment using the Revised Quality Assessment of Diagnostic Accuracy Studies tool (QUADAS-2) was performed independently by two reviewers.The Grading of Recommendations, Assessment, Development and Evaluations (GRADE) approach was used to summarize the strength of the evidence. Pooled estimates of the mean bias and limits of agreement with outer 95% confidence intervals (population limits of agreement) were calculated. 
 
 **Results**
 
-The primary meta-analysis of zero-heat-flux versus core temperature consisted of `r nexfin_results$Comparisons` comparisons from `r nexfin_results$Studies` individual studies. Data from `r nexfin_results$Participants` participants with `r format(nexfin_results$Measurements, scientfic=F)` paired measurements were included. The pooled estimate for the mean bias was `r nexfin_results$bias_mean`°C. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r nexfin_results$CI_L_rve`°C to `r nexfin_results$CI_U_rve`°C. The GRADE evidence quality rating was downgraded to moderate due to concerns about study limitations. Population limits of agreement for the sensitivity analysis restricted to studies rated as having low risk of bias across all the domains of the QUADAS-2 were similar to the primary analysis.
+The primary meta-analysis of CNAP versus invasive arterial pressure consisted of `r nexfin_results$Comparisons` comparisons from `r nexfin_results$Studies` individual studies. Data from `r nexfin_results$Participants` participants with `r format(nexfin_results$Measurements, scientfic=F)` paired measurements were included. The pooled estimate for the mean bias was `r nexfin_results$bias_mean`°C. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r nexfin_results$CI_L_rve`°C to `r nexfin_results$CI_U_rve`°C. The GRADE evidence quality rating was downgraded to moderate due to concerns about study limitations. Population limits of agreement for the sensitivity analysis restricted to studies rated as having low risk of bias across all the domains of the QUADAS-2 were similar to the primary analysis.
 
-**Conclusion**
+**Conclusion** 
 
 The range of uncertainty in the accuracy of a thermometer should be taken into account when using this device to inform clinical decision-making. Clinicians should therefore consider the potential that a temperature measurement from a 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System could be as much as 1°C higher or lower than core temperature. Use of this device may not be appropriate in situations where a difference in temperature of less than 1°C is important to detect. 
 
 
 Clinical trial number: Not applicable
 
-Keywords: measurement, surgery, anesthesia
+Keywords: arterial pressure, continuous non-invasive monitoring, critical care 
 
 
 \pagebreak
@@ -117,7 +116,7 @@ SD^2^ = Variance
 
 ## Methods
 
-A systematic review was conducted. The primary comparison for this review was zero-heat-flux temperature measured using the 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System versus temperature measured from a core site, which we defined as temperature measured at either an arterial, esophageal, bladder, rectal, nasopharyngeal or oropharyngeal site. 
+A systematic review was conducted. The primary comparison for this review was blood pressure measured using continous non-invasive blood pressure monitoring devices versus blood pressure measured using an invasive device.
 
 ### Inclusion criteria
 

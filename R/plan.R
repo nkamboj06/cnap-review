@@ -34,8 +34,8 @@ get_analysis_plan <- function(){
     # Risk of bias figures
     rob_within = make_rob_within(rob),
     rob_across = make_rob_across(rob),
-    
-    # Study characteristics table
+  
+      # Study characteristics table
     
     characteristics_table = make_characteristics_table(study_df,
                                                        baseline_df,
@@ -44,10 +44,11 @@ get_analysis_plan <- function(){
     # Meta-analysis
     baseline_df = make_baseline_df(data),
     outcomes_df = make_outcome_df(data),
+    
+    # dataframe for nexfin analysis
     nexfin_df = make_ma_df(outcomes_df = outcomes_df,
                            rob = rob, 
                            study_df = study_df,
-                           
                            #add in filters below to select subset of studies (e.g. filter())
                            outcome == "sbp",
                            cnap == "nexfin",
@@ -56,9 +57,8 @@ get_analysis_plan <- function(){
                            case_when(study!="Ameloot 2014" ~ outcome == "sbp" & type == "invasive",
                                      study=="Ameloot 2014" ~ outcome == "sbp" & type == "invasive" & location == "femoral"
                            )
-   ),
+    ),
     
-    # dataframe for nexfin dbp analysis
     nexfin_dbp_df = make_ma_df(outcomes_df = outcomes_df,
                            rob = rob, 
                            study_df = study_df,
@@ -195,38 +195,38 @@ get_analysis_plan <- function(){
     primary_map_results = meta_analysis(primary_map_df),
     primary_sbp_results = meta_analysis(primary_sbp_df),
     primary_dbp_results = meta_analysis(primary_dbp_df),
-    results_list = list(primary_sbp_results, primary_dbp_results, primary_map_results, vc_sbp_results, vc_dbp_results, vc_map_results, aat_sbp_results, aat_dbp_results, aat_map_results, nexfin_results, nexfin_dbp_results, nexfin_map_results, tline_sbp_results, tline_dbp_results, tline_map_results, cnap_sbp_results, cnap_dbp_results, cnap_map_results, finapres_sbp_results, finapres_dbp_results, finapres_map_results, ncat_sbp_results, ncat_dbp_results, ncat_map_results, femoral_sbp_results, femoral_dbp_results, femoral_map_results, radial_sbp_results, radial_dbp_results, radial_map_results),
+    results_list = list(primary_sbp_results, vc_sbp_results, aat_sbp_results, nexfin_results, tline_sbp_results, cnap_sbp_results, finapres_sbp_results, ncat_sbp_results, femoral_sbp_results, radial_sbp_results, primary_dbp_results, vc_dbp_results, aat_dbp_results, nexfin_dbp_results, tline_dbp_results, cnap_dbp_results, finapres_dbp_results, ncat_dbp_results, femoral_dbp_results, radial_dbp_results, primary_map_results, vc_map_results, aat_map_results, nexfin_map_results, tline_map_results, cnap_map_results, finapres_map_results, ncat_map_results, femoral_map_results, radial_map_results),
     results_flextable = make_results_flextable(results_list,
-                                       names = c("Primary_SBP",
-                                                 "Primary_DBP",
-                                                 "Primary_MAP",
-                                                 "Volume Clamp_SBP",
-                                                 "Volume Clamp_DBP",
-                                                 "Volume Clamp_MAP",
-                                                 "AAT_SBP",
-                                                 "AAT_DBP",
-                                                 "AAT_MAP",
-                                                 "Nexfin_SBP",
-                                                 "Nexfin_DBP",
-                                                 "Nexfin_MAP",
-                                                 "Tline_SBP",
-                                                 "Tline_DBP",
-                                                 "Tline_MAP",
-                                                 "CNAP_SBP",
-                                                 "CNAP_DBP",
-                                                 "CNAP_MAP",
-                                                 "Finapres_SBP",
-                                                 "Finapres_DBP",
-                                                 "Finapres_MAP",
-                                                 "NCAT_SBP",
-                                                 "NCAT_DBP",
-                                                 "NCAT_MAP",
-                                                 "Femoral_SBP",
-                                                 "Femoral_DBP",
-                                                 "Femoral_MAP",
-                                                 "Radial_SBP",
-                                                 "Radial_DBP",
-                                                 "Radial_MAP")),
+                                       names = c("Primary SBP",
+                                                 "Volume Clamp SBP",
+                                                 "AAT SBP",
+                                                 "Nexfin SBP",
+                                                 "Tline SBP",
+                                                 "CNAP SBP",
+                                                 "Finapres SBP",
+                                                 "NCAT SBP",
+                                                 "Femoral SBP",
+                                                 "Radial SBP",
+                                                 "Primary DBP",
+                                                 "Volume Clamp DBP",
+                                                 "AAT DBP",
+                                                 "Nexfin DBP",
+                                                 "Tline DBP",
+                                                 "CNAP DBP",
+                                                 "Finapres DBP",
+                                                 "NCAT DBP",
+                                                 "Femoral DBP",
+                                                 "Radial DBP",
+                                                 "Primary MAP",
+                                                 "Volume Clamp MAP",
+                                                 "AAT MAP",
+                                                 "Nexfin MAP",
+                                                 "Tline MAP",
+                                                 "CNAP MAP",
+                                                 "Finapres MAP",
+                                                 "NCAT MAP",
+                                                 "Femoral MAP",
+                                                 "Radial MAP")),
     
    
     #making dataframe for cnap sbp analysis
@@ -308,10 +308,7 @@ get_analysis_plan <- function(){
                             #add in filters below to select subset of studies (e.g. filter())
                             outcome == "sbp",
                             type == "invasive",
-                            location == "femoral",
-                            case_when(study!="Ameloot 2014" ~ outcome == "sbp" & type == "invasive",
-                                      study=="Ameloot 2014" ~ outcome == "sbp" & type == "invasive" & location == "femoral"
-                            )
+                            location == "femoral"
    ),
  
    femoral_dbp_df= make_ma_df(outcomes_df = outcomes_df,
@@ -320,10 +317,7 @@ get_analysis_plan <- function(){
                               #add in filters below to select subset of studies (e.g. filter())
                               outcome == "dbp",
                               type == "invasive",
-                              location == "femoral",
-                              case_when(study!="Ameloot 2014" ~ outcome == "dbp" & type == "invasive",
-                                        study=="Ameloot 2014" ~ outcome == "dbp" & type == "invasive" & location == "femoral"
-                              )
+                              location == "femoral"
    ),
    
    femoral_map_df= make_ma_df(outcomes_df = outcomes_df,
@@ -336,7 +330,7 @@ get_analysis_plan <- function(){
                               case_when(study!="Ameloot 2014" ~ outcome == "map" & type == "invasive",
                                         study=="Ameloot 2014" ~ outcome == "map" & type == "invasive" & location == "femoral"
                               )
-   ),
+  ),
    
    # meta-analysis for femoral analysis
    femoral_sbp_results = meta_analysis(femoral_sbp_df),
@@ -369,11 +363,11 @@ get_analysis_plan <- function(){
                               outcome == "map",
                               type == "invasive",
                               location == "radial",
-                              case_when(study!="Ameloot 2014" ~ outcome == "map" & type == "invasive",
+                               case_when(study!="Ameloot 2014" ~ outcome == "map" & type == "invasive",
                                        study=="Ameloot 2014" ~ outcome == "map" & type == "invasive" & location == "femoral"
                              )
    ),
-   
+  
    # meta-analysis for radial analysis
    radial_sbp_results = meta_analysis(radial_sbp_df),
    radial_dbp_results = meta_analysis(radial_dbp_df),

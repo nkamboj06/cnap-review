@@ -20,8 +20,8 @@ make_results_flextable <- function(results_list,
            "Lower 95% LoA" = LOA_L, 
            "Upper 95% LoA" = LOA_U, 
            "Outer CI for lower 95% LoA" = CI_L_rve,
-           "Outer CI for upper 95% LoA" = CI_U_rve) %>% flextable() %>% 
-    compose(j=~sd2_est, part = "header",
+           "Outer CI for upper 95% LoA" = CI_U_rve) %>% flextable() %>%
+     compose(j=~sd2_est, part = "header",
             value = as_paragraph(
               "SD",
               as_sup("2")
@@ -33,7 +33,7 @@ make_results_flextable <- function(results_list,
             ))  %>% 
     footnote(i = 1, j = 6:12,
              value = as_paragraph(
-               "Units are °C"
+               "Units are mmHg"
              ),
              ref_symbols = "a",
              part = "header") %>% 
@@ -61,7 +61,7 @@ make_results_flextable <- function(results_list,
              ),
              ref_symbols = "e",
              part = "header") %>% 
-    add_header_row(values = c("","","","","","","","","","", "Population LoA"),  colwidths = c(rep(1,10, by=1), 2))   %>% 
+    add_header_row(values = c("","","","","","","","","","","Population LoA"),  colwidths = c(rep(1,10, by=1), 2))   %>%
     theme_booktabs() %>% 
     width(j=1,width = 1.19) %>%
     width(j=2,width = 0.69) %>%
