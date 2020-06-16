@@ -13,7 +13,7 @@ make_rob_within <- function(rob) {
   
   RoB <- rob %>%
     arrange(study) %>% 
-    separate(study, c("Study", "Year"), sep = ", ")  %>% 
+    separate(study, c("Study", "Year"), sep = " ")  %>% 
     arrange(-as.numeric(Year)) %>%
     mutate(study = glue("{Study}, {Year}"))%>% 
     select(study, 
