@@ -277,31 +277,26 @@ data <-   outcomes_df %>%
     fix_border_issues() %>% 
   
   autofit()
-    
-  
-  # Remove the autofit() above an use these width functions to set specific column widths for the 
+    # Remove the autofit() above an use these width functions to set specific column widths for the 
   # word document
   # %>% 
-  #   width(j="Year",width = 0.49) %>%
-  #   width(j="Study",width = 0.79)  %>%
-  #   width(j="code",width = 0.39)  %>%
-  #   width(j="patients",width = 0.98)  %>%
-  #   width(j="perc_male",width = 1.19) %>%
-  #   width(j="age",width = 0.82) %>%
-  #   width(j="comparison",width = 1.18) %>%
-  #   width(j="n",width = 0.38) %>%
-  #   width(j="n1",width = 1.16) %>%
-  #   width(j="N",width = 0.63) %>%
-  #   width(j="N1",width = 1.19) %>% 
-  #   width(j="temp_range",width = 0.65) %>% 
+  #   width(j="Year",width = 0.30) %>%
+  #   width(j="Study",width = 0.50)  %>%
+  #   width(j="code",width = 0.30)  %>%
+  #   width(j="perc_male",width = 1.00) %>%
+  #   width(j="age",width = 0.70) %>%
+  #   width(j="patients",width = 0.80)  %>%
+  #   width(j="comparison",width = 1.00) %>%
+  #   width(j="n",width = 0.30) %>%
+  #   width(j="n1",width = 1.10) %>%
+  #   width(j="N",width = 0.60) %>%
+  #   width(j="N1",width = 1.2) %>% 
   #   footnote(i =2, j = 6,
   #            value = as_paragraph(
   #              "mean (standard deviation) or median [interquartile range]"
   #            ),
   #            ref_symbols = "a",
   #            part = "header")
-  # 
+  #
   
-
 }
-

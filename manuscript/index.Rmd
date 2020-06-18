@@ -85,7 +85,7 @@ Code availability: All data used in the meta-analyses is available [here](https:
 
 Abbreviated title: 
 
-Funding statement: 
+Funding statement: No funding recieved. 
 
 Conflicts of interest: The authors declare no competing interests.
 
@@ -110,30 +110,30 @@ SD^2^ = Variance
 
 ## Introduction
 
-
+Blood pressure monitoring is a mainstay of hemodynamic monitoring and is a requirement for patients in critical care settings [@Meidert2018Techniques] For patients requiring continuous blood pressure monitoring, invasive arterial pressure monitoring is often used as the standard of care and involves arterial cannulation. [@Meidert2018Techniques] The cannulation of an artery is painful, time-consuming, needs to be done by a trained clinician, and is associated-although very rarely- with complications such as infections, embolism, tissue and nerve damage. [@Meidert2018Techniques] In addition, specialized equipment is required in order to analyse arterial pressure continuously. For these reasons, non-invasive blood pressure (NIBP) monitoring is frequently used. [@Meidert2018Techniques] While there are many benefits of NIBP monitoring, the devices using this method are unable to provide continuous blood pressure measurements and may leave blood pressure fluctuations undetected or may lead to late recognition and delayed correction. For this reason, continuous non-invasive arterial pressure (CNAP) monitoring is fast gaining importance as it addresses the complications associated with the invasive monitoring and the limitations of NIBP monitoring. 
+	
+CNAP monitoring is based on the arterial applanation tonometry (AAT) and volume clamp. Both techniques enable the arterial waveform and BP values to be obtained continuously. [@Stenglova2017CNAP] AAT is based on the work of Pressman and Newgard, who discovered that a transducer strapped to an artery with a bone underneath, can obtain the arterial pulse wave. [@Meidert2018Techniques] A device that is automated and commercially available that uses this method is the T-Line system (Tensys Medical, San Diego, CA, USA).
+Volume clamp is based on the work by Penaz et al. (1976). [@Penaz1976Volumeclamp] and measure blood pressure at the finger using an inflatable cuff combined with a photodiode. [@Meidert2018Techniques] Devices using this technique include Nexfin (BMEYE B.V., Amsterdam, The Netherlands); CNAP (CNSystems, Graz, Austria). CNAP monitoring devices display real-time, continuous arterial pressure waveforms and provide non-invasive beat-to-beat arterial pressure measurement. Numerous studies have investigated the concordance between CNAP measurement and invasive arterial pressure measurement across a variety of clinical populations. Critical appraisal of the quality of these studies followed by synthesis of results in a meta-analysis would aid clinical decision-making regarding the appropriateness of substituting CNAP for blood pressure monitoring in clinical practice.
 
 \pagebreak
 
 ## Methods
 
-A systematic review was conducted. The primary comparison for this review was blood pressure measured using continous non-invasive blood pressure monitoring devices versus blood pressure measured using an invasive device.
+A systematic review was conducted. The primary comparison for this review was blood pressure measured using CNAP monitoring devices versus blood pressure measured using an invasive device.
 
 ### Inclusion criteria
 
-Observational studies that reported temperature measurements from a 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System and comparator thermometer were included. Studies involving a case control design were excluded due to potential for overestimation of the intervention performance. Studies were excluded if conducted on non-human subjects or outside of a clinical healthcare setting. No publication date restrictions were applied. Published conference abstracts were included if there was enough information reported to appraise the quality of the study. There were no language restrictions applied during the search. 
+Studies that reported blood pressure measurements using CNAP technique and comparator invasive were included. Due to the potential of overestimation of the intervention performance, case control design studies were excluded. Studies were limited to human subjects admitted on an in-patient clinical healthcare setting (not including operative room). No publication date or language restrictions were applied. Published conference abstracts were included if there was enough information reported to appraise the quality of the study. 
 
 ### Data sources and searches
 
-Published studies were found by searching Medline and EMBASE to January 2020. The Cochrane-recommended search strategy combining terms for the ‘target condition’ and ‘index test’ was used.[@mann2012should] This search strategy is an efficient approach for systematic reviews of diagnostic test accuracy studies.[@preston2015improving] We also conducted forward citation searching, by using Google Scholar to search the citations of the first article published on the accuracy of the 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System.[@eshraghi2014] The search strategies used for each database are available in the appendix. Selection of studies was undertaken independently by two reviewers. 
+The information extracted included study characteristics (author, year of publication, country, design, sample size, clinical setting, numbers studied, and analyses for each outcome), population characteristics (inclusion and exclusion criteria) and blood pressure measurement characteristics (type of CNAP device and site of invasive measurements). The outcomes that were extracted included the mean bias (eg, accuracy) and variance (eg, SD, precision) in blood pressure measurement between the CNAP and invasive devices. We also extracted information about how repeated measurements were handled. In particular we assessed whether studies: (1) analysed each pair of data separately; (2) treated each pair of data as independent; or (3) used either analysis of variance or a random effects model as a way to control for the dependent nature of the repeated measures data.[@myles2007using]
 
-### Data extraction and quality assessment
+Two reviewers independently completed the risk of bias assessment for the included studies using the revised Quality Assessment of Diagnostic Accuracy Studies (QUADAS-2).[@whiting2011quadas] Risk of bias for patient selection, conduct of the CNAP measurements, conduct of the comparator invasive measurements, and timing and flow (eg, timing of CNAP and established invasive blood pressure measurements, dropouts) was rated as 'high', 'low' or 'unclear' risk of bias by the reviewers. 
 
-Information was extracted regarding study characteristics (author, year of publication, country, design, sample size, clinical setting, numbers studied and analyses for each outcome), population characteristics (inclusion and exclusion criteria) and temperature measurement characteristics (placement of sensor, timing and methods of measurements). The outcomes that were extracted included the mean bias (eg, accuracy) and variance (eg, SD, precision) in temperature measurement between the zero-heat-flux and comparator thermometers. 
-We also extracted information about how repeated measurements were handled. In particular we assessed whether studies: (1) analysed each pair of data separately; (2) treated each pair of data as independent; or (3) used either analysis of variance or a random effects model as a way to control for the dependent nature of the repeated measures data.[@myles2007using]
+A comprehensive search of multiple databases and international clinical trial registry was conducted to minimize the risk of publication bias. [@glasziou2001systematic] Due to the lack of validated methods on statistical approaches for detecting reporting bias, this assessment was not performed. [begg2005systematic] Simulations have revealed that tests for detecting funnel plot asymmetry will result in publication bias being frequently identified incorrectly. [@deeks2005performance]
 
-Two reviewers independently assessed the risk of bias for the included studies using the revised Quality Assessment of Diagnostic Accuracy Studies (QUADAS-2).[@whiting2011quadas] Reviewers rated the risk of bias for patient selection, conduct of the zero-heat-flux measurements, conduct of the comparator thermometer measurements, and timing and flow (eg, timing of zero-heat-flux and established core temperature measurements, dropouts) as 'high', 'low' or 'unclear' risk of bias. We worked to minimize the risk of publication bias by conducting a comprehensive search of multiple databases as well as an international clinical trial registry.[@glasziou2001systematic] Statistical approaches for detection of reporting bias were not conducted due to lack of validated methods.[@begg2005systematic] Simulations have revealed that tests for detecting funnel plot asymmetry will result in publication bias being incorrectly identified too often.[@deeks2005performance]
-
-In order to rate the quality of evidence, we applied the Grading Quality of Evidence and Strength of Recommendation methodology.[@schunemann2008grading] Evidence was downgraded in accordance with study limitations, inconsistency and imprecision. There were no circumstances in which evidence was downgraded for indirectness as this systematic review only included relevant studies. Although the possibility of publication bias was not excluded, this bias was not formally assessed as it was not considered sufficient enough to reason downgrading the quality of evidence. 
+The Grading Quality of Evidence and Strength of Recommendation methodology was applied to rate the quality of evidence.[@schunemann2008grading] Evidence was downgraded in accordance with study limitations, inconsistency and imprecision. There were no circumstances in which evidence was downgraded for indirectness as this systematic review only included relevant studies. Although the possibility of publication bias was not excluded, this bias was not formally assessed as it was not considered sufficient enough to reason downgrading the quality of evidence.
 
 ### Data synthesis and analysis
 
@@ -152,8 +152,7 @@ A sensitivity analysis for the primary comparison (zero-heat-flux versus tempera
 
 ### Study selection and description
 
-Sixteen studies were included (Figure 1). Two studies reported only in abstract form were not included and assigned as 'studies awaiting classification' because there was insufficient information provided.[@cullen2015measuring; @VendrellJorda2016] 
-
+Ninteen studies were included (Figure 1). Twenty studies were conducted in the wrong setting (eg, outpatient, OR) and were excluded. 7 studies were on the wrong population (i.e <18 years of age, subjects were volunteers), and two reported the wrong outcome, therefore were excluded.  
 
 
 \pagebreak
