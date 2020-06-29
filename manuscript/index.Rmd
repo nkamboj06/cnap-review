@@ -45,6 +45,35 @@ library(officedown)
 library(drake)
 
 loadd(nexfin_results)
+loadd(nexfin_dbp_results)
+loadd(nexfin_map_results)
+loadd(primary_map_results)
+loadd(primary_sbp_results)
+loadd(primary_dbp_results)
+loadd(finapres_map_results)
+loadd(finapres_sbp_results)
+loadd(finapres_dbp_results)
+loadd(ncat_map_results)
+loadd(ncat_sbp_results)
+loadd(ncat_dbp_results)
+loadd(tline_map_results)
+loadd(tline_sbp_results)
+loadd(tline_dbp_results)
+loadd(cnap_map_results)
+loadd(cnap_sbp_results)
+loadd(cnap_dbp_results)
+loadd(aat_map_results)
+loadd(aat_sbp_results)
+loadd(aat_dbp_results)
+loadd(vc_map_results)
+loadd(vc_sbp_results)
+loadd(vc_dbp_results)
+loadd(radial_map_results)
+loadd(radial_sbp_results)
+loadd(radial_dbp_results)
+loadd(femoral_map_results)
+loadd(femoral_sbp_results)
+loadd(femoral_dbp_results)
 ```
 
 \pagebreak
@@ -62,11 +91,11 @@ Medline and EMBASE will be searched for studies published using commercially ava
 
 **Results**
 
-The primary meta-analysis of CNAP versus invasive arterial pressure consisted of `r nexfin_results$Comparisons` comparisons from `r nexfin_results$Studies` individual studies. Data from `r nexfin_results$Participants` participants with `r format(nexfin_results$Measurements, scientfic=F)` paired measurements were included. The pooled estimate for the mean bias was `r nexfin_results$bias_mean`°C. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r nexfin_results$CI_L_rve`°C to `r nexfin_results$CI_U_rve`°C. The GRADE evidence quality rating was downgraded to moderate due to concerns about study limitations. Population limits of agreement for the sensitivity analysis restricted to studies rated as having low risk of bias across all the domains of the QUADAS-2 were similar to the primary analysis.
+The primary meta-analysis of CNAP versus invasive arterial pressure consisted of `r primary_sbp_results$Comparisons` comparisons from `r primary_sbp_results$Studies` individual studies, with data from `r primary_sbp_results$Participants` participants with `r format(primary_sbp_results$Measurements, scientfic=F)` paired measurements for SBP were included. For DBP `r primary_dbp_results$Comparisons` comparisons from `r primary_dbp_results$Studies` individual studies, with data from `r primary_dbp_results$Participants` participants with `r format(primary_dbp_results$Measurements, scientfic=F)` paired measurements were included. For MAP `r primary_map_results$Comparisons` comparisons from `r primary_map_results$Studies` individual studies, with data from `r primary_map_results$Participants` participants with `r format(primary_map_results$Measurements, scientfic=F)` paired measurements for MAP were included. The pooled estimate for the mean bias was `r primary_sbp_results$bias_mean`mmHg, `r primary_dbp_results$bias_mean`mmHg, and `r primary_map_results$bias_mean`mmHg for SBP, DBP, and MAP, respectively. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve`mmHg for SBP, `r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve`mmHg for DBP, and  `r primary_map_results$CI_L_rve`mmHg to `r primary_map_results$CI_U_rve`mmHg for MAP. 
 
 **Conclusion** 
 
-The range of uncertainty in the accuracy of a thermometer should be taken into account when using this device to inform clinical decision-making. Clinicians should therefore consider the potential that a temperature measurement from a 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System could be as much as 1°C higher or lower than core temperature. Use of this device may not be appropriate in situations where a difference in temperature of less than 1°C is important to detect. 
+
 
 
 Clinical trial number: Not applicable
@@ -127,7 +156,7 @@ Studies that reported blood pressure measurements using CNAP technique and compa
 
 ### Data sources and searches
 
-The information extracted included study characteristics (author, year of publication, country, design, sample size, clinical setting, numbers studied, and analyses for each outcome), population characteristics (inclusion and exclusion criteria) and blood pressure measurement characteristics (type of CNAP device and site of invasive measurements). The outcomes that were extracted included the mean bias (eg, accuracy) and variance (eg, SD, precision) in blood pressure measurement between the CNAP and invasive devices. We also extracted information about how repeated measurements were handled. In particular we assessed whether studies: (1) analysed each pair of data separately; (2) treated each pair of data as independent; or (3) used either analysis of variance or a random effects model as a way to control for the dependent nature of the repeated measures data.[@myles2007using]
+The information extracted included study characteristics (author, year of publication, country, design, sample size, clinical setting, numbers studied, and analyses for each outcome), population characteristics (inclusion and exclusion criteria) and blood pressure measurement characteristics (type of CNAP device and site of invasive measurements). The outcomes that were extracted included the mean bias (eg, accuracy) and variance (eg, SD, precision) in SBP, DBP, and MAP measurement between the invasive and CNAP devices.  We also extracted information about how repeated measurements were handled. In particular we assessed whether studies: (1) analysed each pair of data separately; (2) treated each pair of data as independent; or (3) used either analysis of variance or a random effects model as a way to control for the dependent nature of the repeated measures data.[@myles2007using]
 
 Two reviewers independently completed the risk of bias assessment for the included studies using the revised Quality Assessment of Diagnostic Accuracy Studies (QUADAS-2).[@whiting2011quadas] Risk of bias for patient selection, conduct of the CNAP measurements, conduct of the comparator invasive measurements, and timing and flow (eg, timing of CNAP and established invasive blood pressure measurements, dropouts) was rated as 'high', 'low' or 'unclear' risk of bias by the reviewers. 
 
@@ -137,27 +166,38 @@ The Grading Quality of Evidence and Strength of Recommendation methodology was a
 
 ### Data synthesis and analysis
 
-The objective for the meta-analysis was to estimate the population limits of agreement between temperature measurements from the 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System and established comparator thermometers. A framework for meta-analysis of Bland-Altman method comparison studies based on limits of agreement approach was used.[@tipton2017framework]  This method was selected because it parallels the approach used in primary Bland-Altman studies, whereby an estimate is generated for the pooled limits of agreement in the population (not just in the samples studied). The ‘population limits of agreement’ is more broad than the limits of agreement commonly reported in the meta-analyses of Bland-Altman studies.[@tipton2017framework] Pooled limits of agreement were calculated using $\delta\pm2\sqrt{\sigma2+\tau2}$, where $\delta$ is the average bias across studies, $\sigma2$ is the average within-study variation in differences and $\tau2$ is the variation in bias across studies. 
+The objective for the meta-analysis was to estimate the population limits of agreement between blood pressure measurements from the devices using the CNAP monitoring devices and established invasive monitoring. A framework for meta-analysis of Bland-Altman method comparison studies based on limits of agreement approach was used.[@tipton2017framework]  This method was selected because it mirrors the approach in primary Bland-Altman studies, providing an estimate of the pooled limits of agreement in the population (not just the samples studied). The ‘population LoA’ is wider than those typically reported in meta-analyses of Bland-Altman studies.[@tipton2017framework] Pooled limits of agreement were calculated using $\delta\pm2\sqrt{\sigma2+\tau2}$, where $\delta$ is the average bias across studies, $\sigma2$ is the average within-study variation in differences and $\tau2$ is the variation in bias across studies. 
 
-Estimations of $\delta$ and $\sigma2$ were made using a weighted least-squares model (similar to a random-effects approach), with the associated standard errors estimated using robust variance estimation. Robust variance estimation was used alternatively to model-based standard errors as some studies included in the systematic review used repeated-measures designs without accommodating for the correlation between measurements.[@hedges2010robust; @tanner2016handling; @tipton2015small] We used the method-of-moments estimator from DerSimonian & Laird @dersimonian1986meta for the $\tau2$ parameter. 
+We estimated $\delta$ and $\sigma2$ using a weighted least-squares model (similar to a random-effects approach) and associated estimations of their SEs were made using robust variance estimation (RVE). As some studies included used repeated-measures designs without accommodating for the correlation between measurements, robust variance estimation was used instead to model-based standard errors. [@hedges2010robust; @tanner2016handling; @tipton2015small] The method-of-moments estimator from DerSimonian & Laird @dersimonian1986meta was used for the $\tau2$ parameter.
 
-Measures of uncertainty were included in our meta-analyses by calculating the outer 95% confidence intervals for pooled limits of agreement. We also accounted for repeated measurements if they were not properly adjusted for in individual studies. This was achieved by using weights proportional to the number of participants, not the total number of measurements.  The R statistical program was used to conduct all analyses.[@R2018] All data and R code used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here]().
+The outer 95% confidence intervals for pooled limits of agreement were calculated to determine the measures of uncertainty. If the individual studies did not account for repeated measurements, it was adjusted for in our study by using weights proportional to the number of participants and not the total number of measurements. All the analyses were conducted using the R statistical program.[@R2018] All data and R code used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here]().
 
-Prior to conducting the meta-analyses, the results from each study were converted into a standard format, with bias meaning comparator thermometer temperature measurement minus the 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System measurement in degrees Celsius (°C). In several studies, results were reported for multiple groups of participants, therefore in the meta-analysis each of these groups was treated as a separate 'comparison'.[@Boisson_2018; @Dahyot_Fizelier_2017; @Schell_Chaple_2018; @M_kinen_2016] Other studies reported multiple sets of results, whereby analyses were conducted between zero-heat-flux and various comparator devices used on the same participant. These instances were also treated as a separate 'comparison' if the comparator devices were a part of separate meta-analysis groups.[@West_2019; @Pesonen_2018; @M_kinen_2016; @Iden_2015] One study used both nasopharyngeal and oropharyngeal temperature as comparators.[@West_2019] Both combined and separate estimates were reported. We used the combined estimate in our primary analysis and the estimate for just the nasopharyngeal temperatures in a subgroup analysis.  One study reported intraoperative, postoperative and overall results for the same participants[@eshraghi2014]. Only the paired measurements from the overall results were included in the main and low risk bias analyses, leaving paired measurements exclusively from the intraoperative and postoperative timepoints to be included in respective meta-analyses subgroups. 
-The conventionally cited clinically acceptable agreement between zero-heat-flux and comparator devices is 0.5°C.[@eshraghi2014] It was deemed that outer confidence bounds for 95% limits of agreement between zero-heat-flux and core temperature measurements (termed as ‘population limits of agreement’) outside of these bounds would be clinically unacceptable. 
+(NEED TO WRITE THIS PARAGRAPH- IGNORE) Prior to conducting the meta-analyses, the results from each study were converted into a standard format, with bias meaning comparator invasive blood pressure measurements minus the CNAP device measurement. In several studies, results were reported for multiple groups of participants, therefore in the meta-analysis each of these groups was treated as a separate 'comparison'.[@Boisson_2018; @Dahyot_Fizelier_2017; @Schell_Chaple_2018; @M_kinen_2016] Other studies reported multiple sets of results, whereby analyses were conducted between zero-heat-flux and various comparator devices used on the same participant. These instances were also treated as a separate 'comparison' if the comparator devices were a part of separate meta-analysis groups.[@West_2019; @Pesonen_2018; @M_kinen_2016; @Iden_2015] One study used both nasopharyngeal and oropharyngeal temperature as comparators.[@West_2019] Both combined and separate estimates were reported. We used the combined estimate in our primary analysis and the estimate for just the nasopharyngeal temperatures in a subgroup analysis.  One study reported intraoperative, postoperative and overall results for the same participants[@eshraghi2014]. Only the paired measurements from the overall results were included in the main and low risk bias analyses, leaving paired measurements exclusively from the intraoperative and postoperative timepoints to be included in respective meta-analyses subgroups. The conventionally cited clinically acceptable agreement between zero-heat-flux and comparator devices is 0.5°C.[@eshraghi2014] It was deemed that outer confidence bounds for 95% limits of agreement between zero-heat-flux and core temperature measurements (termed as ‘population limits of agreement’) outside of these bounds would be clinically unacceptable. 
 
-A sensitivity analysis for the primary comparison (zero-heat-flux versus temperature measurement at core site) was performed based on risk of bias, whereby ‘unclear risk of bias’ was treated as ‘high risk’ and ‘high risk of bias’ studies were excluded from analyses. We also conducted a sensitivity analysis for the primary comparison (zero-heat-flux versus temperature measurement at core site) excluding studies that received funding from industry.  Probe insertion distance for temperature measurements from the nasopharynx and oropharynx may impact accuracy.[@Lim_2016] For this reason, we also conducted a separate analysis excuding these comparators and an analysis of the studies that compared temperature measurements from the 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System with nasopharyngeal temperature. As clinicians would be interested in the accuracy of zero-heat-flux relative within the clinical setting in which they use it, we conducted subgroup analyses for the primary comparison according to clinical setting of the study (either intraoperative or intensive care unit).
+A sensitivity analysis for the primary comparison (CNAP versus invasive arterial pressure) was performed based on risk of bias. Studies rated as ‘unclear risk of bias’ was treated as ‘high risk’ and ‘high risk of bias’ studies were excluded from analyses. We conducted subgroup analyses for the primary comparison according to the method of CNAP monitoring (Volume Clamp or Arterial Applanation Tonometry (AAT)), type of CNAP monitoring device (Finapres, NCAT, CNAP, Nexfin, T-Line), and measurement site of invasive arterial pressure (radial vs. femoral).
 
 ## Results
 
 ### Study selection and description
 
-Ninteen studies were included (Figure 1). Twenty studies were conducted in the wrong setting (eg, outpatient, OR) and were excluded. 7 studies were on the wrong population (i.e <18 years of age, subjects were volunteers), and two reported the wrong outcome, therefore were excluded.  
+Ninteen studies were included (Figure 1). Twenty studies were conducted in the wrong setting (eg, outpatient, OR) and were excluded. 7 studies were on the wrong population (i.e <18 years of age, subjects were volunteers), and two studies reported the wrong outcome, therefore were excluded.  
+
+A summary of the characteristics of included studies is displayed in Table 1. The Nexfin and T-Line device were both equally evaluated, followed by the CNAP device, Finapres, and NCAT. From the 19 studies, seven used the femoral artery and 12 used the radial artery for invasive measurement.The primary comparison of the CNAP versus invasive arterial pressure measurements consisted of 262, 352 measurements, 785 participants, and 19 comparisons from 18 individual studies of SBP. Primary DBP comparison consisted of 262, 235 measurements, 760 participants, and 18 comparisons from 17 studies. Primary MAP comparison consisted of 162, 080 measurements, 784 participants, and 19 comparisons from 18 individual studies. 
+
+### Primary Comparison
+
+Table 2 presents results of the primary, sensitivity, and all subgroup analyses. The pooled estimate for the mean bias between the CNAP and invasive arterial pressure measurements was -1.91, 1.51, and 1.49 mmHg for SBP, DBP, and MAP, respectively.  Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from – 59.93 to 56.11 mmHg, -216.70 to 219.72 mmHg, and -68.89 to 71.87 for SBP, DBP, and MAP, respectively. Primary SBP comparison consisted of 262, 352 measurements,785 participants, 18 studies. Primary DBP comparison consisted of 262, 235 measurements, 760 participants, and 17 studies. Primary MAP comparison consisted of 162, 080 measurements, 784 participants, and 18 studies. The amount of between-study heterogeneity is displayed graphically in the density plot in Fig.3. 
+
+### Sensitivity Analyses 
+
+### Subgroup Analyses
+
+We conducted three subgroup analyses for the primary comparison according to the method of CNAP monitoring, type of CNAP monitoring device, and measurement site of invasive arterial pressure. In the subset of studies conducted using a device based on the volume clamp method, the mean bias and population limits of agreement was -1.63 (-97.44 to 94.17) for SBP, -1.30 (-320.25 to 317.65) for DBP, and 0.83 (-137.63 to 139.28) for MAP. For the AAT method the mean bias and population limits of agreement was -2.41 (-54.74 to 49.91) for SBP, 5.54 (-31.22 to 42.30) for DBP, and 2.15 (-21.59 to 25.89) for MAP. In the subset of studies conducted based on the type of CNAP monitoring device, the mean and population limits of agreement for Nexfin was -1.09 (-295.59 to 293.42) for SBP, -2.71 (-221.51 to 216.09) for DBP, and -0.41 (-58.24 to 57.42) for MAP. For CNAP Monitoring System it was -3.15 (-155.61 to 149.32) for SBP, -1.28 (-1430.91 to 1428.36) for DBP, and 1.68 (-501 to 504.36) for MAP. For Finapres Medical Systems device it was …..NEED TO DISCUSS WITH AARON. In the subset of studies conducted using the femoral site for invasive arterial pressure measurement, the mean bias and population limits of agreement was -2.98 (-311.89 to 305.93) for SBP, 2.38 (-588.85 to 593.61) for DBP, and 0.09 (-18.71 to 18.89) for MAP. For the radial site it was -0.92 (-70.03 to 68.19) for SBP, 2.09 (-285.69 to 289.87) for DBP, and 1.16 (-80.36 to 82.67) for MAP. 
 
 
 \pagebreak
 
-## Discussion
+## Discussion 
 
 This systematic review showed that a temperature measurement from a 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System device could be as much as about 1°C higher or lower than core temperature. These results may have important implications for practice. It was reassuring that results of our sensitivity analysis restricted to studies assessed to be at low risk of bias using the QUADAS-2 tool were similar. As such, it is vital for healthcare professionals considering using this device to first determine if differences in temperature smaller than this magnitude would be important for the given clinical situation. If so, then it may not be appropriate to substitute the 3M^TM^ Bair Hugger^TM^ Temperature Monitoring System in place of a core thermometer. 
 
@@ -196,7 +236,7 @@ Fig. 1 PRISMA Flow Diagram
 
 Fig. 2 Risk of bias assessments for included studies
 
-Fig. 3 Comparisons between core and zero-heat-flux thermometers within and across studies
+Fig. 3 Comparisons between invasive and CNAP blood pressure measurement within and across studies
 
 
 \pagebreak
@@ -204,13 +244,42 @@ Fig. 3 Comparisons between core and zero-heat-flux thermometers within and acros
 # Appendix
 
 ## Medline search strategy
-
-
+1.	Blood pressure OR arterial pressure
+2.	'non invasive' OR Noninvasive or non-invasive
+3.	1 AND 2
+4.	Nexfin or Clearsight OR CNAP OR CNAPTM OR Finapres OR Tensys OR T-line OR TL-200 OR TL-300 OR Vasotrac
+5.	Penaz OR (Pressman and Newgard) OR Volume Clamp OR Arterial applanation tonometry OR Finger Cuff OR ‘vascular unloading’ OR ‘pulse transit time’
+6.	(Continuous OR continued OR continual OR continually OR continuing)
+7.	(Beat-to-beat OR real time OR real-time OR simultaneous OR simultaneously)
+8.	(Accuracy OR precision OR reliability OR validity OR validation OR standard deviation)
+9.	(Bias OR (mean adj1 difference) OR (limi* adj2 agreement) OR (Bland adj1 Altman))
+10.	 blood pressure monitors.sh.
+11.	6 OR 7
+12.	10 OR 11
+13.	3 AND 11
+14.	5 AND 13
+15.	4 OR 12 OR 13 OR 14
+16.	8 OR 9
+17.	15 AND 16
 
 ## EMBASE search strategy
-
-
-
+1.	Blood pressure OR arterial pressure
+2.	'non invasive' OR Noninvasive or non-invasive
+3.	1 AND 2
+4.	Nexfin or Clearsight OR CNAP OR CNAPTM OR Finapres OR Tensys OR T-line OR TL-200 OR TL-300 OR Vasotrac
+5.	Penaz OR (Pressman and Newgard) OR Volume Clamp OR Arterial applanation tonometry OR Finger Cuff OR ‘vascular unloading’ OR ‘pulse transit time’
+6.	(Continuous OR continued OR continual OR continually OR continuing)
+7.	(Beat-to-beat OR real time OR real-time OR simultaneous OR simultaneously)
+8.	(Accuracy OR precision OR reliability OR validity OR validation OR standard deviation)
+9.	(Bias OR (mean adj1 difference) OR (limi* adj2 agreement) OR (Bland adj1 Altman))
+10.	 exp blood pressure monitor/
+11.	6 OR 7
+12.	10 OR 11
+13.	3 AND 11
+14.	5 AND 13
+15.	4 OR 12 OR 13 OR 14
+16.	8 OR 9
+17.	15 AND 16
 
 <!---BLOCK_MULTICOL_START--->
 
