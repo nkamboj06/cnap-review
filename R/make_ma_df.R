@@ -7,7 +7,7 @@
 #' @param study_df Data frame of study characteristics
 
 #' @importFrom stringr str_replace 
-#' @importFrom dplyr right_join mutate case_when filter
+#' @importFrom dplyr right_join mutate case_when filter rename
 #' @importFrom tidyr pivot_wider
 #' @importFrom rlang enexprs
 #' 
@@ -30,6 +30,14 @@ names(data) <- str_replace(names(data), "[a-z][a-z][a-z]_", "")
 
 data <- data %>%
   right_join(rob, by = "study") %>%
+rename("RoB_selection" = `What was the overall risk of bias associated with the selection of participants?`, 
+"RoB_cnap" = `What was the overall risk of bias associated with the conduct or interpretation of CNAP results?`, 
+"RoB_comparator" = `What was the overall risk of bias associated with the conduct of interpretation of comparator blood pressure measurements?`, 
+"RoB_flow" = `What was the overall risk of bias associated with the participant flow?`) %>%
+  mutate(RoB_overall = if_else(RoB_selection == "low" &
+                                 RoB_cnap == "low" &
+                                 RoB_comparator == "low" &
+                                 RoB_flow == "low", "low", "high")) %>%
   right_join(study_df, by = "study") %>% 
   drop_na(cnap)
 
