@@ -137,45 +137,6 @@ get_analysis_plan <- function(){
    primary_dbp_df_nofunding = primary_dbp_df %>%
      filter(sponsor == "No funding recieved." | sponsor == "No funding source." | sponsor == "No funding received." | sponsor == "No funding was received."| sponsor == "No funding indicated."),
    
-    # make dataframe for clinically available devices
-   clinicallyavailable_sbp_df= make_ma_df(outcomes_df = outcomes_df,
-                          rob = rob,
-                          study_df = study_df,
-                          #add in filters below to select subset of studies (e.g. filter())
-                          outcome == "sbp",
-                          cnap == "cnap" | cnap == "nexfin" | cnap =="tline",
-                          type == "invasive",
-                          location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral"
-                          
-   ), 
-   
-   clinicallyavailable_dbp_df= make_ma_df(outcomes_df = outcomes_df,
-                                                   rob = rob,
-                                                   study_df = study_df,
-                                                   #add in filters below to select subset of studies (e.g. filter())
-                                                   outcome == "dbp",
-                                                   cnap == "cnap" | cnap == "nexfin" | cnap =="tline",
-                                                   type == "invasive",
-                                                   location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral"
-   ),
-   
-   clinicallyavailable_map_df= make_ma_df(outcomes_df = outcomes_df,
-                                                   rob = rob,
-                                                   study_df = study_df,
-                                                   #add in filters below to select subset of studies (e.g. filter())
-                                                   outcome == "map",
-                                                   cnap == "cnap" | cnap == "nexfin" | cnap =="tline",
-                                                   type == "invasive",
-                                                   location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral",
-                                                   case_when(study!="Ameloot 2014" ~ outcome == "map" & type == "invasive",
-                                                             study=="Ameloot 2014" ~ outcome == "map" & type == "invasive" & location == "femoral"
-                                                   )
-   ),
-   
-   # meta-analysis for clinically available devices analysis
-   clinicallyavailable_sbp_results = meta_analysis(clinicallyavailable_sbp_df),
-   clinicallyavailable_dbp_results = meta_analysis(clinicallyavailable_dbp_df),
-   clinicallyavailable_map_results = meta_analysis(clinicallyavailable_map_df),
    
      # meta-analysis for primary analysis
     primary_map_results = meta_analysis(primary_map_df),
@@ -188,7 +149,7 @@ get_analysis_plan <- function(){
     primary_map_nofunding_results = meta_analysis(primary_map_df_nofunding),
     primary_dbp_nofunding_results = meta_analysis(primary_dbp_df_nofunding),
     results_list = list(
-     primary_sbp_results, primary_dbp_results, primary_map_results, primary_sbp_lowrisk_results, primary_dbp_lowrisk_results, primary_map_lowrisk_results, primary_sbp_nofunding_results, primary_dbp_nofunding_results, primary_map_nofunding_results, clinicallyavailable_sbp_results, clinicallyavailable_dbp_results, clinicallyavailable_map_results, vc_sbp_results, vc_dbp_results, vc_map_results, aat_sbp_results, aat_dbp_results, aat_map_results, nexfin_results, nexfin_dbp_results, nexfin_map_results, tline_sbp_results, tline_dbp_results, tline_map_results, cnap_sbp_results, cnap_dbp_results, cnap_map_results, femoral_sbp_results, femoral_dbp_results, femoral_map_results, radial_sbp_results, radial_dbp_results, radial_map_results),
+     primary_sbp_results, primary_dbp_results, primary_map_results, primary_sbp_lowrisk_results, primary_dbp_lowrisk_results, primary_map_lowrisk_results, primary_sbp_nofunding_results, primary_dbp_nofunding_results, primary_map_nofunding_results, aat_sbp_results, aat_dbp_results, aat_map_results, vc_sbp_results, vc_dbp_results, vc_map_results, nexfin_results, nexfin_dbp_results, nexfin_map_results, tline_sbp_results, tline_dbp_results, tline_map_results, cnap_sbp_results, cnap_dbp_results, cnap_map_results, femoral_sbp_results, femoral_dbp_results, femoral_map_results, radial_sbp_results, radial_dbp_results, radial_map_results),
     results_flextable = make_results_flextable(results_list,
                                        names = c("Primary SBP",
                                                  "Primary DBP",
@@ -199,15 +160,12 @@ get_analysis_plan <- function(){
                                                  "Studies not funded SBP",
                                                  "Studies not funded DBP",
                                                  "Studies not funded MAP",
-                                                 "Clinically Available Devices SBP",
-                                                 "Clinically Available Devices DBP",
-                                                 "Clinically Available Devices MAP",
-                                                 "Volume Clamp SBP",
-                                                 "Volume Clamp DBP",
-                                                 "Volume Clamp MAP",
                                                  "AAT SBP",
                                                  "AAT DBP",
                                                  "AAT MAP",
+                                                 "Volume Clamp SBP",
+                                                 "Volume Clamp DBP",
+                                                 "Volume Clamp MAP",
                                                  "Nexfin SBP",
                                                  "Nexfin DBP",
                                                  "Nexfin MAP",
