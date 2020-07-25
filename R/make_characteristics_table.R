@@ -31,7 +31,7 @@ make_characteristics_table <- function(study_df, baseline_df, outcomes_df) {
     rename( sample = sample_n,
             female = female_n,
             male = male_n)
-
+  
 data <-   outcomes_df %>%
     pivot_wider(names_from = c(outcome,
                                measure
@@ -83,7 +83,7 @@ data <-   outcomes_df %>%
     mutate(n1=participants) %>% 
     mutate(N1=measurements) %>% 
     select(Year, Study, code,  perc_male, age, group, 
-                  setting, cnap, type, location, participants,n1,
+                  setting, cnap, type, location, participants, n1,
            # didn't include columns for sbp, dbp and map because 
            # it takes up a lot of room and only 4 studies reported anyway
                   measurements,N1, -sbp, -dbp, -map) %>%
@@ -154,11 +154,11 @@ data <-   outcomes_df %>%
   
   compose(j = "perc_male",
                 value = as_paragraph(as_image(
-                  src = here("inst/sex.png"),
+                  src = here("figures/sex.png"),
                   width = .4, height = .3)),
                 part="header"
   ) %>% 
-  
+    
     merge_v(part = "body", j = 1:2) %>% 
   
     merge_at(part = "body", i=~Study=="Berkelmans", j = "code") %>% 
@@ -240,13 +240,20 @@ data <-   outcomes_df %>%
     bg(i=1, j=8:14, part="header", bg="#930093") %>% 
     color(i=1, j=8:14, part="header", color="white")  %>% 
     empty_blanks() %>% 
-    set_header_labels(Year ="", Study = "", code = "",
-                      setting = "", age= "Age (years)",
-                      cnap = "CNAP device", 
-                      type = "Comparator",
-                      location = "", n1 = "Participants",
-                      N1 = "Measurements", group = "",
-                      participants="", measurements="") %>% 
+    set_header_labels(Year ="", 
+                      Study = "", 
+                      code = "",  
+                      perc_male = "", 
+                      age= "Age (years)",
+                      group = "",
+                      setting = "",
+                      cnap = "CNAP",
+                      type = "Comparator", 
+                      location = "",
+                      n1 = "Participants",
+                      N1 = "Measurements", 
+                      n = "", 
+                      N = "") %>% 
     border_remove()  %>% 
     hline(i =~Year=="2018", part = "body", 
           border = fp_border(color="black", width = 1)) %>% 
@@ -274,29 +281,31 @@ data <-   outcomes_df %>%
            border = fp_border(color="black", width = 1)) %>% 
     hline_bottom(part = "body", 
                  border = fp_border(color="black", width = 1))  %>% 
-    fix_border_issues() %>% 
-  
-autofit(
+    fix_border_issues() 
+
     # use these width functions to set specific column widths for the 
-  # word document
-  # %>% 
-  #   width(j="Year",width = 0.2) %>%
-  #   width(j="Study",width = 0.20)  %>%
-  #   width(j="code",width = 0.10)  %>%
-  #   width(j="perc_male",width = 0.80) %>%
-  #   width(j="age",width = 0.75) %>%
-  #   width(j="patients",width = 0.30)  %>%
-  #   width(j="comparison",width = 0.50) %>%
-  #   width(j="n",width = 0.10) %>%
-  #   width(j="n1",width = 0.70) %>%
-  #   width(j="N",width = 0.30) %>%
-  #   width(j="N1",width = 0.6) %>% 
+    # word document
+    # %>% 
+    #   width(j="Year",width = 0.40) %>%
+    #   width(j="Study",width = 0.90) %>%
+    #   width(j="code",width = 0.39)  %>%
+    #   width(j="perc_male",width = 0.80)  %>%
+    #   width(j="age",width = 0.70) %>%
+    #   width(j="group",width = 0.75) %>%
+    #   width(j="setting",width = 0.75) %>%  
+    #   width(j="cnap",width = 0.75) %>%
+    #   width(j="comparator",width = 1.00) %>%
+    #   width(j="location",width = 0.62) %>%
+    #   width(j="n",width = 0.30) %>%
+    #   width(j="n1",width = 1.00) %>% 
+    #   width(j="N",width = 0.60) %>%
+    #   width(j="N1",width = 1.20) %>%
+    
   #   footnote(i =2, j = 6,
   #            value = as_paragraph(
   #              "mean (standard deviation) or median [interquartile range]"
   #            ),
   #            ref_symbols = "a",
   #            part = "header")
-  #
-) 
+
 }

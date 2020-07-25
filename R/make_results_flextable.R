@@ -13,8 +13,8 @@ make_results_flextable <- function(results_list,
   ma <- results_list
   names(ma) <- c(names)
   df <- bind_rows(ma, .id="Comparison")
-  
-  df %>%
+   df %>%
+    separate(col = Comparison, into=c("Comparison", "Outcome"), sep="_") %>%
     rename(" " = Comparison, "Mean bias" = bias_mean,
            "Tau-squared" = tau_est, 
            "Lower 95% LoA" = LOA_L, 
@@ -31,51 +31,53 @@ make_results_flextable <- function(results_list,
               "τ",
               as_sup("2")
             ))  %>% 
-    footnote(i = 1, j = 6:12,
+    footnote(i = 1, j = 7:13,
              value = as_paragraph(
                "Units are mmHg"
              ),
              ref_symbols = "a",
              part = "header") %>% 
-    footnote(i = 1, j = 7,
+    footnote(i = 1, j = 8,
              value = as_paragraph(
                "Variance"
              ),
              ref_symbols = "b",
              part = "header") %>% 
-    footnote(i = 1, j = 8,
+    footnote(i = 1, j = 9,
              value = as_paragraph(
                "Measure of heterogeneity"
              ),
              ref_symbols = "c",
              part = "header") %>% 
-    footnote(i = 1, j = 9:12,
+    footnote(i = 1, j = 10:13,
              value = as_paragraph(
                "LoA = Limits of Agreement"
              ),
              ref_symbols = "d",
              part = "header") %>% 
-    footnote(i = 1, j = 11:12,
+    footnote(i = 1, j = 12:13,
              value = as_paragraph(
                "CI = Confidence Intervals"
              ),
              ref_symbols = "e",
              part = "header") %>% 
-    add_header_row(values = c("","","","","","","","","","","Population LoA"),  colwidths = c(rep(1,10, by=1), 2))   %>%
+    add_header_row(values = c("","","","","","","","","","","","Population LoA"),  colwidths = c(rep(1,11, by=1), 2))   %>%
     theme_booktabs() %>% 
-    width(j=1,width = 1.19) %>%
-    width(j=2,width = 0.69) %>%
-    width(j=3,width = 1.06) %>%
-    width(j=4,width = 0.94) %>%
-    width(j=5,width = 1.19) %>%
-    width(j=6,width = 0.56) %>%
-    width(j=7,width = 0.56) %>%
-    width(j=8,width = 0.6) %>%
-    width(j=9,width = 0.59) %>%
-    width(j=10,width = 0.75) %>%
-    width(j=11,width = 0.94) %>%
-    width(j=12,width = 0.94) %>% 
+    width(j=1,width = 0.80) %>%
+    width(j=2,width = 0.78) %>%
+    width(j=3,width = 0.70) %>%
+    width(j=4,width = 1.06) %>%
+    width(j=5,width = 1.00) %>%
+    width(j=6,width = 1.19) %>%
+    width(j=7,width = 0.60) %>%
+    width(j=8,width = 0.60) %>%
+    width(j=9,width = 0.6)  %>%
+    width(j=10,width = 0.59) %>%
+    width(j=11,width = 0.75) %>%
+    width(j=12,width = 1.00) %>%
+    width(j=13,width = 1.00) %>% 
     fontsize(size = 10)
-  
 
 }
+
+
