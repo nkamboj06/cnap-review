@@ -414,6 +414,9 @@ get_analysis_plan <- function(){
    radial_sbp_results = meta_analysis(radial_sbp_df),
    radial_dbp_results = meta_analysis(radial_dbp_df),
    radial_map_results = meta_analysis(radial_map_df),
+
+   # Plot
+    dist_plot_primary_sbp = make_dist_plot(study_data = primary_sbp_df, ma_results = primary_sbp_results),
    
    # Renders the manuscript - use drake::r_make() to render not knit
     manuscript_word = target(
