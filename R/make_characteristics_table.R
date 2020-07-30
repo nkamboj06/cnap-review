@@ -27,15 +27,15 @@ make_characteristics_table <- function(study_df, baseline_df, outcomes_df) {
   baseline <-   baseline_df %>%
     pivot_wider(names_from = c(characteristic,
                                measure
-    )) %>% 
+    )) %>%
     rename( sample = sample_n,
             female = female_n,
             male = male_n)
-  
+
 data <-   outcomes_df %>%
     pivot_wider(names_from = c(outcome,
                                measure
-    )) %>% 
+    )) %>%
       mutate(measurements = case_when(
         is.na(sbp_measurements & dbp_measurements) ~ map_measurements,
         TRUE ~ sbp_measurements
@@ -260,9 +260,9 @@ data <-   outcomes_df %>%
                       cnap = "CNAP",
                       type = "Comparator", 
                       location = "",
-                      n = "", 
+                      participants = "",
                       n1 = "Participants",
-                      N = "",
+                      measurements = "",
                       N1 = "Measurements") %>% 
     border_remove()  %>% 
     hline(i =~Year=="2018", part = "body", 
@@ -291,31 +291,31 @@ data <-   outcomes_df %>%
            border = fp_border(color="black", width = 1)) %>% 
     hline_bottom(part = "body", 
                  border = fp_border(color="black", width = 1))  %>% 
-    fix_border_issues()  
+    fix_border_issues()  %>%
+
 
     # use these width functions to set specific column widths for the 
     # word document
-    # %>% 
-    #   width(j="Year",width = 0.49) %>%
-    #   width(j="Study",width = 0.70) %>%
-    #   width(j="code",width = 0.59)  %>%
-    #   width(j="perc_male",width = 0.80)  %>%
-    #   width(j="age",width = 0.70) %>%
-    #   width(j="group",width = 0.75) %>%
-    #   width(j="setting",width = 0.75) %>%  
-    #   width(j="cnap",width = 0.65) %>%
-    #   width(j="comparator",width = 0.97) %>%
-    #   width(j="location",width = 0.61) %>%
-    #   width(j="n",width = 0.30) %>%
-    #   width(j="n1",width = 1.00) %>% 
-    #   width(j="N",width = 0.53) %>%
-    #   width(j="N1",width = 1.20) %>%
-    
-  #   footnote(i =2, j = 6,
-  #            value = as_paragraph(
-  #              "mean (standard deviation) or median [interquartile range]"
-  #            ),
-  #            ref_symbols = "a",
-  #            part = "header")
+       width(j="Year",width = 0.49) %>%
+       width(j="Study",width = 0.70) %>%
+       width(j="code",width = 0.59)  %>%
+       width(j="perc_male",width = 0.80)  %>%
+       width(j="age",width = 0.70) %>%
+       width(j="group",width = 0.75) %>%
+       width(j="setting",width = 0.75) %>%
+       width(j="cnap",width = 0.65) %>%
+       width(j="type",width = 0.97) %>%
+       width(j="location",width = 0.61) %>%
+       width(j="participants",width = 0.30) %>%
+       width(j="n1",width = 1.00) %>%
+       width(j="measurements",width = 0.53) %>%
+       width(j="N1",width = 1.20) %>%
+
+     footnote(i =2, j = 6,
+              value = as_paragraph(
+                "mean (standard deviation) or median [interquartile range]"
+              ),
+              ref_symbols = "a",
+              part = "header")
 
 }
