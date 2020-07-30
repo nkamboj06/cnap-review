@@ -48,7 +48,17 @@ data <-   outcomes_df %>%
     right_join(study_df) %>% 
     select(-sponsor) %>% 
     right_join(baseline) %>% 
-  mutate(code = countrycode(country, origin = 'country.name', destination = 'iso3c') 
+  mutate(code = countrycode(country, origin = 'country.name', destination = 'iso3c'),
+           
+         cnap = case_when(
+           cnap == "nexfin" ~ "ClearSight",
+           cnap == "tline" ~ "T-line",
+           cnap == "finapres" ~ "Finapres",
+           cnap == "ncat" ~ "NCAT",
+           cnap == "cnap" ~ "CNAP®"
+         )
+         
+         
 )
     
     
