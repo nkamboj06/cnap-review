@@ -2,7 +2,9 @@
 #' @export
 #' @importFrom ggplot2 ggplot aes stat_function theme margin element_text element_line
 #' element_blank labs
-
+library(ggplot2)
+library(gofer)
+library(patchwork)
 make_dist_plot <- function(study_data, ma_results) {
 
   bias <- study_data$meanbias
@@ -38,6 +40,6 @@ make_dist_plot <- function(study_data, ma_results) {
           panel.background = element_blank(),
           axis.ticks = element_blank(),
           plot.caption = element_text(hjust = 0)) #+
-
+  
 g
-}
+  }

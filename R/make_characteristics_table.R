@@ -228,7 +228,7 @@ data <-   outcomes_df %>%
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "measurements") %>% 
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "N1") %>% 
   
-    fontsize(size = 10) %>% 
+    fontsize(size = 9) %>% 
     fix_border_issues() %>% 
     add_header_row(values = c("Study","Participants", "Blood pressure measurements"),  
                    colwidths = c(3, 4 , 7)) %>% 
@@ -250,10 +250,10 @@ data <-   outcomes_df %>%
                       cnap = "CNAP",
                       type = "Comparator", 
                       location = "",
-                      n1 = "Participants",
-                      N1 = "Measurements", 
                       n = "", 
-                      N = "") %>% 
+                      n1 = "Participants",
+                      N = "",
+                      N1 = "Measurements") %>% 
     border_remove()  %>% 
     hline(i =~Year=="2018", part = "body", 
           border = fp_border(color="black", width = 1)) %>% 
@@ -281,24 +281,24 @@ data <-   outcomes_df %>%
            border = fp_border(color="black", width = 1)) %>% 
     hline_bottom(part = "body", 
                  border = fp_border(color="black", width = 1))  %>% 
-    fix_border_issues() 
+    fix_border_issues()  
 
     # use these width functions to set specific column widths for the 
     # word document
     # %>% 
-    #   width(j="Year",width = 0.40) %>%
-    #   width(j="Study",width = 0.90) %>%
-    #   width(j="code",width = 0.39)  %>%
+    #   width(j="Year",width = 0.49) %>%
+    #   width(j="Study",width = 0.70) %>%
+    #   width(j="code",width = 0.59)  %>%
     #   width(j="perc_male",width = 0.80)  %>%
     #   width(j="age",width = 0.70) %>%
     #   width(j="group",width = 0.75) %>%
     #   width(j="setting",width = 0.75) %>%  
-    #   width(j="cnap",width = 0.75) %>%
-    #   width(j="comparator",width = 1.00) %>%
-    #   width(j="location",width = 0.62) %>%
+    #   width(j="cnap",width = 0.65) %>%
+    #   width(j="comparator",width = 0.97) %>%
+    #   width(j="location",width = 0.61) %>%
     #   width(j="n",width = 0.30) %>%
     #   width(j="n1",width = 1.00) %>% 
-    #   width(j="N",width = 0.60) %>%
+    #   width(j="N",width = 0.53) %>%
     #   width(j="N1",width = 1.20) %>%
     
   #   footnote(i =2, j = 6,
