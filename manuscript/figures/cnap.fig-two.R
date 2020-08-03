@@ -1,17 +1,20 @@
 ### curves
 library(ggplot2)
 library(gofer)
-bias=data_m$bias
-s2_unb = data_m$s2
-pooled_bias = primary$bias_mean
-pooled_sd = primary$sd2_est
-pooled_tau2 = primary$tau_est
-pooled_sd = sqrt(pooled_sd^2 + pooled_tau2)
+make_dist_plot <- function(study_data, ma_results) {
+  
+  bias <- study_data$meanbias
+  s2_unb = study_data$s2
+  pooled_bias = ma_results$bias_mean
+  pooled_sd = ma_results$sd2_est
+  pooled_tau2 = ma_results$tau_est
+  pooled_sd = sqrt(pooled_sd + pooled_tau2)
+  
+  LOA_l = ma_results$LOA_L
+  LOA_u = ma_results$LOA_U
+  LOA_l_CI = ma_results$CI_L_rve
+  LOA_u_CI = ma_results$CI_U_rve
 
-LOA_l = primary$LOA_L
-LOA_u = primary$LOA_U
-LOA_l_CI = primary_sbp$CI_L_rve 
-LOA_u_CI = primary_sbp$CI_U_rve
 g <- ggplot(data.frame(x=seq(-20,20,length=200)), aes(x=x)) + 
   stat_function(fun=dnorm, args = list(bias[1], sd=sqrt(s2_unb[1])), colour = "cornflowerblue", size=0.6, alpha = 0.5) 
 
@@ -48,4 +51,4 @@ g
 
 ggsave(plot = g, device = "pdf", filename = "manuscript/figures/fig3.pdf",
        width = 174, units = "mm")
-
+}

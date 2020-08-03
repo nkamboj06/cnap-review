@@ -416,7 +416,14 @@ get_analysis_plan <- function(){
    radial_map_results = meta_analysis(radial_map_df),
 
    # Plot
-    dist_plot_primary_sbp = make_dist_plot(study_data = primary_sbp_df, ma_results = primary_sbp_results),
+   dist_plot_primary_sbp = make_dist_plot(study_data = primary_sbp_df, ma_results = primary_sbp_results),
+   dist_plot_primary_dbp = make_dist_plot(study_data = primary_dbp_df, ma_results = primary_dbp_results),
+   dist_plot_primary_map = make_dist_plot(study_data = primary_map_df, ma_results = primary_map_results),
+   
+   # combined plot
+   combined_plot = make_combined_plot(dist_plot_primary_sbp,
+                                      dist_plot_primary_dbp,
+                                      dist_plot_primary_map),
    
    # Renders the manuscript - use drake::r_make() to render not knit
     manuscript_word = target(

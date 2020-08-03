@@ -30,7 +30,9 @@ make_characteristics_table <- function(study_df, baseline_df, outcomes_df) {
     )) %>%
     rename( sample = sample_n,
             female = female_n,
-            male = male_n)
+            male = male_n,
+            )
+  
 
 data <-   outcomes_df %>%
     pivot_wider(names_from = c(outcome,
@@ -48,23 +50,35 @@ data <-   outcomes_df %>%
     right_join(study_df) %>% 
     select(-sponsor) %>% 
     right_join(baseline) %>% 
-  mutate(code = countrycode(country, origin = 'country.name', destination = 'iso3c'),
-           
+  mutate(code = countrycode(country, origin = 'country.name', destination = 'iso3c'), 
          cnap = case_when(
            cnap == "nexfin" ~ "ClearSight",
            cnap == "tline" ~ "T-line",
            cnap == "finapres" ~ "Finapres",
            cnap == "ncat" ~ "NCAT",
            cnap == "cnap" ~ "CNAP®"
-         )
-         
-         
+         ),
+         type = case_when(
+           type == "invasive" ~ "Invasive"
+         ),
+        location = case_when(
+          location == "radial" ~ "Radial",
+          location == "femoral" ~ "Femoral",
+          location == "radialfemoral" ~ "Radial/Femoral"
+        ),
+        setting = case_when(
+          setting == "Cardiovascular ICU" ~ "Cardiac ICU",
+          setting == "Post-operative cardiac surgery ICU" ~ "Cardiac Surgery ICU",
+          setting == "Cardiological or Cardio-Surgical ICU" ~ "Cardiac Surgery ICU",
+          setting == "ICU, Medium care unit or Coronary care unit" ~ "ICU/CCU",
+          setting == "ICU" ~ "ICU",
+          setting == "Surgical ICU" ~ "Surgical ICU",
+          setting == "Cardiac ICU" ~ "Cardiac ICU",
+          setting == "Medical ICU" ~ "Medical ICU",
+          setting == "Medical-­Surgical-­Burns ICU" ~ "Medical Surgical Burns ICU"
+        )
+        
 )
-    
-    
-
-
-    
   
   ft <- data %>% 
     # bind_rows(data_SL) %>%
@@ -164,8 +178,8 @@ data <-   outcomes_df %>%
   
   compose(j = "perc_male",
                 value = as_paragraph(as_image(
-                  src = here("figures/sex.png"),
-                  width = .4, height = .3)),
+                  src = here("manuscript/figures/sex.png"),
+                  width = .9, height = .8)),
                 part="header"
   ) %>% 
     
@@ -257,7 +271,7 @@ data <-   outcomes_df %>%
                       age= "Age (years)",
                       group = "",
                       setting = "",
-                      cnap = "CNAP",
+                      cnap = "Device",
                       type = "Comparator", 
                       location = "",
                       participants = "",
@@ -296,26 +310,26 @@ data <-   outcomes_df %>%
 
     # use these width functions to set specific column widths for the 
     # word document
-       width(j="Year",width = 0.49) %>%
-       width(j="Study",width = 0.70) %>%
+       width(j="Year",width = 0.45) %>%
+       width(j="Study",width = 0.87) %>%
        width(j="code",width = 0.59)  %>%
-       width(j="perc_male",width = 0.80)  %>%
+       width(j="perc_male",width = 1.1)  %>%
        width(j="age",width = 0.70) %>%
-       width(j="group",width = 0.75) %>%
-       width(j="setting",width = 0.75) %>%
-       width(j="cnap",width = 0.65) %>%
-       width(j="type",width = 0.97) %>%
-       width(j="location",width = 0.61) %>%
-       width(j="participants",width = 0.30) %>%
-       width(j="n1",width = 1.00) %>%
-       width(j="measurements",width = 0.53) %>%
+       width(j="group",width = 0.67) %>%
+       width(j="setting",width = 0.70) %>%
+       width(j="cnap",width = 0.75) %>%
+       width(j="type",width = 0.95) %>%
+       width(j="location",width = 0.60) %>%
+       width(j="participants",width = 0.35) %>%
+       width(j="n1",width = 0.95) %>%
+       width(j="measurements",width = 0.60) %>%
        width(j="N1",width = 1.20) %>%
 
-     footnote(i =2, j = 6,
+     footnote(i =2, j = 5,
               value = as_paragraph(
                 "mean (standard deviation) or median [interquartile range]"
               ),
               ref_symbols = "a",
-              part = "header")
+              part = "header") 
 
 }

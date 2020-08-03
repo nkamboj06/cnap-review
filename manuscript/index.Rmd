@@ -278,7 +278,7 @@ drake::readd(rob_within)
 
 Fig. 3 Comparisons between invasive and CNAP blood pressure measurement within and across studies
 ```{r }
-drake::readd(dist_plot)
+drake::readd(combined_plot)
 ```
 
 \pagebreak
