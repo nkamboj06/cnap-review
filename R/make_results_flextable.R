@@ -63,10 +63,10 @@ make_results_flextable <- function(results_list,
              part = "header") %>% 
     add_header_row(values = c("","","","","","","","","","","","Population LoA"),  colwidths = c(rep(1,11, by=1), 2))   %>%
     theme_booktabs() %>% 
-    width(j=1,width = 0.80) %>%
+    width(j=1,width = 0.89) %>%
     width(j=2,width = 0.78) %>%
-    width(j=3,width = 0.70) %>%
-    width(j=4,width = 1.06) %>%
+    width(j=3,width = 0.65) %>%
+    width(j=4,width = 1.04) %>%
     width(j=5,width = 1.00) %>%
     width(j=6,width = 1.19) %>%
     width(j=7,width = 0.60) %>%

@@ -89,10 +89,10 @@ data <-   outcomes_df %>%
     mutate(perc_male = round((male/(female+male))*100, 1)) %>% 
     mutate(age = case_when(
       !is.na(age_mean) & !is.na(age_sd)~ glue("{age_mean} ({age_sd})"),
-      !is.na(age_mean) & !is.na(age_min)~ glue("{age_mean} [{age_min} to {age_max}]"),
-      !is.na(age_median) & !is.na(age_min)~ glue("{age_median} [{age_min} to {age_max}]"),
-      is.na(age_median) & is.na(age_median) & !is.na(age_min)~ glue("[{age_min} to {age_max}]"),
-      !is.na(age_median) & !is.na(age_loweriqr) ~ glue("{age_median} [{age_loweriqr}, {age_upperiqr})"),
+      !is.na(age_mean) & !is.na(age_min)~ glue("{age_mean} ({age_min} to {age_max})*"),
+      !is.na(age_median) & !is.na(age_min)~ glue("{age_median} [{age_min} to {age_max}]*"),
+        is.na(age_median) & is.na(age_median) & !is.na(age_min)~ glue("[{age_min} to {age_max}]"),
+      !is.na(age_median) & !is.na(age_loweriqr) ~ glue("{age_median} [{age_loweriqr}, {age_upperiqr}]"),
       !is.na(age_mean) & !is.na(age_loweriqr) ~ glue("{age_mean} [{age_loweriqr}, {age_upperiqr})")
       ),
                   sbp = case_when(
@@ -179,7 +179,7 @@ data <-   outcomes_df %>%
   compose(j = "perc_male",
                 value = as_paragraph(as_image(
                   src = here("manuscript/figures/sex.png"),
-                  width = .9, height = .8)),
+                  width = .9, height = .3)),
                 part="header"
   ) %>% 
     
@@ -327,9 +327,11 @@ data <-   outcomes_df %>%
 
      footnote(i =2, j = 5,
               value = as_paragraph(
-                "mean (standard deviation) or median [interquartile range]"
+                "mean (standard deviation), mean(range)*, mean(interquartile range), median[range]*, or median [interquartile range]"
               ),
               ref_symbols = "a",
               part = "header") 
+  
+  
 
 }
