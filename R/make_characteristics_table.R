@@ -330,8 +330,14 @@ data <-   outcomes_df %>%
                 "mean (standard deviation), mean(range)*, mean(interquartile range), median[range]*, or median [interquartile range]"
               ),
               ref_symbols = "a",
-              part = "header") 
-  
+              part = "header")  %>%
+  compose(j = "perc_male",
+          i=2,
+          value = as_paragraph(as_image(
+            src = here("manuscript/figures/sex.png"),
+            width = .4, height = .3)),
+          part="header"
+  )
   
 
 }
