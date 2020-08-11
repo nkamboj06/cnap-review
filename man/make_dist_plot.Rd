@@ -4,7 +4,7 @@
 \alias{make_dist_plot}
 \title{Distribution plot}
 \usage{
-make_dist_plot(study_data, ma_results)
+make_dist_plot(study_data, ma_results, type)
 }
 \description{
 Distribution plot
