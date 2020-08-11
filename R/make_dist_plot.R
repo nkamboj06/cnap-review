@@ -1,11 +1,11 @@
 #' @title Distribution plot
 #' @export
 #' @importFrom ggplot2 ggplot aes stat_function theme margin element_text element_line
-#' element_blank labs
-library(ggplot2)
-library(gofer)
-library(patchwork)
-make_dist_plot <- function(study_data, ma_results) {
+#' element_blank labs scale_y_continuous
+#' @importFrom glue glue
+
+make_dist_plot <- function(study_data, ma_results,
+                           type) {
 
   bias <- study_data$meanbias
   s2_unb = study_data$s2
@@ -28,9 +28,9 @@ make_dist_plot <- function(study_data, ma_results) {
 
   g <- g + stat_function(fun=dnorm, args = list(pooled_bias, pooled_sd), colour ="lightcoral", alpha = 0.5) +
     stat_function(fun=dnorm, args = list(pooled_bias, pooled_sd), colour = NA, geom="area", fill="lightcoral", alpha = 0.6) +
-    #scale_x_continuous(limits = c(-3.5,3.5), breaks = c(-2, -1, 0, 1, 2)) +
-    labs(x = expression('Difference between CNAP and invasive blood pressure measurements (mmHg)'),
-         caption = "Blue curves are distributions of the differences between measurements from CNAP and invasive\narterial blood pressure measurements in individual studies. The red curve is the distribution of the \npooled estimate.")+
+    labs(x = glue('Difference between CNAP and invasive {type} blood pressure measurements (mmHg)')
+         #scale_x_continuous(limits = c(-3.5,3.5), breaks = c(-2, -1, 0, 1, 2)) +
+        )+
     scale_y_continuous(name = "Density \n", limits = c(0, 0.1)) +
     #labs(title = "\nOuter confidence intervals for pooled limits of agreement\n\n  Pooled limits of agreement")+
     theme(plot.title = element_text(hjust = 0.5, margin = margin(t=10, b=-32), size=10),

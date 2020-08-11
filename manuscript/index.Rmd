@@ -39,21 +39,9 @@ output:
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(include=TRUE,
                       echo=FALSE, warning=FALSE, message=FALSE)
-library(officer)
-library(officedown)
+
 library(drake)
-library(dplyr)
-library(tidyverse)
-library(ggplot2)
-library(gofer)
-library(ggprisma) 
-library(robvis)
-library(knitr)
-library(magrittr)
-library(flextable)
-library(officer)
-library(officedown)
-library(patchwork)
+
 
 
 loadd(nexfin_results)
@@ -188,7 +176,7 @@ The outer 95% confidence intervals for pooled limits of agreement were calculate
 
 Prior to conducting the meta-analyses, the results from each study were converted into a standard format, with bias meaning CNAP minus the comparator invasive blood pressure monitoring system. One study used the femoral artery as the comparator for all 45 participants and also completed an additional analysis on 17 of the 45 participants using the radial artery for invasive MAP measurement. [@de2014validation] Only the results from the femoral artery were reported. Another study reported results for multiple groups of participants, therefore in the meta-analysis each of these groups was treated as a separate 'comparison'. [@berkelmans2018comparing] Two studies [@lakhal2016cnap; @hohn2013non] used a mixture of radial and femoral artery for comparator measurements.The authors of these studies reported the combined results therefore these two studies were not included in the invasive arterial pressure measurement site sub-group analysis. We used the combined estimate in our primary analysis and the estimate for the different methods, and devices in a subgroup analysis. To the best of our knowledge there are no specific guidelines to evaluate CNAP monitoring systems, however the criteria developed by the Association for the Advancement of Medical Instrumentation (AAMI) for evaluating automatic sphygmanometers has been cited in other research to evaluate CNAP measurement. [@hohn2013non; @martina2012noninvasive; @ilies2015comparison; @ilies2012investigation; @hahn2012clinical; @fischer2012non] Therefore, for this review the criteria by AAMI for automatic sphygmanometers was used to evaluate CNAP monitoring. For SAP, DBP, and MAP, the defined acceptability for accuracy was no greater than 5 mmHg and precision not greater than 8 mmHg for SAP and DBP. [@sphygmomanometers20092] It was deemed that outer confidence bounds for 95% limits of agreement between CNAP and invasive monitoring systems (termed as 'population limits of agreement') outside of these bounds would be clinically unacceptable.
 
-A sensitivity analysis for the primary comparison (CNAP versus invasive arterial pressure monitoring systems) was performed based on risk of bias. Studies rated as 'unclear risk of bias' was treated as 'high risk' and 'high risk of bias' studies were excluded from analyses. We conducted subgroup analyses for the primary comparison according to the method of CNAP monitoring (volume clamp vs. arterial applanation tonometry), and arterial catheter site for invasive arterial pressure measurement (radial vs. femoral). As clinicians would be interested in the accuracy of specific CNAP devices, we conducted a subgroup analyses for the type of CNAP monitoring device (CNAP® monitor, ClearSight system, and T-Line), where a sufficient number of studies were available.
+A sensitivity analysis for the primary comparison (CNAP versus invasive arterial pressure monitoring systems) was performed based on risk of bias. Studies rated as 'unclear risk of bias' was treated as 'high risk' and 'high risk of bias' studies were excluded from analyses. We conducted subgroup analyses for the primary comparison according to the method of CNAP monitoring (volume clamp vs. arterial applanation tonometry), and arterial catheter site for invasive arterial pressure measurement (radial vs. femoral). As clinicians would be interested in the accuracy of specific CNAP devices, we conducted a subgroup analyses for the type of CNAP monitoring device (CNAP® monitor, ClearSight system, and T-Line), where a sufficient number of studies were available.
 
 ## Results
 
@@ -208,7 +196,7 @@ The modified QUADAS-2 was used to conduct the quality assessment (presented in f
 
 ### Primary Comparison
 
-Table 2 presents the results of the primary, sensitivity, and all subgroup analyses. The pooled estimate for the mean bias between the CNAP and invasive arterial pressure measurements was `r primary_sbp_results$bias_mean` mmHg, `r primary_dbp_results$bias_mean` mmHg, and `r primary_map_results$bias_mean`mmHg for SBP, DBP, and MAP, respectively. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve`mmHg for SBP, `r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve` mmHg for DBP, and `r primary_map_results$CI_L_rve` mmHg to `r primary_map_results$CI_U_rve`mmHg for MAP. The amount of between-study heterogeneity is displayed graphically in the density plot in Fig.3. The quality of evidence for the primary comparison was downgraded to very low quality due to concerns about imprecision, inconsistency, and study limitations.
+Table 2 presents the results of the primary, sensitivity, and all subgroup analyses. The pooled estimate for the mean bias between the CNAP and invasive arterial pressure measurements was `r primary_sbp_results$bias_mean` mmHg, `r primary_dbp_results$bias_mean` mmHg, and `r primary_map_results$bias_mean`mmHg for SBP, DBP, and MAP, respectively. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve`mmHg for SBP, `r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve` mmHg for DBP, and `r primary_map_results$CI_L_rve` mmHg to `r primary_map_results$CI_U_rve`mmHg for MAP. The amount of between-study heterogeneity is displayed graphically in the density plot in Figure \@ref(fig:combined). The quality of evidence for the primary comparison was downgraded to very low quality due to concerns about imprecision, inconsistency, and study limitations.
 
 ### Sensitivity Analyses
 
@@ -275,9 +263,7 @@ drake::readd(rob_within)
 
 \pagebreak
 
-Fig. 3 Comparisons between CNAP and invasive blood pressure measurement within and across studies
-
-```{r }
+```{r combined, fig.cap="Comparisons between CNAP and invasive blood pressure measurement within and across studies", fig.height = 6}
 drake::readd(combined_plot)
 ```
 
