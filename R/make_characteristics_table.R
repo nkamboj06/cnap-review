@@ -46,7 +46,7 @@ data <-   outcomes_df %>%
               is.na(sbp_participants & dbp_participants) ~ map_participants,
               TRUE ~ sbp_participants
             )) %>% 
-    select(study, cnap, type, location, group, participants, measurements) %>% 
+    select(study, cnap, location, group, participants, measurements) %>% 
     right_join(study_df) %>% 
     select(-sponsor) %>% 
     right_join(baseline) %>% 
@@ -57,9 +57,6 @@ data <-   outcomes_df %>%
            cnap == "finapres" ~ "Finapres",
            cnap == "ncat" ~ "NCAT",
            cnap == "cnap" ~ "CNAP®"
-         ),
-         type = case_when(
-           type == "invasive" ~ "Invasive"
          ),
         location = case_when(
           location == "radial" ~ "Radial",
@@ -107,7 +104,7 @@ data <-   outcomes_df %>%
     mutate(n1=participants) %>% 
     mutate(N1=measurements) %>% 
     select(Year, Study, code,  perc_male, age, group, 
-                  setting, cnap, type, location, participants, n1,
+                  setting, cnap, location, participants, n1,
            # didn't include columns for sbp, dbp and map because 
            # it takes up a lot of room and only 4 studies reported anyway
                   measurements,N1, -sbp, -dbp, -map) %>%
@@ -188,7 +185,6 @@ data <-   outcomes_df %>%
     merge_at(part = "body", i=~Study=="Berkelmans", j = "code") %>% 
    merge_at(part = "body", i=~Study=="Berkelmans", j = "setting") %>% 
   merge_at(part = "body", i=~Study=="Berkelmans", j = "cnap") %>% 
-  merge_at(part = "body", i=~Study=="Berkelmans", j = "type") %>% 
   merge_at(part = "body", i=~Study=="Berkelmans", j = "location") %>% 
 
   merge_at(part = "body", i=~Study=="Lakhal", j = "code") %>% 
@@ -220,7 +216,6 @@ data <-   outcomes_df %>%
     merge_at(part = "body", i=~Study=="Hofhuizen", j = "perc_male") %>%
     merge_at(part = "body", i=~Study=="Hofhuizen", j = "age") %>% 
     merge_at(part = "body", i=~Study=="Hofhuizen", j = "cnap") %>%
-    merge_at(part = "body", i=~Study=="Hofhuizen", j = "type") %>% 
     
     merge_at(part = "body", i=~Study=="Hofhuizen", j = "group") %>% 
     merge_at(part = "body", i=~Study=="Hofhuizen", j = "setting")  %>% 
@@ -233,7 +228,6 @@ data <-   outcomes_df %>%
     merge_at(part = "body", i=~Study=="Martina", j = "perc_male") %>%
     merge_at(part = "body", i=~Study=="Martina", j = "age") %>% 
     merge_at(part = "body", i=~Study=="Martina", j = "cnap") %>% 
-    merge_at(part = "body", i=~Study=="Martina", j = "type") %>% 
     merge_at(part = "body", i=~Study=="Martina", j = "group") %>% 
     merge_at(part = "body", i=~Study=="Martina", j = "setting")  %>% 
     merge_at(part = "body", i=~Study=="Martina", j = "participants") %>% 
@@ -244,7 +238,6 @@ data <-   outcomes_df %>%
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "code") %>% 
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "perc_male") %>%
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "age") %>% 
-    merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "type") %>% 
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "group") %>% 
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "setting")  %>% 
     merge_at(part = "body", i=~Study=="Meidert" & Year==2014, j = "participants") %>% 
@@ -255,14 +248,14 @@ data <-   outcomes_df %>%
     fontsize(size = 9) %>% 
     fix_border_issues() %>% 
     add_header_row(values = c("Study","Participants", "Blood pressure measurements"),  
-                   colwidths = c(3, 4 , 7)) %>% 
+                   colwidths = c(3, 4 , 6)) %>% 
     align(align = "center", part = "header") %>% 
     bg(i=1, j=1:3, part="header", bg="#0080ff") %>% 
     color(i=1, j=1:3, part="header", color="white") %>% 
     bg(i=1, j=4:7, part="header", bg="#ee721a") %>% 
     color(i=1, j=4:7, part="header", color="white")  %>% 
-    bg(i=1, j=8:14, part="header", bg="#930093") %>% 
-    color(i=1, j=8:14, part="header", color="white")  %>% 
+    bg(i=1, j=8:13, part="header", bg="#930093") %>% 
+    color(i=1, j=8:13, part="header", color="white")  %>% 
     empty_blanks() %>% 
     set_header_labels(Year ="", 
                       Study = "", 
@@ -272,7 +265,6 @@ data <-   outcomes_df %>%
                       group = "",
                       setting = "",
                       cnap = "Device",
-                      type = "Comparator", 
                       location = "",
                       participants = "",
                       n1 = "Participants",
@@ -300,7 +292,7 @@ data <-   outcomes_df %>%
            border = fp_border(color="black", width = 1))  %>% 
     hline( i =~Year=="1993", part = "body", 
            border = fp_border(color="black", width = 1))  %>% 
-    bg(j=11:14, bg="lightgray") %>% 
+    bg(j=10:13, bg="lightgray") %>% 
     hline( i =2, part = "header", 
            border = fp_border(color="black", width = 1)) %>% 
     hline_bottom(part = "body", 
@@ -318,7 +310,6 @@ data <-   outcomes_df %>%
        width(j="group",width = 0.67) %>%
        width(j="setting",width = 0.70) %>%
        width(j="cnap",width = 0.75) %>%
-       width(j="type",width = 0.95) %>%
        width(j="location",width = 0.60) %>%
        width(j="participants",width = 0.35) %>%
        width(j="n1",width = 0.95) %>%
@@ -338,6 +329,5 @@ data <-   outcomes_df %>%
             width = .4, height = .3)),
           part="header"
   )
-  
 
 }

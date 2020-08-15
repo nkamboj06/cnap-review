@@ -7,6 +7,7 @@
 #' @importFrom dplyr bind_rows rename
 #' @importFrom flextable flextable compose as_paragraph 
 #' as_sup footnote add_header_row theme_booktabs width fontsize
+
 make_results_flextable <- function(results_list,
                                names) {
 
@@ -76,8 +77,8 @@ make_results_flextable <- function(results_list,
     width(j=11,width = 0.75) %>%
     width(j=12,width = 1.00) %>%
     width(j=13,width = 1.00) %>% 
-    fontsize(size = 10)
-
+    fontsize(size = 10)  
+    
 }
 
 
