@@ -313,7 +313,7 @@ get_analysis_plan <- function(){
                           cnap == "ncat" | cnap ==  "tline",
                           outcome == "sbp",
                           type == "invasive",
-                          location == "radial" | location == "femoral"
+                          location == "radial" | location == "femoral" | location == "radialfemoral" | location == "radialfemoral" 
    ),
   
    
@@ -324,7 +324,7 @@ get_analysis_plan <- function(){
                           cnap == "ncat" | cnap ==  "tline",
                           outcome == "dbp",
                           type == "invasive",
-                          location == "radial" | location == "femoral"
+                          location == "radial" | location == "femoral" | location == "radialfemoral" | location == "radialfemoral" 
    ),
   
    aat_map_df= make_ma_df(outcomes_df = outcomes_df,
@@ -334,10 +334,9 @@ get_analysis_plan <- function(){
                          cnap == "ncat" | cnap ==  "tline",
                          outcome == "map",
                          type == "invasive",
-                         location == "radial" | location == "femoral"
+                         location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral"
    ),
   
-   
    # meta-analysis for AAT analysis
    aat_sbp_results = meta_analysis(aat_sbp_df),
    aat_dbp_results = meta_analysis(aat_dbp_df),
@@ -406,7 +405,7 @@ get_analysis_plan <- function(){
                              type == "invasive",
                              location == "radial",
                              case_when(study!="Ameloot 2014" ~ outcome == "map" & type == "invasive",
-                                       study=="Ameloot 2014" ~ outcome == "map" & type == "invasive" & location == "femoral"
+                                       study=="Ameloot 2014" ~ outcome == "map" & type == "invasive" & location == "radial"
                              )
    ),
    
