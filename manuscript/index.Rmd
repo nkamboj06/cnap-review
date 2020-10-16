@@ -112,9 +112,9 @@ Keywords: arterial pressure, continuous non-invasive monitoring, critical care
 
 ## Declarations
 
-Availability of data and material (data transparency): All data used in the meta-analyses is available [here](add%20link%20here).
+Availability of data and material (data transparency): All data used in the meta-analyses is available [here]().
 
-Code availability: All data used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) <!--# and archived here--> .
+Code availability: All data used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here](https://doi.org/10.5281/zenodo.4006561).
 
 Abbreviated title:
 
@@ -172,7 +172,7 @@ A framework for meta-analysis of Bland-Altman method comparison studies based on
 
 Pooled limits of agreement were calculated using the formula $\delta\pm2\sqrt{\sigma2+\tau2}$, where $\delta$ is the average bias across studies, $\sigma2$ is the average within-study variation in differences and $\tau2$ is the variation in bias across studies. We estimated $\delta$ and $\sigma2$ using a weighted least-squares model, which is similar to a random-effects approach. The associated estimations of their standard errors were made using robust variance estimation. As some studies used repeated-measures designs without accommodating for the correlation between measurements from the same participants, robust variance estimation was used instead of model-based standard errors. [@hedges2010robust; @tanner2016handling; @tipton2015small] The method-of-moments estimator from DerSimonian & Laird [@dersimonian1986meta] was used for the $\tau2$ parameter.
 
-Outer 95% confidence intervals for pooled limits of agreement were calculated to determine the measures of uncertainty. If the individual studies did not account for repeated measurements, we calculated weights proportional to the number of participants and not the total number of measurements for use in the meta-analysis. All the analyses were conducted using the R statistical program.[@R2018] All data and R code used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here]().
+Outer 95% confidence intervals for pooled limits of agreement were calculated to determine the measures of uncertainty. If the individual studies did not account for repeated measurements, we calculated weights proportional to the number of participants and not the total number of measurements for use in the meta-analysis. All the analyses were conducted using the R statistical program.[@R2018] All data and R code used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here](https://doi.org/10.5281/zenodo.4006561).
 
 A sensitivity analysis for the primary comparison (CNAP versus invasive arterial pressure monitoring systems) was performed based on risk of bias. Studies rated as 'unclear risk of bias' was treated as 'high risk' and 'high risk of bias' studies were excluded from analyses. We conducted subgroup analyses for the primary comparison according to the method of CNAP monitoring (volume clamp vs. arterial applanation tonometry), and arterial catheter site for invasive arterial pressure measurement (radial vs. femoral). As clinicians would be interested in the accuracy of specific CNAP devices, we conducted a subgroup analyses for the type of CNAP monitoring device (CNAP® monitor, ClearSight system, and T-line), where a sufficient number of studies were available. Due to the lack of validated methods on statistical approaches for detecting reporting bias, this assessment was not performed. [@begg2005systematic] Simulations have revealed that tests for detecting funnel plot asymmetry will result in publication bias often being identified incorrectly.[@deeks2005performance]
 
