@@ -2,7 +2,7 @@
 ##' @name make_results_flextable
 ##' @param results_list list of meta-analysis results
 ##' @return
-##' @author Aaron Conway
+##' @author Navpreet Kamboj
 ##' @export
 #' @importFrom dplyr bind_rows rename
 #' @importFrom flextable flextable compose as_paragraph 
@@ -85,8 +85,6 @@ make_results_flextable <- function(results_list,
    merge_at(part = "body", i=~Analysis=="Arterial Applanation Tonometry", j = "Analysis") %>% 
    merge_at(part = "body", i=~Analysis=="Volume Clamp", j = "Analysis") %>% 
    merge_at(part = "body", i=~Analysis=="ClearSight", j = "Analysis") %>% 
-     merge_at(part = "body", i=~Analysis=="ClearSight", j = "Analysis") %>% 
-     merge_at(part = "body", i=~Analysis=="CNAP®", j = "Analysis") %>% 
      merge_at(part = "body", i=~Analysis=="T-line", j = "Analysis") %>% 
      merge_at(part = "body", i=~Analysis=="Femoral Site", j = "Analysis") %>% 
      merge_at(part = "body", i=~Analysis=="Radial Site", j = "Analysis") %>% 

@@ -12,15 +12,15 @@
 get_analysis_plan <- function(){
   drake_plan(
     # Prisma figure 
-    prisma = make_prisma(retrieved = 1710, included = 19, 
-                         duplicates = 858, full_text = 48, 
-                         wrong_setting = 20,
-                         wrong_population= 7,
+    prisma = make_prisma(retrieved = 1710, included = 18, 
+                         duplicates = 858, full_text = 47, 
+                         wrong_setting = 18,
+                         wrong_population= 9,
                          wrong_outcome = 2),
     
     # Import data
     importdata = read_csv(
-      here("data/review_69353_extracted_data_csv_20200601072844.csv")),
+      here("data/review_69353_extracted_data_csv_20201227072740.csv")),
     data = cleandata(importdata),
     rob = create_clean_rob(
       here("data/review_69353_quality_assessment_export.csv")),
@@ -149,7 +149,7 @@ get_analysis_plan <- function(){
     primary_map_nofunding_results = meta_analysis(primary_map_df_nofunding),
     primary_dbp_nofunding_results = meta_analysis(primary_dbp_df_nofunding),
     results_list = list(
-     primary_sbp_results, primary_dbp_results, primary_map_results, primary_sbp_lowrisk_results, primary_dbp_lowrisk_results, primary_map_lowrisk_results, primary_sbp_nofunding_results, primary_dbp_nofunding_results, primary_map_nofunding_results, aat_sbp_results, aat_dbp_results, aat_map_results, vc_sbp_results, vc_dbp_results, vc_map_results, nexfin_results, nexfin_dbp_results, nexfin_map_results, cnap_sbp_results, cnap_dbp_results, cnap_map_results, tline_sbp_results, tline_dbp_results, tline_map_results, femoral_sbp_results, femoral_dbp_results, femoral_map_results, radial_sbp_results, radial_dbp_results, radial_map_results),
+     primary_sbp_results, primary_dbp_results, primary_map_results, primary_sbp_lowrisk_results, primary_dbp_lowrisk_results, primary_map_lowrisk_results, primary_sbp_nofunding_results, primary_dbp_nofunding_results, primary_map_nofunding_results, aat_sbp_results, aat_dbp_results, aat_map_results, vc_sbp_results, vc_dbp_results, vc_map_results, nexfin_results, nexfin_dbp_results, nexfin_map_results, tline_sbp_results, tline_dbp_results, tline_map_results, femoral_sbp_results, femoral_dbp_results, femoral_map_results, radial_sbp_results, radial_dbp_results, radial_map_results),
     results_flextable = make_results_flextable(results_list,
                                        names = c("Primary_SBP",
                                                  "Primary_DBP",
@@ -169,9 +169,6 @@ get_analysis_plan <- function(){
                                                  "ClearSight_SBP",
                                                  "ClearSight_DBP",
                                                  "ClearSight_MAP",
-                                                 "CNAP®_SBP",
-                                                 "CNAP®_DBP",
-                                                 "CNAP®_MAP",
                                                  "T-line_SBP",
                                                  "T-line_DBP",
                                                  "T-line_MAP",
@@ -194,42 +191,6 @@ get_analysis_plan <- function(){
                            location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral"
    ), 
    
-   #making dataframe for cnap sbp analysis
-    cnap_sbp_df= make_ma_df(outcomes_df = outcomes_df,
-                        rob = rob,
-                        study_df = study_df,
-                        #add in filters below to select subset of studies (e.g. filter())
-                        outcome == "sbp",
-                        cnap == "cnap",
-                        type == "invasive",
-                        location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral"
-    ),
-    
-     cnap_dbp_df= make_ma_df(outcomes_df = outcomes_df,
-                            rob = rob,
-                            study_df = study_df,
-                            #add in filters below to select subset of studies (e.g. filter())
-                            outcome == "dbp",
-                            cnap == "cnap",
-                            type == "invasive",
-                            location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral"
-    ),
-    
-    cnap_map_df= make_ma_df(outcomes_df = outcomes_df,
-                            rob = rob,
-                            study_df = study_df,
-                            #add in filters below to select subset of studies (e.g. filter())
-                            outcome == "map",
-                            cnap == "cnap",
-                            type == "invasive",
-                            location == "radial" | location == "radialfemoral" | location == "radialfemoral" | location == "femoral"
-    ),
-    
-     # meta-analysis for cnap analysis
-    cnap_sbp_results = meta_analysis(cnap_sbp_df),
-    cnap_dbp_results = meta_analysis(cnap_dbp_df),
-    cnap_map_results = meta_analysis(cnap_map_df),
-    
     #making dataframe for tline analysis
     tline_sbp_df= make_ma_df(outcomes_df = outcomes_df,
                         rob = rob,

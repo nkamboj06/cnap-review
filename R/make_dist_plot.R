@@ -31,7 +31,7 @@ make_dist_plot <- function(study_data, ma_results,
     labs(x = glue('Difference between CNAP and invasive {type} blood pressure measurements (mmHg)')
     #scale_x_continuous(limits = c(-3.5,3.5), breaks = c(-2, -1, 0, 1, 2)) +
       )+
-    scale_y_continuous(name = "Density \n", limits = c(0, 0.1)) +
+    scale_y_continuous(name = "Density \n", limits = c(0, 0.15)) +
     #labs(title = "\nOuter confidence intervals for pooled limits of agreement\n\n  Pooled limits of agreement")+
     theme(plot.title = element_text(hjust = 0.5, margin = margin(t=10, b=-32), size=10),
           axis.text=element_text(hjust = 0, size=8),

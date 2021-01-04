@@ -11,10 +11,10 @@ author:
       institute: [PMCC]
       correspondence: false
   - Kelly Metcalfe PhD:
-      institute: [LBFON]
+      institute: [LBFON, WCH]
       correspondence: false
   - Charlene Chu PhD:
-      institute: [LBFON]
+      institute: [LBFON, KITE]
       correspondence: false
   - Aaron Conway PhD:
       email: aaron.conway@utoronto.ca
@@ -27,7 +27,9 @@ institute:
   - PMCC: Peter Munk Cardiac Centre, University Health Network, Toronto, Canada
   - LBFON: Lawrence S. Bloomberg Faculty of Nursing, University of Toronto, Toronto, Canada
   - QUT: School of Nursing, Queensland University of Technology (QUT), Brisbane, Australia
-
+  - KITE: KITE-Toronto Rehabilitation Institute, University Health Network, Toronto, Canada
+  - WCH: Women’s College Research Institute, Toronto, Canada
+  
 output:
   officedown::rdocx_document:
     reference_docx: Extras/manuscript_template.docx
@@ -67,9 +69,6 @@ loadd(ncat_dbp_results)
 loadd(tline_map_results)
 loadd(tline_sbp_results)
 loadd(tline_dbp_results)
-loadd(cnap_map_results)
-loadd(cnap_sbp_results)
-loadd(cnap_dbp_results)
 loadd(aat_map_results)
 loadd(aat_sbp_results)
 loadd(aat_dbp_results)
@@ -88,35 +87,38 @@ loadd(femoral_dbp_results)
 
 ### Abstract
 
-**Purpose**
+**Objective**
 
-Continuous non-invasive arterial pressure monitoring devices display non-invasive beat-to-beat arterial pressure measurements. The aim of this systematic review was to summarize the evidence regarding the agreement between CNAP and invasive arterial pressure measurements among patients admitted to an adult critical care unit.
+To summarize the evidence regarding the agreement between continuous non-invasive and invasive arterial pressure measurements in adult critical care patients.
 
-**Methods**
+**Research Methodology**
 
-Medline and EMBASE were searched for studies that included participants whose blood pressure was monitored concurrently using invasive and continuous non-invasive arterial pressure monitors in the intensive care unit. Two reviewers independently screened all studies and used the Revised Quality Assessment of Diagnostic Accuracy Studies tool (QUADAS-2) to complete the quality assessment. The Grading of Recommendations, Assessment, Development and Evaluations (GRADE) approach was used to summarize the certainty of the evidence. Pooled estimates of the mean bias and limits of agreement with outer 95% confidence intervals (termed population limits of agreement because between-study heterogeneity and sampling error are accounted for in the estimates) were calculated.
+Medline and EMBASE were searched for studies that included adult critical care patients reporting the agreement between continuous non-invasive and invasive arterial pressure measurements. Two reviewers independently selected studies and assessed risk of bias using the Revised Quality Assessment of Diagnostic Accuracy Studies tool (QUADAS-2). The Grading of Recommendations, Assessment, Development and Evaluations approach was used. Pooled estimates of the mean bias and limits of agreement with outer 95% confidence intervals (termed population limits of agreement) were calculated.
 
 **Results**
 
-Population limits of agreement for systolic blood pressure were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve`mmHg (`r primary_sbp_results$Comparisons` comparisons; `r primary_sbp_results$Studies` studies; `r primary_sbp_results$Participants` participants; `r format(primary_sbp_results$Measurements, scientfic=F)` measurements). The accuracy of diastolic blood pressure measurements from CNAP devices were highly inconsistent across studies, resulting in extremely imprecise estimates for the population limits of agreement (`r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve`mmHg; `r primary_dbp_results$Comparisons` comparisons; `r primary_dbp_results$Studies` studies; `r primary_dbp_results$Participants` participants; `r format(primary_dbp_results$Measurements, scientfic=F)` measurements). Population limits of agreement for mean arterial pressure spanned from `r primary_map_results$CI_L_rve`mmHg to `r primary_map_results$CI_U_rve`mmHg (`r primary_map_results$Comparisons` comparisons; `r primary_map_results$Studies` studies; `r primary_map_results$Participants` participants; `r format(primary_map_results$Measurements, scientfic=F)` measurements). The evidence was rated as very low-quality evidence due to very serious concerns about heterogeneity and imprecision. Sensitivity analyses restricted to studies that were rated as low risk of bias across all domains of the QUADAS-2 revealed wider population limits of agreement than the primary analysis.
+Population limits of agreement for systolic blood pressure were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve` mmHg (`r primary_sbp_results$Studies` studies; `r primary_sbp_results$Participants` participants). Accuracy of diastolic blood pressure measurements was highly inconsistent across studies, resulting in imprecise estimates for the population limits of agreement.Population limits of agreement for mean arterial pressure spanned from `r primary_map_results$CI_L_rve` mmHg to `r primary_map_results$CI_U_rve` mmHg (`r primary_map_results$Studies` studies; `r primary_map_results$Participants` participants). The evidence was rated as very low-quality due to very serious concerns about heterogeneity and imprecision. 
 
 **Conclusion**
 
-The range of uncertainty in the accuracy of blood pressure monitoring system should be considered when deciding on the appropriate situations in which CNAP devices can be used in clinical practice. In practice, systolic blood pressure measurements from a continuous non-invasive device should be estimated to be as much as about 30-40 mmHg lower or higher than an invasive measurement. Results of this meta-analysis suggest that blood pressure measurements using CNAP monitoring are not sufficiently accurate to substitute for invasive monitoring for adult patients in critical care settings who require close hemodynamic monitoring.
+Substantial differences in blood pressure were identified between measurements taken from continuous non-invasive and invasive monitoring devices. Clinicians should consider this broad range of uncertainty if using these devices to inform clinical decision-making in critical care.
 
-Clinical trial number: Not applicable
+Keywords: arterial pressure, arterial pressure monitoring, continuous non-invasive monitoring, critical care
 
-Keywords: arterial pressure, continuous non-invasive monitoring, critical care
+Clinical Implications: 
+•	Continuous non-invasive arterial pressure monitoring is not sufficiently accurate to substitute for invasive monitoring for adult patients in intensive care as large difference in blood pressure measurements between continuous non-invasive and invasive monitoring were identified.
+•	The arterial applanation tonometry technique is more accurate than volume clamp for diastolic blood pressure measurement. 
+•	The T-line device produces more accurate systolic, diastolic, and mean arterial pressure measurements than ClearSight
 
 \pagebreak
 
 ## Declarations
 
-Availability of data and material (data transparency): All data used in the meta-analyses is available [here]().
+Availability of data and material (data transparency): All data used in the meta-analyses is available [here](https://github.com/nkamboj06/continuous non-invasive arterial pressure-review).
 
-Code availability: All data used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here](https://doi.org/10.5281/zenodo.4006561).
+Code availability: All data used in the meta-analyses is available [here](https://github.com/nkamboj06/continuous non-invasive arterial pressure-review) and archived [here](https://doi.org/10.5281/zenodo.4092938).
 
-Abbreviated title:
+Abbreviated title: CNAP Monitoring in Critical Care
 
 Funding statement: No funding received.
 
@@ -125,8 +127,6 @@ Conflicts of interest: The authors declare no competing interests.
 Author contributions: NK: Study design, analysis, wrote manuscript; AC: Study design, revised the manuscript for important intellectual content; KC: Study design, revised the manuscript for important intellectual content; KM: Study design, revised the manuscript for important intellectual content; CC: Study design, revised the manuscript for important intellectual content.
 
 **Glossary of terms:**
-
-CNAP = Continuous Non-invasive Arterial Pressure
 
 GRADE = Grading of Recommendations, Assessment, Development and Evaluations
 
@@ -144,95 +144,95 @@ SD^2^ = Variance
 
 ## Introduction
 
-Invasive arterial pressure monitoring is the standard of care for patients requiring continuous blood pressure monitoring. [@Meidert2018Techniques] Arterial cannulation is painful, time-consuming, needs to be done by a trained clinician, and is associated with rare complications such as infections, embolism, tissue and nerve damage. For these reasons, intermittent non-invasive blood pressure monitoring is a frequently used alternative. [@Meidert2018Techniques] However, monitoring blood pressure intermittently increases risk of late recognition and delayed correction of hemodynamic compromise. Continuous non-invasive arterial pressure (CNAP) monitoring allows for continuous blood pressure measurements without the risk of complications and inconvenience associated with arterial cannulation. CNAP monitoring devices display real-time, continuous arterial pressure waveforms and provide non-invasive beat-to-beat arterial pressure measurement.[@kim2014accuracy]
+Invasive arterial pressure monitoring is the standard of care for patients requiring continuous blood pressure monitoring [@kim2014accuracy]. Arterial cannulation is painful, time-consuming, needs to be done by a trained clinician, and is associated with complications such as infections, embolism, tissue and nerve damage [@brzezinski2009radial; @haddad2008can]. For these reasons, intermittent non-invasive blood pressure monitoring is a frequently used alternative [@kim2014accuracy]. However, monitoring blood pressure intermittently increases risk of late recognition and delayed correction of hemodynamic compromise [@chen2012impact; @benes2015continuous]. Continuous non-invasive arterial pressure monitoring allows for continuous blood pressure measurements without the risk of vascular complications and inconvenience associated with arterial cannulation. These monitoring devices display real-time, continuous arterial pressure waveforms and provide non-invasive beat-to-beat arterial pressure measurement [@Meidert2018Techniques].
 
-Continuous non-invasive monitoring of blood pressure can be achieved through the arterial applanation tonometry and volume clamp techniques (also called vascular unloading technique or finger cuff technologies).[@Meidert2018Techniques; @teboul2016less; @saugel2014measurement] Arterial applanation tonometry is based on the work of Pressman and Newgard, who discovered that a transducer strapped to an artery with a bone underneath, can obtain the arterial pulse wave. [@Meidert2018Techniques] A device that is automated and commercially available that uses this method is the T-line system (Tensys Medical, San Diego, CA, USA). The volume clamp technique is based on the work by Penaz et al. (1976). [@Penaz1976Volumeclamp] Blood pressure is measured at the finger using an inflatable cuff combined with a photodiode. [@Meidert2018Techniques] Devices using this technique include ClearSight system (Edwards Life-sciences, Irvine, CA, USA [formerly known as Nexfin; BMEye, Amsterdam, The Netherlands); and CNAP® monitor (CNSystems, Graz, Austria). Numerous studies have investigated the concordance between CNAP measurement and invasive arterial pressure measurement in critical care. Critical appraisal of the quality of evidence from these studies followed by synthesis of results in a meta-analysis would aid clinical decision-making regarding the appropriateness of substituting CNAP for blood pressure monitoring in the intensive care unit.
-
+Continuous non-invasive monitoring of blood pressure can be achieved through the arterial applanation tonometry and volume clamp techniques (also called vascular unloading technique or finger cuff technologies) [@Meidert2018Techniques; @teboul2016less; @saugel2014measurement]. Arterial applanation tonometry is based on the work of Pressman and Newgard, who discovered that a transducer strapped to an artery with a bone underneath, can obtain the arterial pulse wave [@Meidert2018Techniques]. A device that is automated and commercially available that uses this method is the T-line system (Tensys Medical, San Diego, CA, USA). The volume clamp technique is based on the work by Penaz et al.(1976) [@Penaz1976Volumeclamp]. Blood pressure is measured at the finger using an inflatable cuff combined with a photodiode [@Meidert2018Techniques]. Devices using this technique include ClearSight system (Edwards Life-sciences, Irvine, CA, USA [formerly known as Nexfin; BMEye, Amsterdam, The Netherlands); and continuous non-invasive arterial pressure® monitor (CNSystems, Graz, Austria). Numerous validation studies have investigated the concordance between continuous non-invasive and invasive arterial pressure measurement in critical care with contradicting results. The purpose of this study is to summarize the evidence from these studies regarding the agreement between invasive and continuous non-invasive arterial pressure measurements among patients admitted to an adult intensive care unit. Critical appraisal of the quality of evidence from these studies followed by synthesis of results in a meta-analysis would aid clinical decision-making regarding the appropriateness of substituting continuous non-invasive for invasive blood pressure monitoring in the intensive care unit. 
 \pagebreak
 
 ## Methods
 
-A systematic review was conducted. The primary comparison for this review was blood pressure measured using a CNAP device versus blood pressure measured using an invasive device.
+A systematic review and meta-analysis was conducted. The primary comparison for this review was blood pressure measured using a continuous non-invasive versus invasive arterial pressure device in the critical care setting. 
 
 ### Inclusion criteria
 
-Studies that reported blood pressure from a CNAP device with a concurrent invasive measurement obtained from an arterial cannula were included. Due to the potential of overestimation of the intervention performance, case control designs were excluded. Studies were limited to human subjects who were 18 years of age or older and received care in a critical care setting (eg. Intensive Care Unit, Coronary Care Unit, Cardiothoracic Intensive Care Unit). No publication date or language restrictions were applied. Published conference abstracts were included if there was enough information reported to appraise the quality of the study.
+Studies that reported blood pressure from a continuous non-invasive arterial pressure device with a concurrent invasive measurement obtained from an arterial cannula were included. Due to the potential of overestimation of the intervention performance, case control designs were excluded. Studies were limited to human subjects who were 18 years of age or older and received care in a critical care setting (e.g., Intensive Care Unit, Cardiothoracic Intensive Care Unit, Surgical Intensive Care Unit). No publication date or language restrictions were applied. Published conference abstracts were included if there was enough information reported to appraise the quality of the study.
 
-### Data sources and searches
+### Data sources and searches, and extraction
 
-A comprehensive search of EMBASE and Medline was conducted. The search strategy is presented in the appendix.[@glasziou2001systematic] Study characteristics (author, year of publication, country, design, sample size, clinical setting, numbers studied, and analyses for each outcome), population characteristics (inclusion and exclusion criteria) and blood pressure measurement characteristics (type of CNAP device and site of invasive measurements) were extracted. Outcomes were the mean bias (eg, accuracy) and variance (eg, SD, precision) for systolic blood pressure, diastolic blood pressure, and mean arterial pressure. We also extracted information about how repeated measurements were handled. In particular we assessed whether studies: (1) analysed each pair of data separately; (2) treated each pair of data as independent; or (3) used either analysis of variance or a random effects model as a way to control for the dependent nature of the repeated measures data.[@myles2007using]
+A comprehensive search of EMBASE and Medline was conducted. The last update of the systematic search was January 28th, 2020. The search strategies used for each database in presented in the appendix one.
 
-Two reviewers independently completed risk of bias assessments using the revised Quality Assessment of Diagnostic Accuracy Studies (QUADAS-2).[@hadian2006evidence] Risk of bias for patient selection, conduct of the CNAP measurements, conduct of the comparator invasive measurements, and timing and flow (eg, timing of CNAP and established invasive blood pressure measurements, dropouts) was rated as 'high', 'low' or 'unclear'.
+### Data extraction and quality assessment
 
-The Grading Quality of Evidence and Strength of Recommendation methodology was applied to rate the quality of evidence across studies.[@schunemann2008grading] Evidence was downgraded in accordance with study limitations, inconsistency, and imprecision. There were no circumstances in which evidence was downgraded for indirectness as this systematic review only included relevant studies. Although the possibility of publication bias was not excluded, this bias was not formally assessed as it was not considered sufficient enough to reason downgrading the quality of evidence.
+Information on the study characteristics (author, year of publication, country, design, sample size, clinical setting, numbers studied, and analyses for each outcome), population characteristics (inclusion and exclusion criteria) and blood pressure measurement characteristics (type of continuous non-invasive arterial pressure device and site of invasive measurements) was extracted. Outcomes were the mean bias (eg, accuracy) and variance (eg, SD, precision) for systolic blood pressure, diastolic blood pressure, and mean arterial pressure. We also extracted information about how repeated measurements were handled. In particular we assessed whether studies: (1) analysed each pair of data separately; (2) treated each pair of data as independent; or (3) used either analysis of variance or a random effects model as a way to control for the dependent nature of the repeated measures data [@myles2007using].
+
+Two reviewers independently completed risk of bias assessments using the revised Quality Assessment of Diagnostic Accuracy Studies (QUADAS-2) [@hadian2006evidence]. Risk of bias for patient selection, conduct of the continuous non-invasive arterial pressure measurements, conduct of the comparator invasive measurements, and timing and flow (eg, timing of continuous non-invasive and established invasive blood pressure measurements, dropouts) was rated as 'high', 'low' or 'unclear'. The QUADAS-2 template is presented in the appendix two.
+
+The Grading Quality of Evidence and Strength of Recommendation methodology was applied to rate the quality of evidence across studies [@schunemann2008grading]. Evidence was downgraded in accordance with study limitations, inconsistency, and imprecision. There were no circumstances in which evidence was downgraded for indirectness as this systematic review only included relevant studies. Although the possibility of publication bias was not excluded, this bias was not formally assessed as it was not considered sufficient enough to reason downgrading the quality of evidence.
 
 ### Data synthesis and analysis
 
-A framework for meta-analysis of Bland-Altman method comparison studies based on limits of agreement approach was used.[@tipton2017framework] One advantage of this method is that it incorporates sampling error into the estimate of the pooled limits of agreement (LoA). This 'population LoA' is wider than those typically reported in meta-analyses of Bland-Altman studies.[@tipton2017framework]
+A framework for meta-analysis of Bland-Altman method comparison studies based on limits of agreement approach was used [@tipton2017framework]. One advantage of this method is that it incorporates sampling error into the estimate of the pooled limits of agreement (LoA). This 'population LoA' is wider than those typically reported in meta-analyses of Bland-Altman studies [@tipton2017framework].
 
-Pooled limits of agreement were calculated using the formula $\delta\pm2\sqrt{\sigma2+\tau2}$, where $\delta$ is the average bias across studies, $\sigma2$ is the average within-study variation in differences and $\tau2$ is the variation in bias across studies. We estimated $\delta$ and $\sigma2$ using a weighted least-squares model, which is similar to a random-effects approach. The associated estimations of their standard errors were made using robust variance estimation. As some studies used repeated-measures designs without accommodating for the correlation between measurements from the same participants, robust variance estimation was used instead of model-based standard errors. [@hedges2010robust; @tanner2016handling; @tipton2015small] The method-of-moments estimator from DerSimonian & Laird [@dersimonian1986meta] was used for the $\tau2$ parameter.
+Pooled limits of agreement were calculated using the formula $\delta\pm2\sqrt{\sigma2+\tau2}$, where $\delta$ is the average bias across studies, $\sigma2$ is the average within-study variation in differences and $\tau2$ is the variation in bias between studies. We estimated $\delta$ and $\sigma2$ using a weighted least-squares model, which is similar to a random-effects approach. The associated estimations of their standard errors were made using robust variance estimation. As some studies used repeated-measures designs without accommodating for the correlation between measurements from the same participants, robust variance estimation was used instead of model-based standard errors [@hedges2010robust; @tanner2016handling; @tipton2015small]. The method-of-moments estimator from DerSimonian and Laird [@dersimonian1986meta] was used for the $\tau2$ parameter.
 
-Outer 95% confidence intervals for pooled limits of agreement were calculated to determine the measures of uncertainty. If the individual studies did not account for repeated measurements, we calculated weights proportional to the number of participants and not the total number of measurements for use in the meta-analysis. All the analyses were conducted using the R statistical program.[@R2018] All data and R code used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here](https://doi.org/10.5281/zenodo.4006561).
+Outer 95% confidence intervals for pooled limits of agreement were calculated to determine the measures of uncertainty. If the individual studies did not account for repeated measurements, we calculated weights proportional to the number of participants and not the total number of measurements for use in the meta-analysis. 
 
-A sensitivity analysis for the primary comparison (CNAP versus invasive arterial pressure monitoring systems) was performed based on risk of bias. Studies rated as 'unclear risk of bias' was treated as 'high risk' and 'high risk of bias' studies were excluded from analyses. We conducted subgroup analyses for the primary comparison according to the method of CNAP monitoring (volume clamp vs. arterial applanation tonometry), and arterial catheter site for invasive arterial pressure measurement (radial vs. femoral). As clinicians would be interested in the accuracy of specific CNAP devices, we conducted a subgroup analyses for the type of CNAP monitoring device (CNAP® monitor, ClearSight system, and T-line), where a sufficient number of studies were available. Due to the lack of validated methods on statistical approaches for detecting reporting bias, this assessment was not performed. [@begg2005systematic] Simulations have revealed that tests for detecting funnel plot asymmetry will result in publication bias often being identified incorrectly.[@deeks2005performance]
+At present there are no minimal standards set for the accuracy of continuous non-invasive arterial pressure monitoring systems. Criteria developed by the Association for the Advancement of Medical Instrumentation (AAMI) for evaluating automatic sphygmanometers has been cited in other research to evaluate continuous non-invasive arterial pressure measurement accuracy [@hohn2013non; @martina2012noninvasive; @ilies2015comparison; @ilies2012investigation; @hahn2012clinical; @fischer2012non]. The AAMI defines acceptable limits for accuracy of an automatic sphygmanometer as no greater than 5 mmHg and precision not greater than 8 mmHg for systolic and diastolic blood pressure [@sphygmomanometers20092].
 
-Results from each study were converted into a standard format, with bias meaning CNAP minus the comparator invasive blood pressure monitoring system. One study used the femoral artery as the comparator for all 45 participants and  completed an additional analysis on 17 of the 45 participants using the radial artery for invasive MAP measurement. [@de2014validation] The results from the radial artery were included in the measurement site sub-group analysis, whereas the results from the femoral artery were reported in the primary analysis. Another study reported results for multiple groups of participants.[@berkelmans2018comparing] Each of these groups was treated as a separate 'comparison' in the meta-analysis. Two studies used a mixture of radial and femoral artery for comparator measurements.[@lakhal2016cnap; @hohn2013non] The authors of these studies reported the combined results therefore these two studies were not included in the arterial catheter site for invasive arterial pressure measurement sub-group analysis. We used the combined estimate in our primary analysis and the estimate for the different methods, and devices in a subgroup analysis. At present there are no minimal standards set for the accuracy of CNAP monitoring systems. Criteria developed by the Association for the Advancement of Medical Instrumentation (AAMI) for evaluating automatic sphygmanometers has been cited in other research to evaluate CNAP accuracy. [@hohn2013non; @martina2012noninvasive; @ilies2015comparison; @ilies2012investigation; @hahn2012clinical; @fischer2012non] The AAMI defines acceptable limits for accuracy of an automatic sphygmanometer as no greater than 5 mmHg and precision not greater than 8 mmHg for systolic and diastolic blood pressure. [@sphygmomanometers20092]
+Prior to conducting the meta-analyses, results from each study were converted into a standard format, with bias meaning continuous non-invasive minus the comparator invasive blood pressure monitoring system. A sensitivity analysis for the primary comparison (continuous non-invasive versus invasive arterial pressure monitoring systems) was performed based on risk of bias. Studies rated as 'unclear risk of bias' was treated as 'high risk' and 'high risk of bias' studies were excluded from analyses. We conducted subgroup analyses for the primary comparison according to the method of continuous non-invasive arterial pressure monitoring (volume clamp vs. arterial applanation tonometry), and arterial catheter site for invasive arterial pressure measurement (radial vs. femoral). As clinicians would be interested in the accuracy of specific continuous non-invasive arterial pressure devices, we conducted a subgroup analyses for the type of continuous non-invasive arterial pressure monitoring device, where a sufficient number of studies were available. Due to the lack of validated methods on statistical approaches for detecting reporting bias, this assessment was not performed [@begg2005systematic]. Simulations have revealed that tests for detecting funnel plot asymmetry will result in publication bias often being identified incorrectly [@deeks2005performance]. All the analyses were conducted using the R statistical program [@R2018]. All data and R code used in the meta-analyses is available [here](https://github.com/nkamboj06/cnap-review) and archived [here](https://doi.org/10.5281/zenodo.4092938).
 
 ## Results
 
 ### Study selection and description
 
-Nineteen studies were included (Figure \@ref(fig:prisma)). Twenty studies were conducted in the wrong setting (eg, outpatient, operating room) and were excluded. Seven studies were conducted with the wrong population (i.e \<18 years of age, subjects were volunteers), and two studies reported the wrong outcome, therefore were excluded.
-
-A summary of the characteristics of included studies is displayed in Table 1. The primary meta-analysis for systolic blood pressure consisted of `r format(primary_sbp_results$Measurements, scientfic=F)` measurements, `r primary_sbp_results$Participants` participants, and `r primary_sbp_results$Comparisons` comparisons from `r primary_sbp_results$Studies` individual studies. The primary meta-analysis for diastolic blood pressure consisted of `r format(primary_dbp_results$Measurements, scientfic=F)` measurements, `r primary_dbp_results$Participants` participants, and `r primary_dbp_results$Comparisons` comparisons from `r primary_dbp_results$Studies` individual studies . There were `r format(primary_map_results$Measurements, scientfic=F)` measurements from `r primary_map_results$Participants` participants included in the primary meta-analysis for mean arterial pressure (`r primary_map_results$Comparisons` comparisons; `r primary_map_results$Studies` studies). 
+Eighteen studies were included (Figure \@ref(fig:prisma)). A summary of the characteristics of included studies is displayed in Table 1. Twenty-nine studies were excluded after full-text review for failure to meet the inclusion criteria or insufficient data for meta-analysis (see appendix three). The primary meta-analysis for systolic blood pressure consisted of `r format(primary_sbp_results$Measurements, scientfic=F)` measurements, `r primary_sbp_results$Participants` participants, and `r primary_sbp_results$Comparisons` comparisons from `r primary_sbp_results$Studies` individual studies. The primary meta-analysis for diastolic blood pressure consisted of `r format(primary_dbp_results$Measurements, scientfic=F)` measurements, `r primary_dbp_results$Participants` participants, and `r primary_dbp_results$Comparisons` comparisons from `r primary_dbp_results$Studies` individual studies. There were `r format(primary_map_results$Measurements, scientfic=F)` measurements from `r primary_map_results$Participants` participants included in the primary meta-analysis for mean arterial pressure (`r primary_map_results$Comparisons` comparisons; `r primary_map_results$Studies` studies). One study reported results for two groups of participants (atrial fibrillation and sinus rhythm) and each of these groups was treated as a separate ‘comparison’ in the meta-analysis [@berkelmans2018comparing].
 
 The sensitivity analysis including only studies that were rated as having low risk of bias across all domains included `r primary_sbp_lowrisk_results$Comparisons` comparisons from `r primary_sbp_lowrisk_results$Studies` studies that enrolled `r primary_sbp_lowrisk_results$Participants` participants with `r format(primary_sbp_lowrisk_results$Measurements, scientfic=F)` paired measurements for the systolic blood pressure outcome. Primary diastolic blood pressure comparison of low risk of bias studies included `r primary_dbp_lowrisk_results$Comparisons` comparisons from `r primary_dbp_lowrisk_results$Studies` studies that enrolled `r primary_dbp_lowrisk_results$Participants` participants with `r format(primary_dbp_lowrisk_results$Measurements, scientfic=F)` paired measurements. Primary mean arterial pressure comparison for low risk of bias studies included `r primary_map_lowrisk_results$Comparisons` comparisons from `r primary_map_lowrisk_results$Studies` individual studies of `r primary_map_lowrisk_results$Participants` participants with `r format(primary_dbp_lowrisk_results$Measurements, scientfic=F)` paired measurements.
 
-There were `r aat_sbp_results$Studies` studies that compared the systolic blood pressure based on the arterial applanation tonometry method to invasive systolic blood pressure, comprising `r aat_sbp_results$Comparisons` comparisons with `r format(aat_sbp_results$Measurements, scientfic=F)` measurements from `r aat_sbp_results$Participants` participants. Arterial applanation tonometry method was used in `r aat_dbp_results$Studies` studies that compared to invasive diastolic blood pressure, comprising `r aat_dbp_results$Comparisons` comparisons with `r format(aat_dbp_results$Measurements, scientfic=F)` measurements from `r aat_dbp_results$Participants` participants. For mean arterial pressure measurement this method was used in `r aat_map_results$Studies` studies comprising `r aat_map_results$Comparisons` comparisons with `r format(aat_map_results$Measurements, scientfic=F)` measurements from `r aat_map_results$Participants` participants. There were `r vc_sbp_results$Studies` studies that compared the systolic blood pressure based on the volume clamp method to invasive arterial pressure, comprising `r vc_sbp_results$Comparisons` comparisons with `r format(vc_sbp_results$Measurements, scientfic=F)` measurements from `r vc_sbp_results$Participants` participants. Volume clamp method was used in `r vc_dbp_results$Studies` studies that compared to invasive diastolic blood pressure, comprising `r vc_dbp_results$Comparisons` comparisons with `r format(vc_dbp_results$Measurements, scientfic=F)` measurements from `r vc_dbp_results$Participants` participants. Volume clamp method for mean arterial pressure measurement was used in `r vc_map_results$Studies` studies comprising `r vc_map_results$Comparisons` comparisons with `r format(vc_map_results$Measurements, scientfic=F)` measurements from `r vc_map_results$Participants` participants.
-
-ClearSight system was used in `r nexfin_results$Studies` studies that compared systolic blood pressure to invasive systolic blood pressure, comprising `r nexfin_results$Comparisons` comparisons with `r format(nexfin_results$Measurements, scientfic=F)` measurements from `r nexfin_results$Participants` participants. There were `r nexfin_dbp_results$Studies` studies that compared ClearSight system diastolic blood pressure to invasive diastolic blood pressure, comprising `r nexfin_dbp_results$Comparisons` comparisons with `r format(nexfin_dbp_results$Measurements, scientfic=F)` measurements from `r nexfin_dbp_results$Participants` participants. ClearSight system for mean arterial pressure measurement was used in `r nexfin_map_results$Studies` studies comprising `r nexfin_map_results$Comparisons` comparisons with `r format(nexfin_map_results$Measurements, scientfic=F)` measurements from `r nexfin_map_results$Participants` participants. There were `r cnap_sbp_results$Studies` studies that compared the systolic blood pressure based on the CNAP® monitor to invasive systolic blood pressure, comprising `r cnap_sbp_results$Comparisons` comparisons with `r format(cnap_sbp_results$Measurements, scientfic=F)` measurements from `r cnap_sbp_results$Participants` participants. There were `r cnap_dbp_results$Studies` studies that compared to CNAP® monitor and invasive diastolic blood pressure, comprising `r cnap_dbp_results$Comparisons` comparisons with `r format(cnap_dbp_results$Measurements, scientfic=F)` measurements from `r cnap_dbp_results$Participants` participants. CNAP® monitor for mean arterial pressure measurement was used in `r cnap_map_results$Studies` studies comprising `r cnap_map_results$Comparisons` comparisons with `r format(cnap_map_results$Measurements, scientfic=F)` measurements from `r cnap_map_results$Participants` participants. T-line was used in `r tline_sbp_results$Studies` studies that compared systolic blood pressure to invasive systolic blood pressure, comprising `r tline_sbp_results$Comparisons` comparisons with `r format(tline_sbp_results$Measurements, scientfic=F)` measurements from `r tline_sbp_results$Participants` participants. T-line was used in `r tline_dbp_results$Studies` studies that compared to invasive diastolic blood pressure, comprising `r tline_dbp_results$Comparisons` comparisons with `r format(tline_dbp_results$Measurements, scientfic=F)` measurements from `r tline_dbp_results$Participants` participants. T-line for mean arterial pressure measurement was used in `r tline_map_results$Studies` studies comprising `r tline_map_results$Comparisons` comparisons with `r format(tline_map_results$Measurements, scientfic=F)` measurements from `r tline_map_results$Participants` participants.
-
-From the 19 studies, there were `r femoral_sbp_results$Studies` studies that compared the systolic blood pressure from the femoral site, comprising `r femoral_sbp_results$Comparisons` comparisons with `r format(femoral_sbp_results$Measurements, scientfic=F)` measurements from `r femoral_sbp_results$Participants` participants. Diastolic blood pressure from the femoral site was used in `r femoral_dbp_results$Studies` studies, comprising `r femoral_dbp_results$Comparisons` comparisons with `r format(femoral_dbp_results$Measurements, scientfic=F)` measurements from `r femoral_dbp_results$Participants` participants. Femoral site for mean arterial pressure measurement was used in `r femoral_map_results$Studies` studies comprising `r femoral_map_results$Comparisons` comparisons with `r format(femoral_map_results$Measurements, scientfic=F)` measurements from `r femoral_map_results$Participants` participants.  There were `r radial_sbp_results$Studies` studies that compared the systolic blood pressure from the radial site, comprising `r radial_sbp_results$Comparisons` comparisons with `r format(radial_sbp_results$Measurements, scientfic=F)` measurements from `r radial_sbp_results$Participants` participants. Radial site was used in `r radial_dbp_results$Studies` studies that compared diastolic blood pressure, comprising `r radial_dbp_results$Comparisons` comparisons with `r format(radial_dbp_results$Measurements, scientfic=F)` measurements from `r radial_dbp_results$Participants` participants. mean arterial pressure measurement from the radial site was used in `r radial_map_results$Studies` studies comprising `r radial_map_results$Comparisons` comparisons with `r format(radial_map_results$Measurements, scientfic=F)` measurements from `r radial_map_results$Participants` participants.
-
-The modified QUADAS-2 was used to conduct the quality assessment (presented in Figure \@ref(fig:rob)). In the patient selection domain, risk of bias was assessed as low in 17 studies, unclear in 1, and high in 1. In the index test domain, 14 studies were assessed as low risk, 3 as unclear risk, and 2 as high risk. In the reference standard domain, 13 studies were assessed as low risk, 2 as unclear risk, and 4 as high risk. In the flow and timing domains, 11 studies were low risk, 4 unclear risk, and 4 high risk. Overall, 7 studies were assessed as low risk and 12 as high risk. In 8 (42%) studies, the authors declared a receipt of funding.
+The modified QUADAS-2 was used to conduct the quality assessment (presented in Figure \@ref(fig:rob)). In the patient selection domain, risk of bias was assessed as low in 16 studies, unclear in 1, and high in 1. In the index test domain, 13 studies were assessed as low risk, 3 as unclear risk, and 2 as high risk. In the reference standard domain, 12 studies were assessed as low risk, 2 as unclear risk, and 4 as high risk. In the flow and timing domains, 11 studies were low risk, 3 unclear risk, and 4 high risk. Overall, 7 studies were assessed as low risk and 11 as high risk. In 7 (39%) studies, the authors declared a receipt of funding from manufacturers, institutional, departmental, or an infrastructure grant.
 
 ### Primary meta-analysis
 
-Table 2 presents the results of the primary, sensitivity, and all subgroup analyses. The pooled estimate for the mean bias between the CNAP and invasive arterial pressure measurements was `r primary_sbp_results$bias_mean` mmHg, `r primary_dbp_results$bias_mean` mmHg, and `r primary_map_results$bias_mean`mmHg for systolic, diastolic, and mean arterial pressure, respectively. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve`mmHg for systolic blood pressure, `r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve` mmHg for diastolic blood pressure, and `r primary_map_results$CI_L_rve` mmHg to `r primary_map_results$CI_U_rve`mmHg for mean arterial pressure. The amount of between-study heterogeneity is displayed graphically in the density plots in Figure \@ref(fig:combined). The quality of evidence for the primary meta-analysis was downgraded to very low quality due to concerns about imprecision, inconsistency, and study limitations.
+Table 2 presents the results of the primary, sensitivity, and all subgroup analyses. The pooled estimate for the mean bias between the continuous non-invasive and invasive arterial pressure measurements was `r primary_sbp_results$bias_mean` mmHg, `r primary_dbp_results$bias_mean` mmHg, and `r primary_map_results$bias_mean` mmHg for systolic, diastolic, and mean arterial pressure, respectively. Population limits of agreement, which take into consideration the between-study heterogeneity and sampling error, were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve` mmHg for systolic blood pressure, `r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve` mmHg for diastolic blood pressure, and `r primary_map_results$CI_L_rve` mmHg to `r primary_map_results$CI_U_rve` mmHg for mean arterial pressure. The amount of between-study heterogeneity is displayed graphically in the density plots in Figure \@ref(fig:combined). The quality of evidence for the primary meta-analysis was downgraded to very low quality due to concerns about imprecision, inconsistency, and study limitations.
 
 ### Sensitivity Analyses
 
-Population limits of agreement for the sensitivity analysis restricted to studies rated as low risk across all domains of the QUADAS-2 were wider than the primary meta-analysis for all outcomes. The mean bias for systolic blood pressure was `r primary_sbp_lowrisk_results$bias_mean` mmHg with population limits of agreement spanning from `r primary_sbp_lowrisk_results$CI_L_rve` mmHg to `r primary_sbp_lowrisk_results$CI_U_rve`mmHg. The mean bias for diastolic blood pressure was `r primary_dbp_lowrisk_results$bias_mean` mmHg with population limits of agreement of `r primary_dbp_lowrisk_results$CI_L_rve` mmHg to `r primary_dbp_lowrisk_results$CI_U_rve`mmHg. The mean bias for mean arterial pressure was `r primary_map_lowrisk_results$bias_mean` mmHg, with population limits of agreement between `r primary_map_lowrisk_results$CI_L_rve` mmHg and `r primary_map_lowrisk_results$CI_U_rve`mmHg. The quality of evidence for this sensitivity analysis was downgraded to very low quality due to concerns about imprecision and inconsistency. A sensitivity analysis excluding studies that received funding from device manufacturers revealed population limits of agreement that were wider than the primary analysis (`r primary_sbp_nofunding_results$CI_L_rve` mmHg to `r primary_sbp_nofunding_results$CI_U_rve`mmHg for systolic blood pressure, `r primary_dbp_nofunding_results$CI_L_rve` mmHg to `r primary_dbp_nofunding_results$CI_U_rve`mmHg for diastolic blood pressure, and `r primary_map_nofunding_results$CI_L_rve` mmHg to `r primary_map_nofunding_results$CI_U_rve`mmHg for mean arterial pressure).The evidence rating for this sensitivity analysis was downgraded to very low, again, due to concerns about imprecision, inconsistency, and study limitations.
+Population limits of agreement for the sensitivity analysis restricted to studies rated as low risk across all domains of the QUADAS-2 were wider than the primary meta-analysis for all outcomes. The mean bias for systolic blood pressure was `r primary_sbp_lowrisk_results$bias_mean` mmHg with population limits of agreement spanning from `r primary_sbp_lowrisk_results$CI_L_rve` mmHg to `r primary_sbp_lowrisk_results$CI_U_rve` mmHg. The mean bias for diastolic blood pressure was `r primary_dbp_lowrisk_results$bias_mean` mmHg with population limits of agreement of `r primary_dbp_lowrisk_results$CI_L_rve` mmHg to `r primary_dbp_lowrisk_results$CI_U_rve` mmHg. The mean bias for mean arterial pressure was `r primary_map_lowrisk_results$bias_mean` mmHg, with population limits of agreement between `r primary_map_lowrisk_results$CI_L_rve` mmHg and `r primary_map_lowrisk_results$CI_U_rve` mmHg. The quality of evidence for this sensitivity analysis was downgraded to very low quality due to concerns about imprecision and inconsistency. A sensitivity analysis excluding studies that received any source of funding revealed population limits of agreement that were wider than the primary analysis (`r primary_sbp_nofunding_results$CI_L_rve` mmHg to `r primary_sbp_nofunding_results$CI_U_rve` mmHg for systolic blood pressure, `r primary_dbp_nofunding_results$CI_L_rve` mmHg to `r primary_dbp_nofunding_results$CI_U_rve` mmHg for diastolic blood pressure, and `r primary_map_nofunding_results$CI_L_rve` mmHg to `r primary_map_nofunding_results$CI_U_rve` mmHg for mean arterial pressure). The evidence rating for this sensitivity analysis was downgraded to very low, again, due to concerns about imprecision, inconsistency, and study limitations.
 
 ### Subgroup Analyses
 
-We conducted three subgroup analyses based on the method of CNAP monitoring, types of CNAP device, and the anatomical site (femoral or radial artery) where the arterial catheter was placed for invasive blood pressure measurement. In the subset of studies conducted using a device based on the arterial applanation tonometry, the pooled mean bias (population limits of agreement) for systolic blood pressure was `r aat_sbp_results$bias_mean` mmHg (`r aat_sbp_results$CI_L_rve` mmHg to `r aat_sbp_results$CI_U_rve` mmHg). For diastolic blood pressure, mean bias was `r aat_dbp_results$bias_mean` mmHg (`r aat_dbp_results$CI_L_rve` mmHg to `r aat_map_results$CI_U_rve` mmHg). The pooled mean bias for mean aretial pressure was `r aat_map_results$bias_mean` mmHg (`r aat_map_results$CI_L_rve` mmHg to `r aat_map_results$CI_U_rve` mmHg). In the subset of studies conducted using a device based on the volume clamp method, the pooled mean bias (population limits of agreement) for systolic blood pressure was `r vc_sbp_results$bias_mean` mmHg (`r vc_sbp_results$CI_L_rve` mmHg to `r vc_sbp_results$CI_U_rve` mmHg). Pooled mean bias for diastolic blood pressure was `r vc_dbp_results$bias_mean` mmHg (`r vc_dbp_results$CI_L_rve` mmHg to `r vc_dbp_results$CI_U_rve` mmHg), and `r vc_map_results$bias_mean` mmHg (`r vc_map_results$CI_L_rve` mmHg to `r vc_map_results$CI_U_rve` mmHg) for mean arterial pressure. The GRADE rating for quality of evidence was downgraded to very low quality due to concerns about imprecision, inconsistency, and study limitations.
+We conducted three subgroup analyses based on the method of continuous non-invasive arterial pressure monitoring, types of monitoring device, and the anatomical site (femoral or radial artery) where the arterial catheter was placed for invasive blood pressure measurement. In the subset of studies conducted using a device based on the arterial applanation tonometry, the pooled mean bias (population limits of agreement) for systolic blood pressure was `r aat_sbp_results$bias_mean` mmHg (`r aat_sbp_results$CI_L_rve` mmHg to `r aat_sbp_results$CI_U_rve` mmHg). For diastolic blood pressure, mean bias was `r aat_dbp_results$bias_mean` mmHg (`r aat_dbp_results$CI_L_rve` mmHg to `r aat_map_results$CI_U_rve` mmHg). The pooled mean bias for mean arterial pressure was `r aat_map_results$bias_mean` mmHg (`r aat_map_results$CI_L_rve` mmHg to `r aat_map_results$CI_U_rve` mmHg). In the subset of studies conducted using a device based on the volume clamp method, the pooled mean bias (population limits of agreement) for systolic blood pressure was `r vc_sbp_results$bias_mean` mmHg (`r vc_sbp_results$CI_L_rve` mmHg to `r vc_sbp_results$CI_U_rve` mmHg). Pooled mean bias for diastolic blood pressure was `r vc_dbp_results$bias_mean` mmHg (`r vc_dbp_results$CI_L_rve` mmHg to `r vc_dbp_results$CI_U_rve` mmHg), and `r vc_map_results$bias_mean` mmHg (`r vc_map_results$CI_L_rve` mmHg to `r vc_map_results$CI_U_rve` mmHg) for mean arterial pressure. The GRADE rating for quality of evidence was downgraded to very low quality due to concerns about imprecision, inconsistency, and study limitations.
 
-In the subset of studies conducted based on the type of monitoring device, the pooled mean bias (population limits of agreement) for the ClearSight system was `r nexfin_results$bias_mean` (`r nexfin_results$CI_L_rve` mmHg to `r nexfin_results$CI_U_rve` mmHg) for systolic blood pressure, `r nexfin_dbp_results$bias_mean` (`r nexfin_dbp_results$CI_L_rve` mmHg to `r nexfin_dbp_results$CI_U_rve` mmHg) for diastolic blood pressure, and `r nexfin_map_results$bias_mean` (`r nexfin_map_results$CI_L_rve` mmHg to `r nexfin_map_results$CI_U_rve` mmHg) for mean arterial pressure. The pooled mean bias (population limits of agreement) for the CNAP® monitor was `r cnap_sbp_results$bias_mean` (`r cnap_sbp_results$CI_L_rve` mmHg to `r cnap_sbp_results$CI_U_rve` mmHg) for systolic blood pressure, `r cnap_dbp_results$bias_mean` (`r cnap_dbp_results$CI_L_rve` mmHg to `r cnap_dbp_results$CI_U_rve` mmHg) for diastolic blood pressure, and `r cnap_map_results$bias_mean` (`r cnap_map_results$CI_L_rve` mmHg to `r cnap_map_results$CI_U_rve` mmHg) for mean arterial pressure. In the subset of studies conducted based on the type of T-line monitoring device, the mean bias (population limits of agreement) was `r tline_sbp_results$bias_mean` (`r tline_sbp_results$CI_L_rve` mmHg to `r tline_sbp_results$CI_U_rve` mmHg) for systolic blood pressure, `r tline_dbp_results$bias_mean` (`r tline_dbp_results$CI_L_rve` mmHg to `r tline_dbp_results$CI_U_rve` mmHg) for diastolic blood pressure, and `r tline_map_results$bias_mean` (`r tline_map_results$CI_L_rve` mmHg to `r tline_map_results$CI_U_rve` mmHg) for mean arterial pressure. The GRADE rating for quality of evidence was downgraded to very low due to study limitations, imprecision, and inconsistency.
+In the subset of studies conducted based on the type of monitoring device, the pooled mean bias (population limits of agreement) for the ClearSight system was `r nexfin_results$bias_mean` mmHg (`r nexfin_results$CI_L_rve` mmHg to `r nexfin_results$CI_U_rve` mmHg) for systolic blood pressure, `r nexfin_dbp_results$bias_mean` mmHg (`r nexfin_dbp_results$CI_L_rve` mmHg to `r nexfin_dbp_results$CI_U_rve` mmHg) for diastolic blood pressure, and `r nexfin_map_results$bias_mean` (`r nexfin_map_results$CI_L_rve` mmHg to `r nexfin_map_results$CI_U_rve` mmHg) for mean arterial pressure. In the subset of studies conducted based on the type of T-line monitoring device, the mean bias (population limits of agreement) was `r tline_sbp_results$bias_mean` mmHg (`r tline_sbp_results$CI_L_rve` mmHg to `r tline_sbp_results$CI_U_rve` mmHg) for systolic blood pressure, `r tline_dbp_results$bias_mean` mmHg (`r tline_dbp_results$CI_L_rve` mmHg to `r tline_dbp_results$CI_U_rve` mmHg) for diastolic blood pressure, and `r tline_map_results$bias_mean` (`r tline_map_results$CI_L_rve` mmHg to `r tline_map_results$CI_U_rve` mmHg) for mean arterial pressure. The GRADE rating for quality of evidence was downgraded to very low due to study limitations, imprecision, and inconsistency.
 
 In the subset of studies conducted using the femoral site for invasive systolic blood pressure measurement, the pooled mean bias (population limits of agreement) was `r femoral_sbp_results$bias_mean` mmHg (`r femoral_sbp_results$CI_L_rve` mmHg to `r femoral_sbp_results$CI_U_rve` mmHg), for diastolic blood pressure `r femoral_dbp_results$bias_mean` mmHg (`r femoral_dbp_results$CI_L_rve` mmHg to `r femoral_map_results$CI_U_rve` mmHg), and for mean arterial pressure `r femoral_map_results$bias_mean` mmHg (`r femoral_map_results$CI_L_rve` mmHg to `r femoral_map_results$CI_U_rve` mmHg). For the radial site, the estimates for pooled mean bias (population limits of agreement) were `r radial_sbp_results$bias_mean` mmHg (`r radial_sbp_results$CI_L_rve` mmHg to `r radial_sbp_results$CI_U_rve`mmHg) for systolic blood pressure, `r radial_dbp_results$bias_mean` mmHg (`r radial_dbp_results$CI_L_rve` mmHg to `r radial_map_results$CI_U_rve` mmHg) for diastolic blood pressure, and `r radial_map_results$bias_mean` mmHg (`r radial_map_results$CI_L_rve` mmHg to `r radial_map_results$CI_U_rve` mmHg) for mean arterial pressure. We downgraded the quality of evidence to very low quality due to concerns about imprecision, inconsistency, and study limitations.
 
+One study used the femoral artery as the comparator for all 45 participants and completed an additional analysis on 17 of the 45 participants using the radial artery for invasive MAP measurement [@de2014validation]. The results from the radial artery were included in the measurement site sub-group analysis, whereas the results from the femoral artery were reported in the primary analysis. Two studies used a mixture of radial and femoral artery for comparator measurements [@lakhal2016cnap; @hohn2013non]. The authors of these studies reported the combined results therefore these two studies were not included in the arterial catheter site sub-group analysis.
 \pagebreak
 
 ## Discussion
 
-We found that systolic and mean arterial blood pressure measurements from CNAP monitoring devices could be as much as about 30-40 mmHg lower or higher than an invasive measurement recorded at the same time. Results for the diastolic blood pressure outcome suggest CNAP devices produce highly inaccurate measurements for this parameter. Based on these results, it is not appropriate to substitute blood pressure measurements from CNAP devices in place of those obtained from invasive arterial pressure monitoring in critical care settings when close hemodynamic monitoring is required. The evidence was downgraded to very low quality due to concerns about imprecision, inconsistency and risk of bias.
+We found that systolic and mean arterial blood pressure measurements from continuous non-invasive arterial pressure monitoring devices could be as much as about 30-45 mmHg lower or higher than an invasive measurement recorded at the same time. Results for the diastolic blood pressure outcome suggest continuous non-invasive arterial pressure devices produce highly inaccurate measurements for this parameter. Based on these results, it is not appropriate to substitute blood pressure measurements from continuous non-invasive devices in place of those obtained from invasive arterial pressure monitoring in critical care settings when close hemodynamic monitoring is required. The evidence was downgraded to very low quality due to concerns about imprecision, inconsistency and risk of bias.
 
-Pooled estimates for the accuracy of CNAP devices have been reported in previous meta-analyses.[@kim2014accuracy; @saugel2020continuous] Our estimates for the population limits of agreement should be considered a better representation of the magnitude of discrepancy which should be expected between CNAP and invasive measurements if these devices were to be used in critical care settings for a number of reasons. First, in our review, we used the framework for meta-analysis of Bland-Altman method comparison studies based on limits of agreement approach. [@tipton2017framework] This approach incorporates the magnitude of heterogeneity in results between studies as well as sampling error. Second, we applied repeated measures adjustments for several of the included studies, which did not account for the correlation between measurements taken from the same participants over time in their primary analyses. This adjustment was not undertaken in the prior meta-analyses, which may lead to more favourable estimates for pooled limits of agreement.[@myles2007using] Third, by restricting the systematic review to the specific population of critical care patients, this systematic review provide direct evidence for this context. Another distinction is that we included both methods of CNAP monitoring (volume clamp and arterial applanation tonometry) in our meta-analyses and performed a sub-group analysis. A previous meta-analysis included devices based on both the methods and did not conduct a subgroup analysis.[@kim2014accuracy] A recent meta-analysis only focused on the volume clamp method.[@saugel2020continuous] Our subgroup meta-analyses revealed important insights into the accuracy of specific types of CNAP devices in critical care.
+Pooled estimates for the accuracy of continuous non-invasive arterial pressure devices have been reported in previous meta-analyses [@kim2014accuracy; @saugel2020continuous]. Our estimates for the population limits of agreement should be considered a better representation of the magnitude of discrepancy which should be expected between continuous non-invasive and invasive blood pressure measurements if these devices were to be used in critical care settings for a number of reasons. First, in our review, we used the framework for meta-analysis of Bland-Altman method comparison studies based on limits of agreement approach [@tipton2017framework]. This approach incorporates the magnitude of heterogeneity in results between studies as well as sampling error. Second, we applied repeated measures adjustments for several of the included studies, which did not account for the correlation between measurements taken from the same participants over time in their primary analyses. This adjustment was not undertaken in the prior meta-analyses, which may lead to more favourable estimates for pooled limits of agreement. Third, by restricting the systematic review to the specific population of critical care patients, this systematic review provide direct evidence for this context. Another distinction is that we included both methods of continuous non-invasive arterial pressure monitoring (volume clamp and arterial applanation tonometry) in our meta-analyses and performed a sub-group analysis. A previous meta-analysis did not conduct a subgroup analysis on these two methods of continuous non-invasive blood pressure monitoring [@kim2014accuracy]. A recent meta-analysis only focused on the volume clamp method [@saugel2020continuous]. Our subgroup meta-analyses revealed important insights into the accuracy of specific types of continuous non-invasive arterial pressure devices in critical care.
 
-The certainty of evidence was downgraded due to impression arising from the fact that many included studies analysed a large number of blood pressure measurements from only a small number of participants. For example, one study analysed 8700 measurements from just 29 participants [@martina2014noninvasive]). We used robust variance estimation to ensure that the pooled estimates were proportional to the number of patients, not the total number of measurements.[@tipton2017framework] Therefore, studies with much larger sample sizes are required to increase confidence in the accuracy and precision of CNAP devices.
+The certainty of evidence was downgraded due to imprecision arising from the fact that many included studies analysed a large number of blood pressure measurements from only a small number of participants. For example, one study analysed 8700 measurements from just 29 participants [@martina2014noninvasive]. We used robust variance estimation to ensure that the pooled estimates were proportional to the number of patients, not the total number of measurements [@tipton2017framework]. Therefore, studies with much larger sample sizes are required to increase confidence in the accuracy and precision of continuous non-invasive arterial pressure devices.
 
-One obvious feature of the primary and sensitivity meta-analyses that requires discussion is that population limits of agreement for diastolic blood pressure were far wider than the systolic and mean arterial pressure outcomes. This was primarily due to the greater heterogeneity across the studies included in the analysis, evidenced by high values for the τ^2^ parameter (reported in Table 2). The more pronounced variation in limits of agreement for diastolic blood pressure in comparison with systolic and mean arterial pressure is also clearly visible in the density plots presented in Figure 3. Close inspection of the subgroup analyses based on the type of CNAP device used, does provide some important additional insight. Population limits of agreement for the diastolic blood pressure outcome in the subgroup meta-analyis of studies that used the arterial applanation tonometry approach were not wider than systolic and mean arterial pressure and did not have high values for the τ^2^ parameter, meaning results between studies were not inconsistent. Based on these results, CNAP devices based on arterial applanation technology should be considered more reliable for use in clinical practice and, in particular, they should given preference over volume clamp devices for any situation where continuous non-invasive monitoring of diastolic blood pressure is required. It is important to note that greater technical challenges for measuring blood pressure with arterial applanation tonometry in comparison with volume clamp devices have been reported. For instance, the arterial applanation tonometry devices are prone to artifacts induced by motion of the limb where the device is applied [@saugel2012t; @meidert2014radial]. 
+One obvious feature of the primary and sensitivity meta-analyses that requires discussion is that population limits of agreement for diastolic blood pressure were far wider than the systolic and mean arterial pressure outcomes. In many cases, the population limits of agreement even exceeded physiologically plausible ranges, suggesting the non-invasive device was highly inaccurate for diastolic blood pressure measurements. The major cause of the extremely wide population limits of agreement was the considerably large amount of heterogeneity across the studies, which can be evidenced by high values for the τ^2^ parameter (reported in Table 2). The more pronounced variation in limits of agreement for diastolic blood pressure compared with systolic and mean arterial pressure is also clearly visible in the density plots presented in Figure 3. Close inspection of the subgroup analyses based on the type of continuous non-invasive device used, does provide some important additional insight. Population limits of agreement for the diastolic blood pressure outcome in the subgroup meta-analysis of studies that used the arterial applanation tonometry approach were not wider than systolic and mean arterial pressure and did not have high values for the τ^2^ parameter, meaning results between studies were not inconsistent. Based on these results, continuous non-invasive blood pressure devices based on arterial applanation technology should be considered more reliable for use in clinical practice and, in particular, they should be given preference over volume clamp devices for any situation where continuous non-invasive monitoring of diastolic blood pressure is required. It is important to note that technical challenges for measuring blood pressure with arterial applanation tonometry have been reported. For instance, optimal positioning of the sensor is key to obtaining reliable measurements and devices based on this method are very sensitive to muscle contraction and movements of the limb where the device is applied [@abreu2020screening; @kizilova2018review].
 
-The sub-group analysis restricted to studies that used devices based on the arterial applanation tonometry technique was comprised primarily of studies that used only one specific device (T-line). From the seven included studies, six used the T-line and one used the NCAT. In contrast, the subgroup meta-analysis of devices based on the volume clamp approach included three different types of devices (Finapres, ClearSight, CNAP® monitor) across the 11 studies. Moreover, different models for the Finapres, ClearSight and CNAP® devices were used across the studies. It seems, though, that variation in the type of volume clamp device does not explain the large variation in estimates for the accuracy of diastolic blood pressure population limits of agreement. Population limits of agreement for diastolic blood pressure were wide in further subgroup meta-analyses restricted to studies that used the ClearSight and CNAP® devices.
+The sub-group analysis restricted to studies that used devices based on the arterial applanation tonometry technique was comprised primarily of studies that used only one specific device (T-line). From the seven included studies, six used the T-line and one used the NCAT. In contrast, the subgroup meta-analysis of devices based on the volume clamp approach included three different types of devices (Finapres, CNAP® monitor, ClearSight) across the 11 studies. Moreover, different models for the Finapres, ClearSight and CNAP® devices were used across the studies. It seems, though, that variation in the type of volume clamp device does not explain the large variation in estimates for the accuracy of diastolic blood pressure population limits of agreement. Population limits of agreement for diastolic blood pressure were wide in further subgroup meta-analyses restricted to studies that used the ClearSight device. 
 
 ### Limitations
 
-Data on adverse events due to blood pressure monitoring with CNAP devices were not extracted. This meta-analysis focused on calculating population limits of agreement, which incorporate the variation in bias between studies into the estimates. Therefore, it was not appropriate to use meta-regression or tests for interaction between subgroups to investigate sources of heterogeneity. The possibility of publication bias cannot be ruled out, although the evidence suggests this may not be as serious of a problem for studies that are not randomized controlled trials.[@begg2005systematic] Several different types of CNAP monitoring devices were combined in our primary meta-analysis. These devices are based on different technologies, namely the arterial applanation tonometry and volume-clamp methods. We performed a sub-group analysis of the different methods (arterial applanation tonometry and volume clamp), and of the different devices (CNAP® monitor, ClearSight system, and T-line). Different models of each device were not assessed individually. We did not undertake subgroup meta-analysis for specific CNAP devices where there was an insufficient number of studies. For example, only two studies used the Finapres device. One reported on the systolic and diastolic blood pressure outcomes [@novak1994accuracy], while the other reported results for only mean arterial pressure [@bindra2016non]. There was one study that explored the NCAT device.[@searle1993assessment] This systematic review focused on estimating the absolute agreement between the CNAP and the invasive methods. We found that a blood pressure measurement at a certain point in time cannot be considered an accurate reflection of 'true' (i.e.invasive) blood pressure. As arterial pressure continuously changes overtime in response to a variety of factors, an alternative way that CNAP devices could potentially be useful in clinical practice is if the trends over time were accurate. [@saugel2020continuous; @smolle2015accuracy] We did not evaluate the trending ability CNAP devices because methods to meta-analyses results from individual studies are not available.
+Data on adverse events due to blood pressure monitoring with continuous non-invasive arterial pressure devices were not extracted. This meta-analysis focused on calculating population limits of agreement, which incorporate the variation in bias between studies into the estimates. Therefore, it was not appropriate to use meta-regression or tests for interaction between subgroups to investigate sources of heterogeneity. The possibility of publication bias cannot be ruled out, although the evidence suggests this may not be as serious of a problem for studies that are not randomized controlled trials [@begg2005systematic].
+
+Several different types of continuous non-invasive arterial pressure monitoring devices were combined in our primary meta-analysis. These devices are based on different technologies, namely the arterial applanation tonometry and volume-clamp methods. We performed a sub-group analysis of the different methods (arterial applanation tonometry and volume clamp), and of the different devices (ClearSight system and T-line). Different models of each device were not assessed individually. We did not undertake subgroup meta-analysis for specific continuous non-invasive arterial pressure devices where there was less than five number of studies. For example, there was only one study each exploring the Finapres and NCAT device [@novak1994accuracy; @searle1993assessment].
+
+This systematic review focused on estimating the absolute agreement between the continuous non-invasive and invasive arterial pressure methods. We found that a blood pressure measurement at a certain point in time cannot be considered an accurate reflection of 'true' (e.g., invasive) blood pressure. As arterial pressure continuously changes overtime in response to a variety of factors, an alternative way that continuous non-invasive devices could potentially be useful in clinical practice is if the blood pressure trends over time were accurate [@saugel2020continuous; @smolle2015accuracy]. We did not evaluate the trending ability continuous non-invasive arterial pressure devices because methods to meta-analyses results from individual studies are not available.
 
 ## Conclusion
 
-Substantial differences between blood pressure measurements from continuous non-invasive and invasive monitoring for blood pressure measurements were identified in this meta-analysis. Population limits of agreement were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve`mmHg for systolic blood pressure, `r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve` mmHg for diastolic blood pressure, and `r primary_map_results$CI_L_rve` mmHg to `r primary_map_results$CI_U_rve`mmHg for mean arterial pressure. Clinicians should consider this broad range of uncertainty of continuous noninvasive blood pressure monitoring if using these devices to inform clinical decision-making in critical care. More consistent population limits of agreement across systolic, diastolic and mean arterial pressure were identified in a subgroup meta-analysis of studies that evaluated CNAP devices based on arterial applanation tonometry, which was primarily the T-line device. Based on the evidence at hand, the T-line device should be considered the most accurate CNAP device in critical care settings.
+Substantial differences between blood pressure measurements from continuous non-invasive and invasive monitoring for blood pressure measurements were identified in this meta-analysis. Systolic and mean arterial blood pressure measurements from continuous non-invasive arterial pressure monitoring devices could be as much as about 30-45 mmHg lower or higher than an invasive measurement recorded at the same time. Overall, continuous non-invasive arterial pressure devices produced highly inaccurate measurements for diastolic blood pressure. However, non-invasive devices that use arterial applanation tonometry technology to measure blood pressure differ from invasive measurements by 30 mmHg lower to 45 mmHg higher range. Population limits of agreement were wide, spanning from `r primary_sbp_results$CI_L_rve` mmHg to `r primary_sbp_results$CI_U_rve`mmHg for systolic blood pressure, `r primary_dbp_results$CI_L_rve` mmHg to `r primary_dbp_results$CI_U_rve` mmHg for diastolic blood pressure, and `r primary_map_results$CI_L_rve` mmHg to `r primary_map_results$CI_U_rve` mmHg for mean arterial pressure. Clinicians should consider this broad range of uncertainty of continuous noninvasive blood pressure monitoring if using these devices to inform clinical decision-making in critical care.
 
 \pagebreak
 
@@ -249,7 +249,7 @@ Fig. \@ref(fig:prisma) PRISMA Flow Diagram.
 
 Fig. \@ref(fig:rob) Risk of bias assessments for included studies.
 
-Fig. \@ref(fig:combined) Comparisons between CNAP and invasive blood pressure measurement within and across studies. Blue curves are distributions of the differences between measurements from CNAP and invasive arterial blood pressure measurements in individual studies. The red curve is the distribution of the pooled estimate.
+Fig. \@ref(fig:combined) Comparisons between continuous non-invasive and invasive blood pressure measurement within and across studies. Blue curves are distributions of the differences between measurements from  continuous non-invasive and invasive arterial blood pressure measurements in individual studies. The red curve is the distribution of the pooled estimate.
 
 \pagebreak
 
@@ -267,14 +267,34 @@ drake::readd(rob_within)
 
 \pagebreak
 
-```{r combined, fig.cap="Comparisons between CNAP and invasive blood pressure measurement within and across studies. Blue curves are distributions of the differences between measurements from CNAP and invasive arterial blood pressure measurements in individual studies. The red curve is the distribution of the pooled estimate.)", fig.height = 6}
+```{r combined, fig.cap="Comparisons between continuous non-invasive and invasive blood pressure measurement within and across studies. Blue curves are distributions of the differences between measurements from  continuous non-invasive and invasive arterial blood pressure measurements in individual studies. The red curve is the distribution of the pooled estimate.", fig.height = 6}
 
 drake::readd(combined_plot)
 ```
 
+
+<!---BLOCK_MULTICOL_START--->
+
+<!---BLOCK_STOP--->
+
+<!--BLOCK_LANDSCAPE_START--->
+
+## Table 1: Study Characteristics
+
+```{r }
+drake::readd(characteristics_table)
+```
+
 \pagebreak
 
-# Appendix
+### Table 2: Results of meta-analyses
+
+```{r }
+drake::readd(results_flextable)
+```
+<!---BLOCK_LANDSCAPE_STOP--->
+
+# Appendix 1
 
 ## Medline search strategy
 
@@ -315,24 +335,149 @@ drake::readd(combined_plot)
 15. 4 OR 12 OR 13 OR 14
 16. 8 OR 9
 17. 15 AND 16
-<!---BLOCK_MULTICOL_START--->
-
-<!---BLOCK_STOP--->
-
-<!--BLOCK_LANDSCAPE_START--->
-
-## Table 1: Study Characteristics
-
-```{r }
-drake::readd(characteristics_table)
-```
 
 \pagebreak
 
-### Table 2: Results of meta-analyses
+# Appendix 2: Quality Assessment by Using Revised Quality Assessment of Diagnostic Accuracy Studies Tool (QUADAS-2)
 
-```{r }
-drake::readd(results_flextable)
-```
+Patient selection	
+  Was a consecutive or random sample of patients enrolled?	High/ Low / Unclear
+	Was a case-control design avoided?	High/ Low / Unclear
+	Did the study avoid inappropriate exclusions?	High/ Low / Unclear
+	What was the overall risk of bias associated with the selection of participants?	High/ Low / Unclear
 
-<!---BLOCK_LANDSCAPE_STOP--->
+Index test
+  Were the continuous non-invasive arterial pressure results interpreted without knowledge of the results of     the comparator?	High/ Low / Unclear
+	Were the continuous non-invasive arterial pressure device measurements performed accurately? 	High/ Low /     Unclear
+	What was the overall risk of bias associated with the conduct or interpretation of continuous non-invasive     arterial pressure results?	High/ Low / Unclear
+	
+Reference standard
+	Were comparator blood pressure results interpreted without knowledge of continuous non-invasive arterial      pressure measurements?	High/ Low / Unclear
+	Was the comparator blood pressure device used the same way for all patients?	High/ Low / Unclear
+	Were the comparator measures performed accurately?	High/ Low / Unclear
+	What was the overall risk of bias associated with the conduct or interpretation of comparator blood          pressure measurements?	High/ Low / Unclear
+
+Flow and Timing
+	Was the interval between continuous non-invasive arterial pressure and comparator blood pressure              measurement device the same for all patients and repeated measurements? 	High/ Low / Unclear
+	Were all patients included in the analysis?	High/ Low / Unclear
+	Were repeated measurements taken into account in the Bland-Altman analysis?	High/ Low / Unclear
+	What was the overall risk of bias associated with the participant flow?	High/ Low / Unclear
+
+\pagebreak
+
+# Appendix 3: List of 29 Excluded Studies
+
+Hansen, S., & Staber, M. (2006). Oscillometric blood pressure measurement used for calibration of the arterial tonometry method contributes significantly to error. Eur J Anaesthesiol, 23(9), 781-7. 
+
+Reason: Insufficient or lack of data (only reported the worst and lowest range in SBP error). 
+
+Steiner, L. A, Johnston, A. J, Salvador, R., Czosnyka, M., & Menon, D. K. (2003). Validation of a tonometric noninvasive arterial blood pressure monitor in the intensive care setting. Anaesthesia, 58, 448–54 
+
+Reason: Insufficient or lack of data (data were expressed as bias and 10th and 90th percentile. No standard deviation could be calculated. There was no extractable age and sex information).
+
+Jagadeesh, A. M., Singh, N. G., & Mahankali, S. (2012). A comparison of a continuous noninvasive arterial pressure (CNAP) monitor with an invasive arterial blood pressure monitor in the cardiac surgical ICU. Annals of Cardiac Anaesthesia, 15(3), 180–4 
+
+Reason: Patients under 18 years of age (inclusion criteria for their study is age >16 years).
+
+Brittain, J. M., Busk, T. M., & Møller, S. (2018). Validation of non-invasive haemodynamic methods in patients with liver disease: the Finometer and the Task Force Monitor. Clin Physiol Funct Imaging, 38(3), 384-389. 
+
+Reason: Wrong setting (not critical care)
+
+Gomez-Angelats, E., Sierra, C., Coca, A., Pare, J. C., & de la Sierra, A. (2004). Lack of association between blood pressure variability and left ventricular hypertrophy in essential hypertension. Medicina Clinica, 123(19), 731-734.
+
+Reason: Wrong setting (not critical care)
+
+Kawahara, M. (1990). Evaluation of the accuracy of non-invasive automatic blood pressure monitors. Anesthesia progress, 37(5), 244-247.
+
+Reason: Wrong setting (operative room- patients having oral surgery under general anesthesia) 
+
+Kugler, J., Rollnik, J., & Schmitz, N. (1997). Retest-reliability and convergent validity of noninvasive blood pressure determination: arm sphygmomanometry vs. Penaz-method. International journal of clinical monitoring and computing, 14(4), 251-254.
+
+Reason: Wrong setting (not critical care)
+
+Lal, S. K., Mihailidou, A. S., Cejnar, M., Henderson, R. J., Jones, M., & Hunyor, S. N. (1993). Continuous, non-invasive volume-clamp blood pressure: determinants of performance. Journal of hypertension, 11(12), 1413-1422.
+
+Reason: Wrong setting (did not specify critical care and sample included 60 volunteers)
+
+Tanaka, S. Nogawa, M. Yamakoshi, T. & Yamakoshi, K. (2007). Accuracy assessment of a noninvasive device for monitoring beat-by-beat blood pressure in the radial artery using the volume-compensation method. IEEE transactions on bio-medical engineering, 54(10), 1892-5.
+
+Reason: Wrong population (sample consisted of nine healthy adult subjects aged from 22 to 48 years)
+
+Nelesen, R. A., & Dimsdale, J. E. (2002). Use of radial arterial tonometric continuous blood pressure measurement in cardiovascular reactivity studies. Blood pressure monitoring, 7(5), 259-63.
+
+Reason: Wrong setting (did not specify critical care, recruited participants in hypertension and sleep apnea studies conducted at the University of California, San Diego)
+
+Jagomagi, K., Raamat, R., & Talts, J. (2001). Effect of altering vasoactivity on the measurement of finger blood pressure. Blood pressure monitoring, 6(1), 33-40
+
+Reason: Wrong population (participants were healthy volunteers). 
+
+Imholz, B. P., van Montfrans, G. A., Settels, J. J., van der Hoeven, G. M., Karemaker, J. M. & Wieling, W. (1988). Continuous non-invasive blood pressure monitoring: reliability of Finapres device during the Valsalva manoeuvre. Cardiovascular research, 22(6), 390-7.
+
+Reason: Wrong setting (not in critical care) 
+
+Hehenkamp, W. J. K., Rang, S., van Goudoever, J., Bos, W. J. W., Wolf, H., & van der Post, J. A. M. (2002). Comparison of Portapres with standard sphygmomanometry in pregnancy. Hypertension in pregnancy, 21(1), 65-76.
+
+Reason: Patients under 18 years of age (age range in this study is 15-43 years).
+
+Gizdulich, P., Prentza, A., & Wesseling, K. H. (1997). Models of brachial to finger pulse wave distortion and pressure decrement. Cardiovascular research, 33(3), 698-705.
+
+Reason: Wrong population (included healthy volunteer)
+
+Eeftinck Schattenkerk, D. W., van Lieshout, J. J., van den Meiracker, A. H., Wesseling, K. R., Blanc, S., Wieling, W., van Montfrans, G. A., Settels, J. J., Wesseling, K. H., & Westerhof, B. E. (2009). Nexfin noninvasive continuous blood pressure validated against Riva-Rocci/Korotkoff. American journal of hypertension, 22(4), 378-83
+
+Reason: Wrong patient population (volunteers) 
+
+Belani, K. G., Buckley, J. J., & Poliac, M. O. (1999). Accuracy of radial artery blood pressure determination with the Vasotrac. Canadian journal of anaesthesia = Journal canadien d'anesthesie, 46(1), 488-96. 
+
+Reason: Wrong patient population (healthy volunteers)
+
+Wagner, J. Y., Prantner, J. S., Meidert, A. S., Hapfelmeier, A., Schmid, R. M., & Saugel, B. (2014). Noninvasive continuous versus intermittent arterial pressure monitoring: evaluation of the vascular unloading technique (CNAP device) in the emergency department. Scandinavian journal of trauma, resuscitation and emergency medicine, 22(101477511), 8
+
+Reason: Wrong setting (Emergency department) 
+
+van Egmond, J., Hasenbos, M., & Crul, J. F. (1985). Invasive v. non-invasive measurement of arterial pressure. Comparison of two automatic methods and simultaneously measured direct intra-arterial pressure. British journal of anaesthesia, 57(4), 434-44.
+Reason: Wrong setting (included ICU and operative room) 
+
+van der Does, Y., van Loon, L. M., Alsma, J., Govers, A., Lansdorp, B., Rood, P. P. M., & Schuit, S. C. E. (2013). Non-invasive blood pressure and cardiac index measurements using the Finapres Portapres in an emergency department triage setting. The American journal of emergency medicine, 31(7), 1012-6. 
+
+Reason: Wrong setting (Emergency department) 
+
+Schutte, A. E., Huisman, H. W., van Rooyen, J. M., Malan, N. T., & Schutte, R. (2004). Validation of the Finometer device for measurement of blood pressure in black women. Journal of human hypertension, 18(2), 79-84.
+
+Reason: Wrong setting (not in critical care) 
+
+Pouwels, S., Lascaris, B., Nienhuijs, S. W., Arthur Bouwman, R., & Buise, M. P. (2017). Validation of the Nexfin non-invasive continuous blood pressure monitoring validated against Riva-Rocci/Korotkoff in a bariatric patient population. Journal of clinical anesthesia, 39(an9, 8812166), 89-95.
+
+Reason: Wrong setting (Outpatient clinic)
+
+Parati, G., Casadei, R., Groppelli, A., Di Rienzo, M., & Mancia, G. (1989). Comparison of finger and intra-arterial blood pressure monitoring at rest and during laboratory testing. Hypertension, 13(6), 647-55.
+
+Reason: Wrong setting (not in critical care)
+
+Nowak, R. M., Sen, A., Garcia, A. J., Wilkie, H., Yang, J. J., Nowak, M. R., & Moyer, M. L. (2011). Noninvasive continuous or intermittent blood pressure and heart rate patient monitoring in the ED. The American journal of emergency medicine, 29(7), 782-9.
+
+Reason: Wrong setting (Emergency department)
+
+Idzenga, T., Reesink, K. D., van Swelm, Y., Hansen, H. H. G., Holewijn, S., & de Korte, C. L. (2012). Noninvasive estimation of the blood pressure waveform in the carotid artery using continuous finger blood pressure monitoring. Ultrasound in medicine & biology, 38(11), 1998-2006. 
+
+Reason: Wrong population (included healthy volunteers)
+
+Epstein, R. H., Huffnagle, S., & Bartkowski, R. R. (1991). Comparative accuracies of a finger blood pressure monitor and an oscillometric blood pressure monitor. Journal of clinical monitoring, 7(2), 161-7.
+
+Reason: Wrong setting (operative room- patients with back pain undergoing spinal fusion with metal plates under general anesthesia)
+
+Broch, O., Bein, B., Gruenewald, M., Carstens, A., Illies, C., Schoneich, F., Steinfath, M., & Renner, J. (2013). A comparison of continuous non-invasive arterial pressure with invasive radial and femoral pressure in patients undergoing cardiac surgery. Minerva anestesiologica, 79(3), 248-56.
+
+Reason: Wrong setting (operative room)
+
+Arfeen, Z. U., Maran, N. J., Simon, E. J., & McClure, J. H. (1996). A comparison of non-invasive methods of blood pressure measurement in normotensive and hypertensive pregnant women. International journal of obstetric anesthesia, 5(3), 168-71.
+
+Reason: Wrong setting (not in critical care; outpatient clinics) 
+
+Allan, P. D., O'Donnell, T., & Tzeng, Y. (2018). Agreement between finger plethysmography- and brachial oscillometry-derived blood pressure measurements. Clinical physiology and functional imaging, 38(3), 439-446. 
+
+Reason: Wrong population (included healthy volunteers; data obtained from the Wellington Cerebral Hemodynamics Database)
+
+Akkermans, J., Diepeveen, M., Ganzevoort, W., van Montfrans, G. A., Westerhof, B. E., & Wolf, H. (2009). Continuous non-invasive blood pressure monitoring, a validation study of Nexfin in a pregnant population. Hypertension in pregnancy, 28(2), 230-42.
+
+Reason: Wrong setting (outpatient clinic) 
