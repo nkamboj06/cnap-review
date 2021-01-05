@@ -46,8 +46,6 @@ library(drake)
 library(bookdown)
 library(officedown)
 
-
-
 loadd(nexfin_results)
 loadd(nexfin_dbp_results)
 loadd(nexfin_map_results)

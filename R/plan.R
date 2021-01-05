@@ -9,6 +9,7 @@
 
 #'
 #'
+
 get_analysis_plan <- function(){
   drake_plan(
     # Prisma figure 
@@ -17,7 +18,7 @@ get_analysis_plan <- function(){
                          wrong_setting = 18,
                          wrong_population= 9,
                          wrong_outcome = 2),
-    
+ 
     # Import data
     importdata = read_csv(
       here("data/review_69353_extracted_data_csv_20201227072740.csv")),

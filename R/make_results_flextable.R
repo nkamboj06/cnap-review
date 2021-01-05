@@ -2,7 +2,7 @@
 ##' @name make_results_flextable
 ##' @param results_list list of meta-analysis results
 ##' @return
-##' @author Navpreet Kamboj
+##' @author Aaron Conway
 ##' @export
 #' @importFrom dplyr bind_rows rename
 #' @importFrom flextable flextable compose as_paragraph 
