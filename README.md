@@ -1,2 +1,2 @@
 # cnap-review
-Cite the code: [![https://doi.org/10.5281/zenodo.4419814]
+Cite the code: [![DOI](https://zenodo.org/badge/210374538.svg)](https://zenodo.org/badge/latestdoi/210374538)
