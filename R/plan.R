@@ -13,8 +13,8 @@
 get_analysis_plan <- function(){
   drake_plan(
     # Prisma figure 
-    prisma = make_prisma(retrieved = 1710, included = 18, 
-                         duplicates = 858, full_text = 47, 
+    prisma = make_prisma(retrieved = 2520, included = 18, 
+                         duplicates = 886, full_text = 47, 
                          wrong_setting = 18,
                          wrong_population= 9,
                          wrong_outcome = 2),
